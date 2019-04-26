@@ -6,3 +6,8 @@ export const Login = 'login'
 export const Sign = 'Sign'
 //export const Login_isAuth_F = 'login_isAuth_false'
 //export const Login_isAuth_T = 'login_isAuth_true'
+
+export const REGISTER_NAME = 'register_name'
+export const Register_PWD = 'register_pwd'
+export const Register_sPWD = 'register_spwd'
+export const Register_Npassword = 'register_npassword'

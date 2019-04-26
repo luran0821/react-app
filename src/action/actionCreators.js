@@ -34,3 +34,26 @@ export const onClickLogin = () => ({
 export const Sign = () => ({
     type: types.Sign
 })
+
+
+export const registerNameChanege = (e) => ({
+    type: types.REGISTER_NAME, 
+    value: e.target.value
+})
+
+export const registerNpwdChanege = (e) => ({
+    type: types.Register_Npassword,
+    value: e.target.value
+})
+
+export const registerPwdChanege = (e) => ({
+    type: types.Register_PWD,
+    value: e.target.value 
+})
+
+export const registerPwdSChanege = (e) => ({
+    type: types.Register_sPWD,
+    value: e.target.value 
+})
+
+ registerNameChanege, registerPwdChanege, npassword, registerPwdSChanege 
