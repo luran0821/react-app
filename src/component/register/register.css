@@ -1,0 +1,50 @@
+.register{
+    position:absolute;
+    top:30%;
+    left:43%;
+    margin:-150px 0 0 -200px;
+    width:600px;
+    height:500px;
+    border:1px solid #008800;
+   
+}
+.register-name{
+    position:absolute;
+    top:10%;
+    left:17%;
+}
+
+.register-password{
+    position:absolute;
+    top:30%;
+    left:17%;
+}
+
+
+
+.register-npassword{
+    position:absolute;
+    top:50%;
+    left:17%;
+}
+
+.register-button{
+    position:absolute;
+    top:70%;
+    left:17%;
+}
+
+ .register-regin-button{
+    width: 100px;
+    height: 40px;
+    top:0;
+    left:40%;
+}
+
+
+.register-login-button{
+    width: 100px;
+    height: 40px;
+    top:0;
+    left:60%;
+}

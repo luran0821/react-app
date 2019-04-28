@@ -1,5 +1,6 @@
 import * as types from './types'
 
+
 export const changeInputValue = (e) => ({
     type: types.CHANGE_INPUT_VALUE,
     value: e.target.value
@@ -37,7 +38,7 @@ export const Sign = () => ({
 
 
 export const registerNameChanege = (e) => ({
-    type: types.REGISTER_NAME, 
+    type: types.Register_NAME, 
     value: e.target.value
 })
 
@@ -56,4 +57,7 @@ export const registerPwdSChanege = (e) => ({
     value: e.target.value 
 })
 
- registerNameChanege, registerPwdChanege, npassword, registerPwdSChanege 
+export const onClickregister = () => ({
+    type: types.Register
+})
+

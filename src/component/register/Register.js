@@ -15,7 +15,7 @@ import './register.css'
 
 const Register = (props) => {
 
-    const { name, password, registerNameChanege, registerPwdChanege, npassword, registerPwdSChanege } = props
+    const { name, password, registerNameChanege, registerPwdChanege, npassword, registerPwdSChanege, onClickregister ,message} = props
 
     return(
         <div>
@@ -47,43 +47,49 @@ const Register = (props) => {
                             >logout</button></div> */}
 
 
-                 <div>           
+                 <div className='register-name'>           
                     
                         <InputText  
                             placeholder='用户名'
-                            size = '30'
+                            size = '45'
                             value= { name }
                            onChange={ registerNameChanege}
                         />
                    
                 </div>
                 
-                <div>
+                <div className= 'register-password'>
                     <Password  
                                 placeholder='密码'
-                                size = '30'
+                                size = '45'
                                 value= { password }
                             onChange={ registerPwdChanege}
                             />
                 </div>
-                <div>
+
+                <div>{ message }</div>
+
+                <div  className='register-npassword'>
                     <Password  
                                 placeholder='密码确认'
-                                size = '30'
+                                size = '45'
                                 value= { npassword }
                             onChange={ registerPwdSChanege}
                             />
                 </div>
                 
-                <div>{ password !== npassword ? '两次密码不一致，请检查 ！' : null }</div>
 
-                <div>
+                <div>{ message }</div>
+                {/* <div>{ password !== npassword ? '两次密码不一致，请检查 ！': null }</div> */}
+
+                <div className='register-button'>
+
                     <Button 
-                        className="p-button-info regin-button" label="注册" 
-
+                        className="p-button-info register-regin-button" label="注册" 
+                        onClick={ onClickregister }
                         />
                     <Button  
-                        className="p-button-info  login-button" label="已有账户请登陆" 
+                        className="p-button-info  register-login-button" label="登陆" 
 
                         />
                 </div>
@@ -109,6 +115,7 @@ const mapStateToProps = (state) => ({
     password: state.register.password,
     isAuth: state.register.npassword,
     redirecTo:  state.register.redirecTo,
+    message:  state.register.message
 })
 
 
@@ -124,8 +131,8 @@ const mapDispatchToProps = (dispatch) =>({
     },
 
 
-    onClickLogin(){
-        dispatch(actionCreators.onClickLogin())
+    onClickregister(){
+        dispatch(actionCreators.onClickregister())
     } 
 })
 
