@@ -1,0 +1,11 @@
+.menue span{
+    text-align: left
+}
+.menue-left{
+width: 15%;
+float: left;
+}
+.menue-right{
+    width: 85%;
+    float: left;
+}

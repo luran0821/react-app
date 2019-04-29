@@ -2,52 +2,31 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux'
 
 
-import {Accordion,AccordionTab} from 'primereact/accordion';
+import Menue from '../Menue/Menue'
 
-
+import './panel.css'
 export class MainPanel extends Component {
         
-    constructor() {
-        super();
-        this.state = {
-            columns: [0, 1, 2, 3, 4, 5]
-        };
-        
-        this.addColumn = this.addColumn.bind(this);
-        this.removeColumn = this.removeColumn.bind(this);
+   
+
+    render() {
+        return (
+            <div>
+                <Menue />
+                <div className='main-panel'>
+                       <div className='left-panel'>left</div>
+                       <div className='right-panel'>right</div>
+                       <div className='bottom-panel clear'>bottom</div>
+                </div>        
+            </div>
+            
+            
+                
+            
+        ) 
     }
-
-    addColumn() {
-        this.setState({
-            columns: [...this.state.columns, this.state.columns.length]
-        });
-    }
-
-    removeColumn() {
-        let cols = [...this.state.columns];
-        cols.splice(-1, 1);
-        this.setState({
-            columns: cols
-        });
-    }
-
-
-render(){
-    return(
-        <Accordion activeIndex={this.state.activeIndex} onTabChange={(e) => this.setState({activeIndex: e.index})}>
-    <AccordionTab header="Header I">
-        Content I
-    </AccordionTab>
-    <AccordionTab header="Header II">
-        Content II
-    </AccordionTab>
-    <AccordionTab header="Header III">
-        Content III
-    </AccordionTab>
-</Accordion>
-    
-    )
+                          
 }
 
-}
+
 export default connect(null, null)(MainPanel)
