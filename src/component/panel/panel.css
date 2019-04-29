@@ -1,7 +1,6 @@
 .main-panel{
     width: 100%;
     height: 100%;
-   background-color: aqua;
 }
 .top-panel{
     background-color: red;
@@ -9,7 +8,6 @@
 .left-panel{
     width: 15%;
     min-height:  600px;
-    background-color: green;
     float: left;
 }
 .right-panel{
