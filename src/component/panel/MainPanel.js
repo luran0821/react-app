@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
+import { BrowserRouter as Router , Route ,Link} from 'react-router-dom'
 
 
-import Menue from '../Menue/Menue'
+import Menue from '../menue/Menue'
 import {PanelMenu} from 'primereact/panelmenu';
 
 import './panel.css'
+import  login  from '../../component/login/Login';
  class MainPanel extends Component {     
     render() {
+
+
+        var linkvalue = "/login"
         const items = [
             {
                label: '人员信息管理',
@@ -15,7 +20,11 @@ import './panel.css'
                items:[  
                   {
                      label:'人员信息',
-                     icon:'pi pi-fw pi-user'
+                     icon:'pi pi-fw pi-user',
+                     command: (event) => {
+                       // linkvalue = '/login'
+                        console.log(linkvalue)
+                    }
                   },
                   {
                      label:'学历信息',
@@ -123,9 +132,18 @@ import './panel.css'
                 <Menue />
                 <div className='main-panel'>
                        <div className='left-panel'>
-                          <PanelMenu model={items} style={{width: '100%'}}/>
+                          <PanelMenu model={items} style={{width: '100%'}}
+                              
+                          />
                        </div>
-                       <div className='right-panel'>right</div>
+                       <div className='right-panel'>
+                        <Router>
+                        
+                            <Link to= {linkvalue}>linkvalue</Link>
+                            <Route path="/login" exact component={login} />       
+                        </Router>
+                       
+                       </div>
                        <div className='bottom-panel clear'>bottom</div>
                 </div>        
             </div>
