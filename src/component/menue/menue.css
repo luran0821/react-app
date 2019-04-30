@@ -1,11 +1,17 @@
-.menue span{
-    text-align: left
-}
 .menue-left{
+/*padding: 10px 0  0 26px;*/
+color: #03c4e8;
 width: 15%;
+height: 40.2px;
 float: left;
+font-size: 20px;
+line-height: 40.2px;
+text-align: center;
+/* background-color: black */
+background-color: #20272a;
 }
 .menue-right{
     width: 85%;
     float: left;
+    background-color: #20272a;
 }

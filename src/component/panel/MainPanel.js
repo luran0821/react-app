@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
-import { BrowserRouter as Router , Route ,Link} from 'react-router-dom'
+import { HashRouter  as Router , Route ,Link} from 'react-router-dom'
 
 
 import Menue from '../menue/Menue'
@@ -8,6 +8,7 @@ import {PanelMenu} from 'primereact/panelmenu';
 
 import './panel.css'
 import  login  from '../../component/login/Login';
+import  table  from '../../component/Table/table';
  class MainPanel extends Component {     
     render() {
 
@@ -19,16 +20,21 @@ import  login  from '../../component/login/Login';
                icon:'pi pi-fw pi-bookmark',
                items:[  
                   {
+                     
                      label:'人员信息',
                      icon:'pi pi-fw pi-user',
                      command: (event) => {
-                       // linkvalue = '/login'
+                        window.location.hash='/login'
                         console.log(linkvalue)
                     }
                   },
                   {
                      label:'学历信息',
-                     icon:'pi pi-fw pi-user'
+                     icon:'pi pi-fw pi-user',
+                     command: (event) => {
+                        window.location.hash='/table'
+                        console.log(linkvalue)
+                    }
                   }
                ]
             },
@@ -130,17 +136,19 @@ import  login  from '../../component/login/Login';
             
             <div>
                 <Menue />
+                <div className='clear' style={{width: '100%', height: 1}}></div> 
                 <div className='main-panel'>
                        <div className='left-panel'>
-                          <PanelMenu model={items} style={{width: '100%'}}
+                          <PanelMenu  model={items} style={{width: '100%'}}
                               
                           />
                        </div>
                        <div className='right-panel'>
                         <Router>
                         
-                            <Link to= {linkvalue}>linkvalue</Link>
-                            <Route path="/login" exact component={login} />       
+                           
+                            <Route path="/login" exact component={login} />  
+                            <Route path="/table" exact component={table} />       
                         </Router>
                        
                        </div>
