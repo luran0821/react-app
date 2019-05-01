@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session');
 const bodyparser = require('body-parser');
-const userRouter = require('./user')
+const accountRouter = require('./account')
 const redisStore = require('connect-redis')(session);
 
 //建立mongo连接后面跟要创建的数据库(集合connection)
@@ -10,10 +10,11 @@ const redisStore = require('connect-redis')(session);
 
 const app =  express()
 
+app.use('/api',accountRouter)
+
+
 ///user/info userRouter子路由
-app.use('/user', userRouter)
-
-
+//app.use('/user', userRouter)
 // mongoose.connect(DB_URL)
 // mongoose.connection.on('connected', function(){
 //     console.log('mongo connect success')
@@ -55,56 +56,30 @@ app.use('/user', userRouter)
 //   });
 
 
-// app.get('/',function(req, res){
-//     res.send('<h1> test !<h1>')
-// })
-
-
-
-
-
 
 app.use(bodyparser.json()); // 使用bodyparder中间件，
-app.use(bodyparser.urlencoded({ extended: true }));
+//app.use(bodyparser.urlencoded({ extended: true }));
 
-
-
-// 使用 session 中间件
-app.use(session({
-    name: 'session-name', // 这里是cookie的name，默认是connect.sid
-    secret :  'secret', // 对session id 相关的cookie 进行签名  建议使用 128 个字符的随机字符串
-    resave : true,
-    saveUninitialized: false, // 是否保存未初始化的会话/*强制保存 session 即使它并没有变化,。默认为 true。建议设置成 false。*/
-    cookie : {
-        maxAge : 1000 * 60 * 3, // 设置 session 的有效时间，单位毫秒
-    },
-    store: new redisStore({
-        host: '127.0.0.1',
-        port: '6379',
-        db: 0,
-        pass: '',
-    })
-}));
-
-
-
-
-
-
-
-app.get('/data', function(req, res){
-    User.find({}, function(err, doc){
-        return res.json({name: 'ran', password: '123456'})
-    })
-    //res.json({name: 'app', type: 'IT'})
-})
-
-
-
+// // 使用 session 中间件
+// app.use(session({
+//     name: 'session-name', // 这里是cookie的name，默认是connect.sid
+//     secret :  'secret', // 对session id 相关的cookie 进行签名  建议使用 128 个字符的随机字符串
+//     resave : true,
+//     saveUninitialized: false, // 是否保存未初始化的会话/*强制保存 session 即使它并没有变化,。默认为 true。建议设置成 false。*/
+//     cookie : {
+//         maxAge : 1000 * 60 * 3, // 设置 session 的有效时间，单位毫秒
+//     },
+//     store: new redisStore({
+//         host: '127.0.0.1',
+//         port: '6379',
+//         db: 0,
+//         pass: '',
+//     })
+// }));
 
 
 
 
 app.listen(9093, function(){
-    console.log('connenting .....!')
+    console.log('Node app start at port 9093.....!')
 })

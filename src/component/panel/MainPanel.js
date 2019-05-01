@@ -24,7 +24,7 @@ import  table  from '../../component/Table/table';
                      label:'人员信息',
                      icon:'pi pi-fw pi-user',
                      command: (event) => {
-                        window.location.hash='/login'
+                       // window.location.hash='/login'
                         console.log(linkvalue)
                     }
                   },
@@ -32,19 +32,48 @@ import  table  from '../../component/Table/table';
                      label:'学历信息',
                      icon:'pi pi-fw pi-user',
                      command: (event) => {
-                        window.location.hash='/table'
+                        //window.location.hash='/table'
                         console.log(linkvalue)
                     }
                   }
                ]
             },
             {
+               label: '部门管理',
+               icon:'pi pi-fw pi-bookmark',
+               items:[  
+                  {
+                     label:'部门信息',
+                     icon:'pi pi-fw pi-user',
+                     command: (event) => {
+                        window.location.hash='/table'
+                        console.log(linkvalue)
+                    }
+                  },
+                  {
+                     label:'部门调动',
+                     icon:'pi pi-fw pi-user',                     
+                  },
+                  {
+                     label:'添加部门',
+                     icon:'pi pi-fw pi-user',                     
+                  }
+               ]
+            },
+
+
+
+            {
                label:'薪资管理',
                icon:'pi pi-fw pi-bookmark',
                items:[
                   {
                      label:'基本工资',
-                     icon:'pi pi-fw pi-align-left'
+                     icon:'pi pi-fw pi-align-left',
+                     command: (event) => {
+                        window.location.hash='/table'
+                        console.log(linkvalue)
+                    }
                   },
                   {
                      label:'补贴',
@@ -53,11 +82,7 @@ import  table  from '../../component/Table/table';
                   {
                      label:'五险一金',
                      icon:'pi pi-fw pi-align-center'
-                  },
-                  {
-                     label:'Justify',
-                     icon:'pi pi-fw pi-align-justify'
-                  },
+                  }
          
                ]
             },
@@ -78,22 +103,6 @@ import  table  from '../../component/Table/table';
                   {
                      label:'Search',
                      icon:'pi pi-fw pi-users',
-                     items:[
-                        {
-                           label:'Filter',
-                           icon:'pi pi-fw pi-filter',
-                           items:[
-                              {
-                                 label:'Print',
-                                 icon:'pi pi-fw pi-print'
-                              }
-                           ]
-                        },
-                        {
-                           icon:'pi pi-fw pi-bars',
-                           label:'List'
-                        }
-                     ]
                   }
                ]
             },
@@ -102,28 +111,12 @@ import  table  from '../../component/Table/table';
                icon:'pi pi-fw pi-bookmark',
                items:[
                   {
-                     label:'Edit',
-                     icon:'pi pi-fw pi-pencil',
-                     items:[
-                        {
-                           label:'Save',
-                           icon:'pi pi-fw pi-calendar-plus'
-                        },
-                        {
-                           label:'Delete',
-                           icon:'pi pi-fw pi-calendar-minus'
-                        }
-                     ]
+                     label:'在职员工学历统计',
+                     icon:'pi pi-fw pi-pencil'
                   },
                   {
-                     label:'Archieve',
-                     icon:'pi pi-fw pi-calendar-times',
-                     items:[
-                        {
-                           label:'Remove',
-                           icon:'pi pi-fw pi-calendar-minus'
-                        }
-                     ]
+                     label:'在职员工薪资分布',
+                     icon:'pi pi-fw pi-calendar-times'
                   }
                ]
             }

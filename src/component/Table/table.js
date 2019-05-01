@@ -10,7 +10,7 @@ const Table = () => {
         width: '100%',
         height: '100%',
         lineHeight: '100%'
-      }}>jiojojijo</div>
+      }}>32324234234234234</div>
 
     )
 }

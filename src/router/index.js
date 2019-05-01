@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router , Switch, Route } from 'react-router-dom'
+import { HashRouter as Router , Switch, Route } from 'react-router-dom'
 
 import login from '../component/login/Login'
 import register from '../component/register/Register'
@@ -11,7 +11,7 @@ const Routers = () =>{
             <Switch>
                 <Route  path='/login' component={ login } />
                 <Route  path='/register' component={ register } />
-                <Route  path= '/panel' component= { panel } />
+                <Route  path= '/' component= { panel } />
                 <Route  path= '/table' component= { table } />
             </Switch>
         </Router>
