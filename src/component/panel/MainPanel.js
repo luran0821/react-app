@@ -152,7 +152,7 @@ import  table  from '../../component/Table/table';
                         </Router>
                        
                        </div>
-                       <div className='bottom-panel clear'>bottom</div>
+                       <div className='bottom-panel clear'>Copyright © 2019  All Rights Reserved</div>
                 </div>        
             </div>
             
