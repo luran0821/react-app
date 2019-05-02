@@ -8,55 +8,53 @@ import {PanelMenu} from 'primereact/panelmenu';
 
 import './panel.css'
 import  login  from '../../component/login/Login';
-import  table  from '../../component/Table/table';
+import  utable  from '../../component/utable/UserTable';
+import  deptable  from '../../component/deptable/DepTabel';
  class MainPanel extends Component {     
     render() {
 
 
-        var linkvalue = "/login"
         const items = [
             {
                label: '人员信息管理',
-               icon:'pi pi-fw pi-bookmark',
+               icon:'pi pi-fw pi-user',
                items:[  
                   {
                      
                      label:'人员信息',
                      icon:'pi pi-fw pi-user',
                      command: (event) => {
-                       // window.location.hash='/login'
-                        console.log(linkvalue)
+                        window.location.hash='/utable'
+                        
                     }
                   },
                   {
                      label:'学历信息',
                      icon:'pi pi-fw pi-user',
-                     command: (event) => {
-                        //window.location.hash='/table'
-                        console.log(linkvalue)
-                    }
+                     
                   }
                ]
             },
             {
                label: '部门管理',
-               icon:'pi pi-fw pi-bookmark',
+               icon:'pi pi-fw pi-sitemap',
                items:[  
                   {
                      label:'部门信息',
-                     icon:'pi pi-fw pi-user',
-                     command: (event) => {
-                        window.location.hash='/table'
-                        console.log(linkvalue)
-                    }
+                     icon:'pi pi-fw pi-users',
+                     
                   },
                   {
                      label:'部门调动',
-                     icon:'pi pi-fw pi-user',                     
+                     icon:'pi pi-fw pi-users',                     
                   },
                   {
                      label:'添加部门',
-                     icon:'pi pi-fw pi-user',                     
+                     icon:'pi pi-fw pi-users', 
+                     command: (event) => {
+                        window.location.hash='/deptable'
+                       
+                    }                    
                   }
                ]
             },
@@ -65,30 +63,30 @@ import  table  from '../../component/Table/table';
 
             {
                label:'薪资管理',
-               icon:'pi pi-fw pi-bookmark',
+               icon:'pi pi-fw pi-dollar',
                items:[
                   {
                      label:'基本工资',
-                     icon:'pi pi-fw pi-align-left',
+                     icon:'pi pi-fw pi-dollar',
                      command: (event) => {
-                        window.location.hash='/table'
-                        console.log(linkvalue)
+                      //  window.location.hash='/table'
+                       
                     }
                   },
                   {
                      label:'补贴',
-                     icon:'pi pi-fw pi-align-right'
+                     icon:'pi pi-fw pi-dollar'
                   },
                   {
                      label:'五险一金',
-                     icon:'pi pi-fw pi-align-center'
+                     icon:'pi pi-fw pi-dollar'
                   }
          
                ]
             },
             {
                label:'考勤管理',
-               icon:'pi pi-fw pi-bookmark',
+               icon:'pi pi-fw pi-calendar',
                items:[
                   {
                      label:'New',
@@ -108,7 +106,7 @@ import  table  from '../../component/Table/table';
             },
             {
                label:'数据分析',
-               icon:'pi pi-fw pi-bookmark',
+               icon:'pi pi-fw pi-chart-bar',
                items:[
                   {
                      label:'在职员工学历统计',
@@ -116,7 +114,7 @@ import  table  from '../../component/Table/table';
                   },
                   {
                      label:'在职员工薪资分布',
-                     icon:'pi pi-fw pi-calendar-times'
+                     icon:'pi pi-fw pi-money-bill'
                   }
                ]
             }
@@ -140,8 +138,9 @@ import  table  from '../../component/Table/table';
                         <Router>
                         
                            
-                            <Route path="/login" exact component={login} />  
-                            <Route path="/table" exact component={table} />       
+                            <Route path="/login" exact component={ login } />  
+                            <Route path="/utable" exact component={ utable } />
+                            <Route path="/deptable" exact component={ deptable } />        
                         </Router>
                        
                        </div>
