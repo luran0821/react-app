@@ -151,6 +151,8 @@ addNew() {
                             <div className="p-col-8" style={{padding:'.5em'}}>
                                 <InputText id="department_id" onChange={(e) => {this.updateProperty('department_id', e.target.value)}} value={this.state.car.department_id}/>
                             </div>
+
+                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>
                     }
                 </Dialog>

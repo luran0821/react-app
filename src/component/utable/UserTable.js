@@ -110,8 +110,9 @@ addNew() {
     </div>;
 
     let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
-            <Button label="删除" icon="pi pi-times" onClick={this.delete}/>
-            <Button label="保存" icon="pi pi-check" onClick={this.save}/>
+           
+            <Button label="删除" icon="pi pi-times"    onClick={this.delete}/>
+            <Button label="保存" icon="pi pi-check"  onClick={this.save}/>
         </div>;
 
     return (
@@ -234,6 +235,8 @@ addNew() {
                             <div className="p-col-8" style={{padding:'.5em'}}>
                                 <InputText id="address" onChange={(e) => {this.updateProperty('address', e.target.value)}} value={this.state.car.address}/>
                             </div>
+
+                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>
                     }
                 </Dialog>

@@ -16,6 +16,10 @@ const _filter = {'password':0,'__v':0}
 
 Router.get('/account',function(req, res){
  
+ 
+  Account.remove({name: 'admin'}, function(err, doc){
+    console.log(doc)
+  })
   Account.find({}, function(err, doc){
     console.log(11111)
     res.json(doc)
@@ -23,7 +27,12 @@ Router.get('/account',function(req, res){
 })
 
 
-
+// Account.remove({name: 'admin'}, function(err, doc){
+//   console.log(doc)
+// })
+// Account.find({}, function(err, doc){
+//   console.log(11111)
+// })
 
 
 

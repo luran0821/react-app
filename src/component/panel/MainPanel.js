@@ -10,10 +10,11 @@ import './panel.css'
 import  login  from '../../component/login/Login';
 import  utable  from '../../component/utable/UserTable';
 import  deptable  from '../../component/deptable/DepTabel';
+import educhart from '../../component/educhart/EduChart';
+import salarychart from '../../component/salarychart/SalaryChart';
+
  class MainPanel extends Component {     
     render() {
-
-
         const items = [
             {
                label: '人员信息管理',
@@ -66,10 +67,10 @@ import  deptable  from '../../component/deptable/DepTabel';
                icon:'pi pi-fw pi-dollar',
                items:[
                   {
-                     label:'基本工资',
+                     label:'工资',
                      icon:'pi pi-fw pi-dollar',
                      command: (event) => {
-                      //  window.location.hash='/table'
+                        //window.location.hash='/table'
                        
                     }
                   },
@@ -89,18 +90,18 @@ import  deptable  from '../../component/deptable/DepTabel';
                icon:'pi pi-fw pi-calendar',
                items:[
                   {
-                     label:'New',
-                     icon:'pi pi-fw pi-user-plus',
+                     label:'休息管理',
+                     icon:'pi pi-fw pi-clock',
          
                   },
                   {
-                     label:'Delete',
-                     icon:'pi pi-fw pi-user-minus',
+                     label:'员工考勤',
+                     icon:'pi pi-fw pi-user',
          
                   },
                   {
-                     label:'Search',
-                     icon:'pi pi-fw pi-users',
+                     label:'值班安排',
+                     icon:'pi pi-fw pi-calendar-plus',
                   }
                ]
             },
@@ -109,20 +110,24 @@ import  deptable  from '../../component/deptable/DepTabel';
                icon:'pi pi-fw pi-chart-bar',
                items:[
                   {
-                     label:'在职员工学历统计',
-                     icon:'pi pi-fw pi-pencil'
+                     label:'员工学历统计',
+                     icon:'pi pi-fw pi-pencil',
+                     command: (event) => {
+                        window.location.hash='/educhart'
+                         
+                      }
                   },
                   {
-                     label:'在职员工薪资分布',
-                     icon:'pi pi-fw pi-money-bill'
+                     label:'员工薪资分布',
+                     icon:'pi pi-fw pi-money-bill',
+                     command: (event) => {
+                         window.location.hash='/salarychart'
+                         
+                      }
                   }
                ]
             }
          ]
-
-
-
-
         return (
             
             <div>
@@ -135,22 +140,19 @@ import  deptable  from '../../component/deptable/DepTabel';
                           />
                        </div>
                        <div className='right-panel'>
-                        <Router>
-                        
-                           
-                            <Route path="/login" exact component={ login } />  
-                            <Route path="/utable" exact component={ utable } />
-                            <Route path="/deptable" exact component={ deptable } />        
+                       
+                        <Router>                                              
+                            <Route path='/login'   exact component={ login } />  
+                            <Route path='/utable'  exact component={ utable } />
+                            <Route path='/deptable' exact component={ deptable } />
+                            <Route path='/educhart'  exact component={ educhart } />
+                            <Route path='/salarychart' exact component={ salarychart } />        
                         </Router>
                        
                        </div>
                        <div className='bottom-panel clear'>Copyright © 2019  All Rights Reserved</div>
                 </div>        
-            </div>
-            
-            
-                
-            
+            </div>            
         ) 
     }
                           
