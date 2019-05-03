@@ -10,7 +10,7 @@ const redisStore = require('connect-redis')(session);
 
 const app =  express()
 
-app.use('/api',accountRouter)
+app.use('/user',accountRouter)
 
 
 ///user/info userRouter子路由

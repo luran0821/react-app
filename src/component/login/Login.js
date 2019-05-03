@@ -13,34 +13,8 @@ import './login.css'
 const Login = (props) => {
         const { name, password, loginNameChanege, loginPwdChanege, onClickLogin, redirecTo } = props
         return(
-            <div className = 'loginbox' >
-                 {/* <div>
-                    <input value= { name }
-                           onChange={ loginNameChanege }
-                    />
-                 </div>
-                 <div>
-                    <input value= { password }
-                           onChange= { loginPwdChanege }
-                    />
-                 </div>
-                 <div>
-                    <button name='login'
-                            onClick= { onClickLogin }
-                    > login 
-                   { redirecTo ? <Redirect to = { redirecTo } /> : null}
-                    </button>
-                    <button name='register' > register </button>
-                 </div>
-                 <div>
-                 <button 
-
-                            >login</button></div>
-                 <div><button
-                            
-                            >logout</button></div> */}
-
-
+           
+            <div className = 'loginbox' >                
                  <div>           
                     <span className='p-float-label input-name'>
                         <InputText  
@@ -71,15 +45,8 @@ const Login = (props) => {
                     <Button className="p-button-info regin-button" label="注册" />
                     <Button  className="p-button-info  login-button" label="登陆" />
                 </div>
-
-
-         
-
-
-
-
-
             </div>
+        
         )
 
 }

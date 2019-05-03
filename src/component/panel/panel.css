@@ -7,14 +7,14 @@
 }
 .left-panel{
     margin-top: 2px;
-    width: 15%;
+    width: 13%;
     min-height:  600px;
     float: left;
 }
 .right-panel{
     margin-top: 2px;
     min-height:  600px;
-    width: 85%;
+    width: 87%;
     float: left;
 }
 .bottom-panel{

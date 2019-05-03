@@ -19,7 +19,7 @@ import './UserTable.css'
       super();
       this.state = {
         cars: [
-          {"name": "VW", "job_number": 2012, "department": "Orange", "age": "dsad231ff",birth: 'wqwq',gender: 'wqwq', identity_number: 'cwqe', marriage: 'cewe', political: 'dwede', phone:'dwqe', inservice_time: 'dwq',address: 'dewdw'},
+          {"name": "VW", "job_number": 2012, "department": "Orange", "age": "12",birth: 'wqwq',gender: 'wqwq', identity_number: 'cwqe', marriage: 'cewe', political: 'dwede', phone:'dwqe', inservice_time: 'dwq',address: 'dewdw'},
           {"name": "VW", "job_number": 2012, "department": "Orange", "age": "dsad231ff",birth: 'wqwq',gender: 'wqwq', identity_number: 'cwqe', marriage: 'cewe', political: 'dwede', phone:'dwqe', inservice_time: 'dwq',address: 'dewdw'},
           {"name": "VW", "job_number": 2012, "department": "Orange", "age": "dsad231ff",birth: 'wqwq',gender: 'wqwq', identity_number: 'cwqe', marriage: 'cewe', political: 'dwede', phone:'dwqe', inservice_time: 'dwq',address: 'dewdw'},
           {"name": "VW", "job_number": 2012, "department": "Orange", "age": "dsad231ff",birth: 'wqwq',gender: 'wqwq', identity_number: 'cwqe', marriage: 'cewe', political: 'dwede', phone:'dwqe', inservice_time: 'dwq',address: 'dewdw'},
@@ -127,18 +127,18 @@ addNew() {
                            globalFilter={this.state.globalFilter} emptyMessage="没有结果"
                            >
 
-                    <Column field="name" header="姓名" sortable={true}  />
-                    <Column field="job_number" header="工号" sortable={true}  />
-                    <Column field="department" header="部门" sortable={true} />
-                    <Column field="age" header="年龄" sortable={true}  />
-                    <Column field="birth" header="出生年月" sortable={true}  />
-                    <Column field="gender" header="性别" sortable={true} />
-                    <Column field="identity_number" header="身份证号" sortable={true} />
-                    <Column field="marriage" header="婚姻情况" sortable={true} />
-                    <Column field="political" header="政治面貌" sortable={true} />
-                    <Column field="phone" header="电话" sortable={true} />
-                    <Column field="inservice_time" header="入职时间" sortable={true} />
-                    <Column field="address" header="家庭住址" sortable={true} />
+                    <Column field="name" header="姓名" sortable={true} style={{width: '6em',fontWeight: 'none'}} />
+                    <Column field="job_number" header="工号" sortable={true} style={{width: '7em'}} />
+                    <Column field="department" header="部门" sortable={true}  style={{width: '6em'}}/>
+                    <Column field="age" header="年龄" sortable={true}  style={{width: '5em'}}/>
+                    <Column field="birth" header="出生年月" sortable={true} style={{width: '8em'}} />
+                    <Column field="gender" header="性别" sortable={true} style={{width: '5em'}}/>
+                    <Column field="identity_number" header="身份证号" sortable={true} style={{width: '12em'}} />
+                    <Column field="marriage" header="婚姻情况" sortable={true} style={{width: '6em'}}/>
+                    <Column field="political" header="政治面貌" sortable={true} style={{width: '6em'}}/>
+                    <Column field="phone" header="电话" sortable={true} style={{width: '10em'}} />
+                    <Column field="inservice_time" header="入职时间" sortable={true}  style={{width: '8em'}}/>
+                    <Column field="address" header="住址" sortable={true} />
                 </DataTable>
 
 

@@ -7,7 +7,6 @@ import Menue from '../menue/Menue'
 import {PanelMenu} from 'primereact/panelmenu';
 
 import './panel.css'
-import  login  from '../../component/login/Login';
 import  utable  from '../../component/utable/UserTable';
 import  deptable  from '../../component/deptable/DepTabel';
 import educhart from '../../component/educhart/EduChart';
@@ -17,12 +16,12 @@ import salarychart from '../../component/salarychart/SalaryChart';
     render() {
         const items = [
             {
-               label: '人员信息管理',
+               label: '人员信息',
                icon:'pi pi-fw pi-user',
                items:[  
                   {
                      
-                     label:'人员信息',
+                     label:'员工管理',
                      icon:'pi pi-fw pi-user',
                      command: (event) => {
                         window.location.hash='/utable'
@@ -30,24 +29,20 @@ import salarychart from '../../component/salarychart/SalaryChart';
                     }
                   },
                   {
-                     label:'学历信息',
+                     label:'学历管理',
                      icon:'pi pi-fw pi-user',
                      
                   }
                ]
             },
             {
-               label: '部门管理',
+               label: '部门信息',
                icon:'pi pi-fw pi-sitemap',
                items:[  
                   {
-                     label:'部门信息',
+                     label:'部门管理',
                      icon:'pi pi-fw pi-users',
                      
-                  },
-                  {
-                     label:'部门调动',
-                     icon:'pi pi-fw pi-users',                     
                   },
                   {
                      label:'添加部门',
@@ -126,7 +121,22 @@ import salarychart from '../../component/salarychart/SalaryChart';
                       }
                   }
                ]
-            }
+            },
+            {
+               label: '账号信息',
+               icon:'pi pi-fw pi-users',
+               items:[  
+                  {
+                     
+                     label:'账号管理',
+                     icon:'pi pi-fw pi-user',
+                     command: (event) => {
+                        window.location.hash='/utable'
+                        
+                    }
+                  }
+               ]
+            },
          ]
         return (
             
@@ -140,9 +150,8 @@ import salarychart from '../../component/salarychart/SalaryChart';
                           />
                        </div>
                        <div className='right-panel'>
-                       
-                        <Router>                                              
-                            <Route path='/login'   exact component={ login } />  
+                        <Router>                                                                     
+                            <Route path='/'  exact component={ utable } />
                             <Route path='/utable'  exact component={ utable } />
                             <Route path='/deptable' exact component={ deptable } />
                             <Route path='/educhart'  exact component={ educhart } />
