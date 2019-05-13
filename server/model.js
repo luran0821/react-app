@@ -190,8 +190,6 @@ const models = {
         h_education: {type: String, require: true},        //最高学历
         school_name:{type: String, require: true}          //学校
      }
-
-
 }
 
 

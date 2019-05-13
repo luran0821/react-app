@@ -62,7 +62,35 @@ export const onClickregister = () => ({
 })
 
 
-/** */
+/**dep*/
+export const inputNameChanege = (e) => ({
+    type: types.InputNameChanege,
+    value: e.target.value
+})
+
+export const inputIdChanege = (e) => ({
+    type: types.InputIdChanege,
+    value: e.target.value
+})
+
+export const selectionChange = (e) => ({
+    type: types.SelectionChange,
+    value: e.target.value
+})
+
+export const onCarSelect = (e) => ({
+    type: types.OnCarSelect,
+    value: e.target.value
+})
+
+export const deponHide = () => ({
+    type: types.DepOnHide,   
+})
+
+export const InputSearchChanege = (e) => ({
+    type: types.InputSearchChanege,
+    value: e.target.value
+})
 
 
 /** */

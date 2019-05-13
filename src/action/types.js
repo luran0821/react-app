@@ -12,3 +12,14 @@ export const Register_PWD = 'register_pwd'
 export const Register_sPWD = 'register_spwd'
 export const Register_Npassword = 'register_npassword'
 export const Register = 'register'
+
+
+
+//dep
+
+export const  InputNameChanege = 'inputname_chanege'
+export const  InputIdChanege = 'inputid_chanege'
+export const  SelectionChange = 'selection_chanege'
+export const  OnCarSelect = 'oncar_select'
+export const  DepOnHide = 'depon_hide'
+export const InputSearchChanege = 'inputSearch_chanege'
