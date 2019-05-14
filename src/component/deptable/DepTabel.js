@@ -92,8 +92,13 @@ depaddNew() {
 
 
   render() {
-    const {depaddNew, depDelete, displayDialog, onCarSelect, updateProperty ,name,department_id, selectedCar, cars, depSave,inputSearchChanege ,selectionChange}  = this.props
+    const {
+        depaddNew, depDelete, displayDialog, onCarSelect, updateProperty ,
+        name,department_id, selectedCar, cars, depSave,inputSearchChanege ,
+        selectionChange, deponHide
+    }  = this.props
     // let header = <div className="p-clearfix" style={{lineHeight:'1.87em'}}>CRUD for Cars </div>;
+
     var header = <div style={{'textAlign':'right'}}>
                         <i className="pi pi-search" style={{margin:'4px 4px 0 0'}}></i>
                         <InputText type="search" 
@@ -130,10 +135,9 @@ depaddNew() {
                            onSelectionChange = { selectionChange }
                          //onRowSelect={this.onCarSelect}
                          onRowSelect = { onCarSelect }
-                           globalFilter={this.state.globalFilter} emptyMessage="没有结果"
-                           >
-
-                    
+                          // globalFilter={this.state.globalFilter} emptyMessage="没有结果"
+                          globalFilter={ globalFilter } emptyMessage="没有结果"
+                           >                    
                     <Column field="name" header="部门名称" sortable={true} />
                     <Column field="department_id" header="部门编号" sortable={true} />
                 </DataTable>
@@ -146,8 +150,9 @@ depaddNew() {
                 <Dialog visible={ displayDialog } width="300px" 
                 header="部门信息" 
                 modal={true} 
-                footer={dialogFooter} 
-                onHide={() => this.setState({displayDialog: false})}
+                footer={ dialogFooter } 
+                // onHide={() => this.setState({displayDialog: false})}
+                onHide={ deponHide }
                 >   
                     {
                         cars && 
@@ -157,8 +162,8 @@ depaddNew() {
                             <div className="p-col-8" style={{padding:'.5em'}}>
                                 <InputText id="name" 
 
-                                onChange={(e) => {this.updateProperty('name', e.target.value)}} 
-
+                                // onChange={(e) => {this.updateProperty('name', e.target.value)}} 
+                                onChange = { inputNameChanege }
                                 value={ name }/>
                             </div>
                             
@@ -166,8 +171,8 @@ depaddNew() {
                             <div className="p-col-8" style={{padding:'.5em'}}>
                                 <InputText id="department_id"
 
-                                onChange={(e) => {this.updateProperty('department_id', e.target.value)}} 
-                                
+                                // onChange={(e) => {this.updateProperty('department_id', e.target.value)}} 
+                                onChange = { inputIdChanege }
                                 value={ department_id }/>
                             </div>
 
@@ -217,7 +222,8 @@ const mapDispatchToProps = (dispatch) =>({
     },
     depDelete(){
         dispatch(actionCreators.depDelete())
-    },
+    }
+   
 })
 
 

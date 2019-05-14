@@ -13,6 +13,7 @@ const initState = {
 }
 
 export default(state = initState, action) => {
+  
   if(action.type === types.InputSearchChanege){
     const newState = JSON.parse(JSON.stringify(state))
     newState.globalFilter = action.value
@@ -20,12 +21,13 @@ export default(state = initState, action) => {
 }
   if(action.type === types.InputNameChanege){
       const newState = JSON.parse(JSON.stringify(state))
-     
+      newState.cars.name = action.value
       return newState
   } 
+
   if(action.type === types.InputIdChanege){
     const newState = JSON.parse(JSON.stringify(state))
-   
+    newState.cars.department_id = action.value
     return newState
 } 
 if(action.type === types.SelectionChange){
@@ -36,23 +38,19 @@ if(action.type === types.SelectionChange){
  
 if(action.type === types.DepOnHide){
   const newState = JSON.parse(JSON.stringify(state))
- 
+  newState.displayDialog = false
   return newState
 } 
+
 
 
 return state
 }
 
-function findSelectedCarIndex ()
-{
-  return this.state.cars.indexOf(this.state.selectedCar);
+function findSelectedCarIndex (state = initState){
+
+  return state.cars.indexOf(state.selectedCar);
 }
 
-function updateProperty (state = initState, property, value) {
-  let car = state.cars;
-  car[property] = value;
-  const newState = JSON.parse(JSON.stringify(state))
-  return newState;
-}
+
 
