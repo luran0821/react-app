@@ -6,15 +6,15 @@ import {Dialog} from 'primereact/dialog';
 import {InputText} from 'primereact/inputtext';
 import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
-//import {DataTableSubmenu} from './DataTableSubmenu';
 
 
-//import './UserTable.css'
+class DepTabel extends Component{
 
-
-const DepTabel = (props) => {
-
-
+    constructor (props) {
+        super(props)
+        //todo
+       //this.props.onCarSelect = this.props.onCarSelect.bind(this)
+    }
 
 //   depSave() {
 //     let cars = [...this.state.car];
@@ -63,7 +63,7 @@ const DepTabel = (props) => {
 // }
 
 
-  
+render () {
     const {
         depaddNew, 
         depDelete, 
@@ -81,9 +81,9 @@ const DepTabel = (props) => {
         inputSearchChanege ,
         selectionChange, 
         deponHide,
-    }  = props
+    }  = this.props
     // let header = <div className="p-clearfix" style={{lineHeight:'1.87em'}}>CRUD for Cars </div>;
-
+    
 
 
 
@@ -117,12 +117,14 @@ const DepTabel = (props) => {
                 <DataTable value={ cars } paginator={true} rows={20}  
                             header={header} footer={footer}
                            selectionMode="single" 
-                           
+                           //  selection={this.state.selectedCar} 
+                          
                            selection={ selectedCar } 
+                       
                         // onSelectionChange={e => this.setState({selectedCar: e.value})}
-                           onSelectionChange = { selectionChange }
+                           onSelectionChange = { selectionChange  }
                          //onRowSelect={this.onCarSelect}
-                         onRowSelect = { onCarSelect.bind(this) }
+                         onRowSelect = { onCarSelect  }
                           // globalFilter={this.state.globalFilter} emptyMessage="没有结果"
                           globalFilter={ globalFilter } emptyMessage="没有结果"
                            >                    
@@ -171,7 +173,7 @@ const DepTabel = (props) => {
         </div>
     )}
   
-
+ }
 
 
    const mapStateToProps = (state) => ({
@@ -202,6 +204,7 @@ const mapDispatchToProps = (dispatch) =>({
     selectionChange(e){
         dispatch(actionCreators.selectionChange(e))
     },
+
     onCarSelect(e){
         dispatch(actionCreators.onCarSelect(e))
     },

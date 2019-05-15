@@ -2,21 +2,23 @@ import * as types from '../action/types'
 
 const initState = {
   car:{
-    name: 'yang',
-  department_id: 2132
+    name: '',
+    department_id: ''
   },
     
   displayDialog: false,
-  selectedCar: null,
+  selectedCar: {},
   globalFilter: null,
   newCar: false,
-  cars: []
+  cars: [{
+    name: '32',
+    department_id: 2132
+  },{
+    name: 'ya32ng',
+    department_id: 2132
+  }]
 }
    
-  
-   
-
-
 export default(state = initState, action) => {
   
     if(action.type === types.InputSearchChanege){
@@ -42,7 +44,16 @@ export default(state = initState, action) => {
     newState.selectedCar = action.value
     return newState
   } 
- 
+
+  if(action.type === types.OnCarSelect){
+   
+    const newState = JSON.parse(JSON.stringify(state))
+    newState.newCar = false
+    newState.displayDialog = true
+    //car: Object.assign({}, e.data
+    newState.car =  action.value
+    return newState
+  } 
   if(action.type === types.DepOnHide){
     const newState = JSON.parse(JSON.stringify(state))
     newState.displayDialog = false
