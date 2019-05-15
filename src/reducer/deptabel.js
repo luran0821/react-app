@@ -1,19 +1,21 @@
 import * as types from '../action/types'
-import axios from 'axios'
-
 
 const initState = {
-    cars: {
-      car: {
-      name: 'yang',
-      department_id: '1213'
-    }
+  car:{
+    name: 'yang',
+  department_id: 2132
   },
-    displayDialog: '',
-    selectedCar: '',
-    globalFilter: '',
-    newCar: ''
+    
+  displayDialog: false,
+  selectedCar: null,
+  globalFilter: null,
+  newCar: false,
+  cars: []
 }
+   
+  
+   
+
 
 export default(state = initState, action) => {
   
@@ -25,13 +27,13 @@ export default(state = initState, action) => {
 
     if(action.type === types.InputNameChanege){
         const newState = JSON.parse(JSON.stringify(state))
-        newState.cars.name = action.value
+        newState.car.name = action.value
         return newState
    } 
 
   if(action.type === types.InputIdChanege){
     const newState = JSON.parse(JSON.stringify(state))
-    newState.cars.department_id = action.value
+    newState.car.department_id = action.value
     return newState
   } 
 
@@ -51,29 +53,26 @@ export default(state = initState, action) => {
     const newState = JSON.parse(JSON.stringify(state))
 
     newState.newCar = true
-    newState = [...action.value]
+    newState.cars.name = '' 
+    newState.cars.department_id = ''
     newState.displayDialog = true
     return newState
   } 
 
   if(action.type === types.DepSave){
     const newState = JSON.parse(JSON.stringify(state))
+
+    newState.cars = [...state.cars];
     
-   
-
-
-
-
-    let cars = [...state.cars];
     if(state.newCar)
-        cars.push(state.cars);
+    newState.cars.push(state.car);
     else
-        cars[findSelectedCarIndex()] = state.cars;
+    newState.cars[findSelectedCarIndex()] = state.cars;
 
-    newState.cars = cars
     newState.selectedCar = null 
-    newState.selectedCar
-    this.setState({cars:cars, selectedCar:null, car: null, displayDialog:false});
+    //newState.car = null 
+    newState.displayDialog = false 
+    //this.setState({cars:cars, selectedCar:null, car: null, displayDialog:false});
     return newState
   } 
 

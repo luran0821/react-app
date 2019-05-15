@@ -12,92 +12,67 @@ import * as actionCreators from '../../action/actionCreators'
 //import './UserTable.css'
 
 
- class DepTabel extends Component {
+const DepTabel = (props) => {
+
+
+
+//   depSave() {
+//     let cars = [...this.state.car];
+//     if(this.newCar)
+//         cars.push(this.state.car);
+//     else
+//         cars[this.findSelectedCarIndex()] = this.state.car;
+
+//     this.setState({cars:cars, selectedCar:null, car: null, displayDialog:false});
+// }
+
+// depDelete() {
+//     let index = this.findSelectedCarIndex();
+//     this.setState({
+//         cars: this.state.cars.filter((val,i) => i !== index),
+//         selectedCar: null,
+//         car: null,
+//         displayDialog: false});
+// }
+
+// findSelectedCarIndex() {
+//     return this.state.cars.indexOf(this.state.selectedCar);
+// }
+
+// updateProperty(property, value) {
+//     let car = this.state.car;
+//     car[property] = value;
+//     this.setState({car: car});
+// }
+
+
+// onCarSelect(e){
+//     this.newCar = false;
+//     this.setState({
+//         displayDialog:true,
+//         car: Object.assign({}, e.data)
+//     });
+// }
+
+// depaddNew() {
+//     this.newCar = true;
+//     this.setState({
+//         car: {name:'', department_id: ''},
+//         displayDialog: true
+//     });
+// }
 
 
   
-  constructor(props) {
-      super(props);
-    //   this.state = {
-    //     cars: [
-    //       {"name": "VW", "department_id": 2012},
-    //       {"name": "VW", "department_id": 2012},
-    //       {"name": "VW", "department_id": 2012},
-    //       {"name": "VW", "department_id": 2012},
-    //       {"name": "VW", "department_id": 2012},
-    //       {"name": "VW", "department_id": 2012},
-    //       {"name": "VW", "department_id": 2012}
-    //     ]
-
-     // };
-     // this.carservice = new CarService();
-
-
-        this.props.depsave = this.props.depsave.bind(this);
-        this.props.depdelete = this.props.depdelete.bind(this);
-        this.props.onCarSelect = this.props.onCarSelect.bind(this);
-        this.props.depaddNew =this.props.depaddNew.bind(this);
-
-  }
-
-  componentDidMount() {
-     // this.carservice.getCarsSmall().then(data => this.setState({cars: data}));   
-  }
-
-  depSave() {
-    let cars = [...this.state.car];
-    if(this.newCar)
-        cars.push(this.state.car);
-    else
-        cars[this.findSelectedCarIndex()] = this.state.car;
-
-    this.setState({cars:cars, selectedCar:null, car: null, displayDialog:false});
-}
-
-depDelete() {
-    let index = this.findSelectedCarIndex();
-    this.setState({
-        cars: this.state.cars.filter((val,i) => i !== index),
-        selectedCar: null,
-        car: null,
-        displayDialog: false});
-}
-
-findSelectedCarIndex() {
-    return this.state.cars.indexOf(this.state.selectedCar);
-}
-
-updateProperty(property, value) {
-    let car = this.state.car;
-    car[property] = value;
-    this.setState({car: car});
-}
-
-
-onCarSelect(e){
-    this.newCar = false;
-    this.setState({
-        displayDialog:true,
-        car: Object.assign({}, e.data)
-    });
-}
-
-depaddNew() {
-    this.newCar = true;
-    this.setState({
-        car: {name:'', department_id: ''},
-        displayDialog: true
-    });
-}
-
-
-  render() {
     const {
         depaddNew, 
         depDelete, 
         displayDialog, 
         onCarSelect, 
         updateProperty ,
+        inputNameChanege,
+        inputIdChanege,
+        globalFilter,
         name,
         department_id, 
         selectedCar, 
@@ -106,8 +81,11 @@ depaddNew() {
         inputSearchChanege ,
         selectionChange, 
         deponHide,
-    }  = this.props
+    }  = props
     // let header = <div className="p-clearfix" style={{lineHeight:'1.87em'}}>CRUD for Cars </div>;
+
+
+
 
     var header = <div style={{'textAlign':'right'}}>
                         <i className="pi pi-search" style={{margin:'4px 4px 0 0'}}></i>
@@ -120,16 +98,16 @@ depaddNew() {
 
     let footer = <div className="p-clearfix" style={{width:'100%'}}>
         <Button style={{float:'left'}} label="添加" icon="pi pi-plus" 
-        onClick={ depaddNew }           
+        onClick={ depaddNew.bind(this) }           
         />
     </div>;
 
     let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
             <Button label="删除" icon="pi pi-times" 
-            onClick={ depDelete }                
+            onClick={ depDelete.bind(this) }                
             />
             <Button label="保存" icon="pi pi-check" 
-            onClick={ depSave }               
+            onClick={ depSave.bind(this) }               
             />
         </div>;
 
@@ -144,7 +122,7 @@ depaddNew() {
                         // onSelectionChange={e => this.setState({selectedCar: e.value})}
                            onSelectionChange = { selectionChange }
                          //onRowSelect={this.onCarSelect}
-                         onRowSelect = { onCarSelect }
+                         onRowSelect = { onCarSelect.bind(this) }
                           // globalFilter={this.state.globalFilter} emptyMessage="没有结果"
                           globalFilter={ globalFilter } emptyMessage="没有结果"
                            >                    
@@ -165,8 +143,7 @@ depaddNew() {
                 onHide={ deponHide }
                 >   
                     {
-                        cars && 
-                        
+                        cars &&   
                         <div className="p-grid p-fluid">
                             <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="name">部门名称</label></div>
                             <div className="p-col-8" style={{padding:'.5em'}}>
@@ -193,17 +170,17 @@ depaddNew() {
             </div>
         </div>
     )}
-   }
+  
 
 
 
    const mapStateToProps = (state) => ({
-    name: state.deptabel.cars.name,
+    name: state.deptabel.car.name,
     cars: state.deptabel.cars,
-    department_id: state.deptabel.cars.department_id,
+    department_id: state.deptabel.car.department_id,
     displayDialog: state.deptabel.displayDialog,
-    selectedCar: state.depTabel.selectedCar,
-    globalFilter: state.depTabel.globalFilter
+    selectedCar: state.deptabel.selectedCar,
+    globalFilter: state.deptabel.globalFilter
     
 })
 
@@ -211,7 +188,7 @@ depaddNew() {
 const mapDispatchToProps = (dispatch) =>({
 
     inputSearchChanege(e){
-        dispatch(actionCreators.inputSearchChanege(e))
+        dispatch(actionCreators.InputSearchChanege(e))
     },
 
     inputNameChanege(e){

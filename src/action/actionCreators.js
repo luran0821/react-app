@@ -92,17 +92,17 @@ export const InputSearchChanege = (e) => ({
     value: e.target.value
 })
 
-export const depaddNew = () => {
+export const depaddNew = () => ({
     type: types.DepaddNew
-}
+})
 
-export const depDelete = () => {
+export const depDelete = () => ({
     type: types.DepDelete
-}
+})
 
-export const depSave = () => {
+export const depSave = () => ({
     type: types.DepSave
-}
+})
 /** */
 /** */
 /** */
