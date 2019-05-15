@@ -93,9 +93,19 @@ depaddNew() {
 
   render() {
     const {
-        depaddNew, depDelete, displayDialog, onCarSelect, updateProperty ,
-        name,department_id, selectedCar, cars, depSave,inputSearchChanege ,
-        selectionChange, deponHide
+        depaddNew, 
+        depDelete, 
+        displayDialog, 
+        onCarSelect, 
+        updateProperty ,
+        name,
+        department_id, 
+        selectedCar, 
+        cars, 
+        depSave,
+        inputSearchChanege ,
+        selectionChange, 
+        deponHide,
     }  = this.props
     // let header = <div className="p-clearfix" style={{lineHeight:'1.87em'}}>CRUD for Cars </div>;
 
@@ -188,9 +198,9 @@ depaddNew() {
 
 
    const mapStateToProps = (state) => ({
-    name: state.deptabel.car.name,
+    name: state.deptabel.cars.name,
     cars: state.deptabel.cars,
-    department_id: state.deptabel.car.department_id,
+    department_id: state.deptabel.cars.department_id,
     displayDialog: state.deptabel.displayDialog,
     selectedCar: state.depTabel.selectedCar,
     globalFilter: state.depTabel.globalFilter
@@ -199,29 +209,40 @@ depaddNew() {
 
 
 const mapDispatchToProps = (dispatch) =>({
+
     inputSearchChanege(e){
         dispatch(actionCreators.inputSearchChanege(e))
     },
+
     inputNameChanege(e){
         dispatch(actionCreators.inputNameChanege(e))
     },
+
     inputIdChanege(e){
         dispatch(actionCreators.inputIdChanege(e))
     },
+
     selectionChange(e){
         dispatch(actionCreators.selectionChange(e))
     },
     onCarSelect(e){
         dispatch(actionCreators.onCarSelect(e))
     },
+
     deponHide(){
         dispatch(actionCreators.deponHide())
     },
+
     depSave(){
         dispatch(actionCreators.depSave())
     },
+
     depDelete(){
         dispatch(actionCreators.depDelete())
+    },
+
+    depaddNew(){
+        dispatch(actionCreators.depaddNew())
     }
    
 })
