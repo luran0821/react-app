@@ -63,8 +63,11 @@ class DepTabel extends Component{
 // }
 
 
+
+
+
 render () {
-    const {
+    let {
         depaddNew, 
         depDelete, 
         displayDialog, 
@@ -84,8 +87,7 @@ render () {
     }  = this.props
     // let header = <div className="p-clearfix" style={{lineHeight:'1.87em'}}>CRUD for Cars </div>;
     
-
-
+    onCarSelect = onCarSelect.bind(this)
 
     var header = <div style={{'textAlign':'right'}}>
                         <i className="pi pi-search" style={{margin:'4px 4px 0 0'}}></i>
@@ -115,16 +117,23 @@ render () {
         <div>
             <div className="content-section implementation">
                 <DataTable value={ cars } paginator={true} rows={20}  
-                            header={header} footer={footer}
+                            header={header} 
+                            footer={footer}
+                           
                            selectionMode="single" 
                            //  selection={this.state.selectedCar} 
                           
                            selection={ selectedCar } 
                        
                         // onSelectionChange={e => this.setState({selectedCar: e.value})}
-                           onSelectionChange = { selectionChange  }
-                         //onRowSelect={this.onCarSelect}
-                         onRowSelect = { onCarSelect  }
+                           onSelectionChange = { selectionChange.bind(this) }
+                           //using ?
+                         //  onRowSelect={e => onCarSelect}
+                         
+
+                        
+   
+
                           // globalFilter={this.state.globalFilter} emptyMessage="没有结果"
                           globalFilter={ globalFilter } emptyMessage="没有结果"
                            >                    

@@ -75,12 +75,12 @@ export const inputIdChanege = (e) => ({
 
 export const selectionChange = (e) => ({
     type: types.SelectionChange,
-    value: e.target.value
+    value: e.value
 })
 
 export const onCarSelect = (e) => ({
     type: types.OnCarSelect,
-    value: e.target.value
+    value: e.value
 })
 
 export const deponHide = () => ({

@@ -42,6 +42,9 @@ export default(state = initState, action) => {
   if(action.type === types.SelectionChange){
     const newState = JSON.parse(JSON.stringify(state))
     newState.selectedCar = action.value
+    newState.car = action.value
+    newState.displayDialog = true
+
     return newState
   } 
 
@@ -50,8 +53,9 @@ export default(state = initState, action) => {
     const newState = JSON.parse(JSON.stringify(state))
     newState.newCar = false
     newState.displayDialog = true
+    console.log(action)
     //car: Object.assign({}, e.data
-    newState.car =  action.value
+    //newState.cars =  action.value
     return newState
   } 
   if(action.type === types.DepOnHide){
