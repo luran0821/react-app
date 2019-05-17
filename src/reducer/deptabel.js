@@ -48,16 +48,16 @@ export default(state = initState, action) => {
     return newState
   } 
 
-  if(action.type === types.OnCarSelect){
+  // if(action.type === types.OnCarSelect){
    
-    const newState = JSON.parse(JSON.stringify(state))
-    newState.newCar = false
-    newState.displayDialog = true
-    console.log(action)
-    //car: Object.assign({}, e.data
-    //newState.cars =  action.value
-    return newState
-  } 
+  //   const newState = JSON.parse(JSON.stringify(state))
+  //   newState.newCar = false
+  //   newState.displayDialog = true
+  //   console.log(action)
+  //   //car: Object.assign({}, e.data
+  //   //newState.cars =  action.value
+  //   return newState
+  // } 
   if(action.type === types.DepOnHide){
     const newState = JSON.parse(JSON.stringify(state))
     newState.displayDialog = false
@@ -91,6 +91,30 @@ export default(state = initState, action) => {
     return newState
   } 
 
+
+
+
+  if(action.type === types.DepDelete){
+    const newState = JSON.parse(JSON.stringify(state))
+    let index = findSelectedCarIndex()
+  
+    let val = state.car.department_id
+    console.log(index)
+    newState.cars = state.cars.filter(( val ,i) => i !== index)
+    newState.selectedCar = null
+    newState.displayDialog = false
+    return newState
+  } 
+  //     let index = this.findSelectedCarIndex();
+  //     this.setState({
+  //         cars: this.state.cars.filter((val,i) => i !== index),
+  //         selectedCar: null,
+  //         car: null,
+  //         displayDialog: false});
+  // }
+
+
+  
 
   return state
 }
