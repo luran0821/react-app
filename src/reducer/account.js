@@ -3,7 +3,7 @@ import * as types from '../action/types'
 const initState = {
   car:{
     name: '',
-    department_id: ''
+    password: ''
   },
     
   displayDialog: false,
@@ -12,104 +12,65 @@ const initState = {
   newCar: false,
   index: 0,
   cars: [{
-    name: '生产部',
-    department_id: '0001'
+    name: '32',
+    password: 2132
   },{
-    name: '公关部',
-    department_id:  '0002'
-  },{
-    name: '设能部',
-    department_id:  '0003'
-  },{
-    name: '保卫部',
-    department_id:  '0004'
-  },{
-    name: '人力资源部',
-    department_id:  '0005'
-  },{
-    name: '财务部',
-    department_id:  '0006'
-  },{
-    name: '项目部',
-    department_id:  '0007'
-  },{
-    name: '综合服务部',
-    department_id:  '0008'
-  },{
-    name: '安全环保部',
-    department_id:  '0009'
-  }
-]
+    name: 'ya32ng',
+    password: 2132
+  }]
 }
    
 export default(state = initState, action) => {
   
-    if(action.type === types.InputSearchChanege){
+    if(action.type === types.AInputSearchChanege){
       const newState = JSON.parse(JSON.stringify(state))
       newState.globalFilter = action.value
-      
       return newState
   }
 
-    if(action.type === types.InputNameChanege){
+    if(action.type === types.AInputNameChanege){
         const newState = JSON.parse(JSON.stringify(state))
         newState.car.name = action.value
-    
         return newState
    } 
 
-  if(action.type === types.InputIdChanege){
+  if(action.type === types.AInputPwdChanege){
     const newState = JSON.parse(JSON.stringify(state))
-    newState.car.department_id = action.value
-  
+    newState.car.password = action.value
     return newState
   } 
 
-  if(action.type === types.SelectionChange){
+  if(action.type === types.ASelectionChange){
     const newState = JSON.parse(JSON.stringify(state))
     newState.newCar = false
     newState.car = action.value
-    //newState.selectedCar = action.value
+   
     newState.index = state.cars.indexOf(action.value)
     console.log(state.cars.indexOf(action.value))
-//todo bug
-    // if( newState.message ){
-    //   let j , len 
-    //   for( j = 1,  len = state.cars.length; j <= len; j ++){
-    //     if (state.cars[j] == newState.car){
-    //       newState.index = state.cars.indexOf(state.cars[j])
-         
-    //     }
-    //   }
-      console.log(state.index)
-      
-      //newState.cars[state.index] = action.value
     
-   
-
     newState.displayDialog = true
     
     return newState
   } 
 
  
-  if(action.type === types.DepOnHide){
+  if(action.type === types.AonHide){
     const newState = JSON.parse(JSON.stringify(state))
     newState.displayDialog = false
     return newState
   } 
 
-  if(action.type === types.DepaddNew){
+  if(action.type === types.AaddNew){
     const newState = JSON.parse(JSON.stringify(state))
     newState.car.name = '' 
-    newState.car.department_id = ''
+    newState.car.password = ''
     newState.newCar = true
    
     newState.displayDialog = true
     return newState
   } 
 
-  if(action.type === types.DepSave){
+  if(action.type === types.ASave){
     const newState = JSON.parse(JSON.stringify(state))
 
     
@@ -120,7 +81,6 @@ export default(state = initState, action) => {
     
     else{
       newState.cars[state.index] = state.car
-      console.log( state.cars, state.selectedCar, state.car, state.index)
     }
   
     newState.selectedCar = null 
@@ -130,7 +90,7 @@ export default(state = initState, action) => {
   } 
 
 
-  if(action.type === types.DepDelete){
+  if(action.type === types.ADelete){
     const newState = JSON.parse(JSON.stringify(state))
     
     newState.cars = state.cars.filter(( val ,i) => i !== state.index)
@@ -138,9 +98,6 @@ export default(state = initState, action) => {
     newState.displayDialog = false
     return newState
   } 
-
-
-  
  
 
   return state

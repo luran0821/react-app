@@ -143,14 +143,6 @@ export const u_Save = () => ({
     type: types.u_Save
 })
 
-// export const u_updateProperty = (property, value) => ({
-//     type: types.u_UpdateProperty,
-//     value: value,
-//     property: property
-// })
-
-
-
 export const u_inputJobChanege = (e) => ({
     type: types.UinputJobChanege,
     value: e.target.value
@@ -217,6 +209,50 @@ export const u_inputInserviceTChanege = (e) => ({
 
 
 
-/** */
+/** account*/
+export const AInputNameChanege = (e) => ({
+    type: types.AInputNameChanege,
+    value: e.target.value
+})
+
+export const AInputPwdChanege = (e) => ({
+    type: types.AInputPwdChanege,
+    value: e.target.value
+})
+
+export const AselectionChange = (e) => ({
+    type: types.ASelectionChange,
+    value: e.value
+})
+
+
+export const AonHide = () => ({
+    type: types.AonHide,   
+})
+
+export const AInputSearchChanege = (e) => ({
+    type: types.AInputSearchChanege,
+    value: e.target.value
+})
+
+export const AaddNew = () => ({
+    type: types.AaddNew
+})
+
+export const ADelete = () => ({
+    type: types.ADelete
+})
+
+export const ASave = () => ({
+    type: types.ASave
+})
+
+
+
+
+
+
+
+
 /** */
 /** */

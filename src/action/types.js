@@ -20,13 +20,11 @@ export const Register = 'register'
 export const  InputNameChanege = 'inputname_chanege'
 export const  InputIdChanege = 'inputid_chanege'
 export const  SelectionChange = 'selection_chanege'
-export const  OnCarSelect = 'oncar_select'
 export const  DepOnHide = 'depon_hide'
 export const InputSearchChanege = 'inputSearch_chanege'
 export const DepaddNew = 'depaddNew'
 export const DepDelete = 'depDelete'
 export const DepSave = 'depSave'
-
 
 //user
 
@@ -52,3 +50,16 @@ export const UinputInserviceChanege = 'u_inputInserviceChanege'
 export const UinputAddressChanege  = 'u_inputAddressChanege'
 export const UInputNameChanege = 'u_InputNameChanege'
 export const UinputInserviceTChanege = 'u_inputInserviceTChanege'
+
+
+
+//account
+
+export const  AInputNameChanege = 'a_inputname_chanege'
+export const  AInputPwdChanege = 'a_inputpwd_chanege'
+export const  ASelectionChange = 'a_selection_chanege'
+export const  AonHide = 'a_on_hide'
+export const AInputSearchChanege = 'a_inputSearch_chanege'
+export const AaddNew = 'a_addNew'
+export const ADelete = 'a_Delete'
+export const ASave = 'a_Save'

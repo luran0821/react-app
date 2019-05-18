@@ -8,31 +8,25 @@ import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
 
-class DepTabel extends Component{
+class Account extends Component{
 
-    constructor (props) {
-        super(props)
-    
-    }
-
-  
-
+ 
 render () {
     let {
-        depaddNew, 
-        depDelete, 
+        AaddNew, 
+        ADelete, 
         displayDialog, 
-        inputNameChanege,
-        inputIdChanege,
+        AInputNameChanege,
+        AInputPwdChanege,
         globalFilter,
         name,
-        department_id, 
+        password, 
         selectedCar, 
         cars, 
-        depSave,
-        inputSearchChanege ,
-        selectionChange, 
-        deponHide
+        ASave,
+        AInputSearchChanege ,
+        AselectionChange, 
+        AonHide,
     }  = this.props
  
   
@@ -41,23 +35,23 @@ render () {
                         <i className="pi pi-search" style={{margin:'4px 4px 0 0'}}></i>
                         <InputText type="search" 
                         // onInput={(e) => this.setState({globalFilter: e.target.value})} 
-                        onInput={(e) =>  inputSearchChanege(e) }
+                        onInput={(e) =>  AInputSearchChanege(e)}
                         placeholder="搜索" size="50"/>
                     </div>;
 
 
     let footer = <div className="p-clearfix" style={{width:'100%'}}>
         <Button style={{float:'left'}} label="添加" icon="pi pi-plus" 
-        onClick={ depaddNew.bind(this) }           
+        onClick={ AaddNew.bind(this) }           
         />
     </div>;
 
     let dialogFooter = <div className="ui-dialog-buttonpane p-clearfix">
             <Button label="删除" icon="pi pi-times" 
-            onClick={ depDelete.bind(this) }                
+            onClick={ ADelete.bind(this) }                
             />
             <Button label="保存" icon="pi pi-check" 
-            onClick={ depSave.bind(this) }               
+            onClick={ ASave.bind(this) }               
             />
         </div>;
 
@@ -69,35 +63,36 @@ render () {
                             footer={footer}   
                            selectionMode="single"                
                            selection={ selectedCar } 
-                           onSelectionChange = {(e) =>  selectionChange(e) }
+                           onSelectionChange = {(e) => AselectionChange(e) }
                           globalFilter={ globalFilter } emptyMessage="没有结果"
                            >                    
-                    <Column field="name" header="部门名称" sortable={true} />
-                    <Column field="department_id" header="部门编号" sortable={true} />
+                    <Column field="name" header="账号" sortable={true} />
+                    <Column field="password" header="密码" sortable={true} />
                 </DataTable>
 
 {/* 添加信息 */}
                 <Dialog visible={ displayDialog } width="300px" 
-                header="部门信息" 
+                header="账户信息" 
                 modal={true} 
                 footer={ dialogFooter } 
-                onHide={ deponHide }
+                onHide={ AonHide }
                 >   
                     {
                         cars &&   
                         <div className="p-grid p-fluid">
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="name">部门名称</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="name">账号</label></div>
                             <div className="p-col-8" style={{padding:'.5em'}}>
                                 <InputText id="name" 
-                                onChange = {(e) =>  inputNameChanege(e)}
+                                onChange = { (e) =>  AInputNameChanege(e)}
                                 value={ name }/>
                             </div>
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="department_id">部门编号</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="department_id">密码</label></div>
                             <div className="p-col-8" style={{padding:'.5em'}}>
-                                <InputText id="department_id" 
-                                onChange = { (e) => inputIdChanege(e) }
-                                value={ department_id }/>
+                                <InputText id="password" 
+                                 type="password" 
+                                onChange = { (e) => AInputPwdChanege(e)}
+                                value={ password }/>
                             </div>
 
                             <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
@@ -112,50 +107,50 @@ render () {
 
 
    const mapStateToProps = (state) => ({
-    name: state.deptabel.car.name,
-    cars: state.deptabel.cars,
-    department_id: state.deptabel.car.department_id,
-    displayDialog: state.deptabel.displayDialog,
-    selectedCar: state.deptabel.selectedCar,
-    globalFilter: state.deptabel.globalFilter
+    name: state.account.car.name,
+    cars: state.account.cars,
+    department_id: state.account.car.password,
+    displayDialog: state.account.displayDialog,
+    selectedCar: state.account.selectedCar,
+    globalFilter: state.account.globalFilter
     
 })
 
 
 const mapDispatchToProps = (dispatch) =>({
 
-    inputSearchChanege(e){
-        dispatch(actionCreators.InputSearchChanege(e))
+    AInputSearchChanege(e){
+        dispatch(actionCreators.AInputSearchChanege(e))
     },
 
-    inputNameChanege(e){
-        dispatch(actionCreators.inputNameChanege(e))
+    AInputNameChanege(e){
+        dispatch(actionCreators.AInputNameChanege(e))
     },
 
-    inputIdChanege(e){
-        dispatch(actionCreators.inputIdChanege(e))
+    AInputPwdChanege(e){
+        dispatch(actionCreators.AInputPwdChanege(e))
     },
 
-    selectionChange(e){
-        dispatch(actionCreators.selectionChange(e))
+    AselectionChange(e){
+        dispatch(actionCreators.AselectionChange(e))
     },
-    deponHide(){
-        dispatch(actionCreators.deponHide())
-    },
-
-    depSave(){
-        dispatch(actionCreators.depSave())
+    AonHide(){
+        dispatch(actionCreators.AonHide())
     },
 
-    depDelete(){
-        dispatch(actionCreators.depDelete())
+    ASave(){
+        dispatch(actionCreators.ASave())
     },
 
-    depaddNew(){
-        dispatch(actionCreators.depaddNew())
+    ADelete(){
+        dispatch(actionCreators.ADelete())
+    },
+
+    AaddNew(){
+        dispatch(actionCreators.AaddNew())
     }
    
 })
 
 
-   export default connect(mapStateToProps, mapDispatchToProps)(DepTabel)
+export default connect(mapStateToProps, mapDispatchToProps)(Account)

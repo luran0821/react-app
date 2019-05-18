@@ -11,7 +11,7 @@ import  utable  from '../../component/utable/UserTable';
 import  deptable  from '../../component/deptable/DepTabel';
 import educhart from '../../component/educhart/EduChart';
 import salarychart from '../../component/salarychart/SalaryChart';
-
+import account from '../../component/account/Account'
  class MainPanel extends Component {     
     render() {
         const items = [
@@ -39,11 +39,6 @@ import salarychart from '../../component/salarychart/SalaryChart';
                label: '部门信息',
                icon:'pi pi-fw pi-sitemap',
                items:[  
-                  {
-                     label:'部门管理',
-                     icon:'pi pi-fw pi-users',
-                     
-                  },
                   {
                      label:'添加部门',
                      icon:'pi pi-fw pi-users', 
@@ -131,7 +126,7 @@ import salarychart from '../../component/salarychart/SalaryChart';
                      label:'账号管理',
                      icon:'pi pi-fw pi-user',
                      command: (event) => {
-                        window.location.hash='/utable'
+                        window.location.hash='/account'
                         
                     }
                   }
@@ -155,7 +150,8 @@ import salarychart from '../../component/salarychart/SalaryChart';
                             <Route path='/utable'  exact component={ utable } />
                             <Route path='/deptable' exact component={ deptable } />
                             <Route path='/educhart'  exact component={ educhart } />
-                            <Route path='/salarychart' exact component={ salarychart } />        
+                            <Route path='/salarychart' exact component={ salarychart } />
+                            <Route path='/account' exact component={ account } />        
                         </Router>
                        
                        </div>
