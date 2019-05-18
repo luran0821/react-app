@@ -5,7 +5,8 @@ import {DataTable} from 'primereact/datatable';
 import {Dialog} from 'primereact/dialog';
 import {InputText} from 'primereact/inputtext';
 import {Button} from 'primereact/button';
-//import {DataTableSubmenu} from './DataTableSubmenu';
+
+import * as actionCreators from '../../action/actionCreators' 
 
 
 import './UserTable.css'
@@ -43,64 +44,79 @@ import './UserTable.css'
 
   }
 
-  componentDidMount() {
-     // this.carservice.getCarsSmall().then(data => this.setState({cars: data}));
+ 
+//   save() {
+//     let cars = [...this.state.cars];
+//     if(this.newCar)
+//         cars.push(this.state.car);
+//     else
+//         cars[this.findSelectedCarIndex()] = this.state.car;
 
-    
-     
-  }
+//     this.setState({cars:cars, selectedCar:null, car: null, displayDialog:false});
+// }
 
-  save() {
-    let cars = [...this.state.cars];
-    if(this.newCar)
-        cars.push(this.state.car);
-    else
-        cars[this.findSelectedCarIndex()] = this.state.car;
+// delete() {
+//     let index = this.findSelectedCarIndex();
+//     this.setState({
+//         cars: this.state.cars.filter((val,i) => i !== index),
+//         selectedCar: null,
+//         car: null,
+//         displayDialog: false});
+// }
 
-    this.setState({cars:cars, selectedCar:null, car: null, displayDialog:false});
-}
+// findSelectedCarIndex() {
+//     return this.state.cars.indexOf(this.state.selectedCar);
+// }
 
-delete() {
-    let index = this.findSelectedCarIndex();
-    this.setState({
-        cars: this.state.cars.filter((val,i) => i !== index),
-        selectedCar: null,
-        car: null,
-        displayDialog: false});
-}
+// updateProperty(property, value) {
+//     let car = this.state.car;
+//     car[property] = value;
+//     this.setState({car: car});
+// }
 
-findSelectedCarIndex() {
-    return this.state.cars.indexOf(this.state.selectedCar);
-}
+// onCarSelect(e){
+//     this.newCar = false;
+//     this.setState({
+//         displayDialog:true,
+//         car: Object.assign({}, e.data)
+//     });
+// }
 
-updateProperty(property, value) {
-    let car = this.state.car;
-    car[property] = value;
-    this.setState({car: car});
-}
-
-onCarSelect(e){
-    this.newCar = false;
-    this.setState({
-        displayDialog:true,
-        car: Object.assign({}, e.data)
-    });
-}
-
-addNew() {
-    this.newCar = true;
-    this.setState({
-        car: {vin:'', year: '', brand: '', color: ''},
-        displayDialog: true
-    });
-}
+// addNew() {
+//     this.newCar = true;
+//     this.setState({
+//         car: {vin:'', year: '', brand: '', color: ''},
+//         displayDialog: true
+//     });
+// }
 
 
   render() {
-    const {}  = this.props
-    // let header = <div className="p-clearfix" style={{lineHeight:'1.87em'}}>CRUD for Cars </div>;
+    const {
+        name,
+        cars,
+        job_number,     //工号
+        age,                   //年龄
+        birth,               //出生年月
+        message,
+        identity_number,   //身份证号
+        inservice,       //在职情况
+        marriage,        //婚姻情况
+        political,      //政治面貌
+        phone,           //电话
+        gender,           //性别
+        address,           //家庭住址
+        inservice_time,     //入职时间
+        department,          //部门
+        displayDialog,
+        selectedCar,
+        globalFilter,
+        UinputSearchChanege
+    }  = this.props
+    
     var header = <div style={{'textAlign':'right'}}>
                         <i className="pi pi-search" style={{margin:'4px 4px 0 0'}}></i>
+
                         <InputText type="search" onInput={(e) => this.setState({globalFilter: e.target.value})} placeholder="搜索" size="50"/>
                     </div>;
 
@@ -118,13 +134,13 @@ addNew() {
     return (
         <div>
             <div className="content-section implementation">
-                <DataTable value={this.state.cars} paginator={true} rows={20}  
+                <DataTable value={ cars } paginator={true} rows={20}  
                             header={header} footer={footer}
                            selectionMode="single" 
-                           selection={this.state.selectedCar} 
+                           selection={ selectedCar } 
                            onSelectionChange={e => this.setState({selectedCar: e.value})}
-                           onRowSelect={this.onCarSelect}
-                           globalFilter={this.state.globalFilter} emptyMessage="没有结果"
+                           
+                           globalFilter={ globalFilter} emptyMessage="没有结果"
                            >
 
                     <Column field="name" header="姓名" sortable={true} style={{width: '6em',fontWeight: 'none'}} />
@@ -156,56 +172,73 @@ addNew() {
                 
                    
                     {
-                        this.state.car && 
+                      cars && 
                         
                         <div className="p-grid p-fluid">
                             <div className='clear'></div>
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="name">姓名</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
-                                <InputText id="name" onChange={(e) => {this.updateProperty('name', e.target.value)}} value={this.state.car.name}/>
+
+                                <InputText id="name" 
+                                onChange={ UinputNameChanege } value={ name }/>
+
                             </div>
                             
 
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="job_number">工号</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+
                                 <InputText id="job_number" onChange={(e) => {this.updateProperty('job_number', e.target.value)}} value={this.state.car.job_number}/>
+
                             </div>
                             <div className='clear'></div>
                             
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="department">部门</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+
                                 <InputText id="department" onChange={(e) => {this.updateProperty('department', e.target.value)}} value={this.state.car.department}/>
+
                             </div>
                             
 
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="age">年龄</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+
                                 <InputText id="age" onChange={(e) => {this.updateProperty('age', e.target.value)}} value={this.state.car.age}/>
+
                             </div> 
                             <div className='clear'></div>
 
 
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="gender">性别</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+
                                 <InputText id="vin" onChange={(e) => {this.updateProperty('gender', e.target.value)}} value={this.state.car.gender}/>
+
                             </div>
                             
 
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="phone">电话</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+
                                 <InputText id="phone" onChange={(e) => {this.updateProperty('phone', e.target.value)}} value={this.state.car.phone}/>
+
                             </div> <div className='clear'></div>
 
 
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="identity_number">身份证</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+
                                 <InputText id="identity_number" onChange={(e) => {this.updateProperty('identity_number', e.target.value)}} value={this.state.car.identity_number}/>
+
                             </div>
                             
 
                             <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="marriage">婚姻</label></div>
                             <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+
                                 <InputText id="marriage" onChange={(e) => {this.updateProperty('marriage', e.target.value)}} value={this.state.car.marriage}/>
+
                             </div> 
                             <div className='clear'></div>
 
@@ -245,9 +278,68 @@ addNew() {
     )}
    }
 
+const mapStateToProps = (state) => ({
+    name: state.usertabel.car.name,
+    cars: state.usertabel.cars,
+    job_number: state.usertabel.car.job_number,     //工号
+    age: state.usertabel.car.age,                   //年龄
+    birth: state.usertabel.car.birth,               //出生年月
+    message: state.usertabel.car.message,
+    identity_number: state.usertabel.car.identity_number,   //身份证号
+    inservice: state.usertabel.car.inservice,       //在职情况
+    marriage: state.usertabel.car.marriage,        //婚姻情况
+    political: state.usertabel.car.political,      //政治面貌
+    phone: state.usertabel.car.phone,           //电话
+    gender: state.usertabel.car.gender,           //性别
+    address: state.usertabel.car.address,           //家庭住址
+    inservice_time:  state.usertabel.car.inservice_time,     //入职时间
+    department: state.usertabel.car.department,          //部门
+    displayDialog: state.usertabel.displayDialog,
+    selectedCar: state.usertabel.selectedCar,
+    globalFilter: state.usertabel.globalFilter
+})
+
+
+
+const mapDispatchToProps = (dispatch) =>({
+    UinputSearchChanege(e){
+        dispatch(actionCreators.u_InputSearchChanege(e))
+    },
+
+    UinputNameChanege(e){
+        dispatch(actionCreators.u_inputNameChanege(e))
+    },
+
+    UinputIdChanege(e){
+        dispatch(actionCreators.u_inputIdChanege(e))
+    },
+
+    UselectionChange(e){
+        dispatch(actionCreators.u_selectionChange(e))
+    },
+
+    UonCarSelect(e){
+        dispatch(actionCreators.u_onCarSelect(e))
+    },
+
+    UonHide(){
+        dispatch(actionCreators.u_onHide())
+    },
+
+    USave(){
+        dispatch(actionCreators.u_Save())
+    },
+
+    UDelete(){
+        dispatch(actionCreators.u_Delete())
+    },
+
+    UaddNew(){
+        dispatch(actionCreators.depaddNew())
+    }
+})
 
 
 
 
-
-   export default connect()(UserTable)
+export default connect(mapDispatchToProps, mapDispatchToProps)(UserTable)

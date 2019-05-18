@@ -26,3 +26,16 @@ export const InputSearchChanege = 'inputSearch_chanege'
 export const DepaddNew = 'depaddNew'
 export const DepDelete = 'depDelete'
 export const DepSave = 'depSave'
+
+
+//user
+
+export const  u_InputNameChanege = 'uinputname_chanege'
+export const  u_InputIdChanege = 'uinputid_chanege'
+export const  u_SelectionChange = 'uselection_chanege'
+export const  u_OnCarSelect = 'uoncar_select'
+export const  u_DepOnHide = 'uon_hide'
+export const u_InputSearchChanege = 'uinputSearch_chanege'
+export const u_addNew = 'u_addNew'
+export const u_Delete = 'u_Delete'
+export const u_Save = 'u_Save'

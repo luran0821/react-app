@@ -103,7 +103,59 @@ export const depDelete = () => ({
 export const depSave = () => ({
     type: types.DepSave
 })
-/** */
+
+
+
+
+/**user */
+
+
+export const u_inputNameChanege = (e) => ({
+    type: types.InputNameChanege,
+    value: e.target.value
+})
+
+export const u_inputIdChanege = (e) => ({
+    type: types.InputIdChanege,
+    value: e.target.value
+})
+
+export const u_selectionChange = (e) => ({
+    type: types.SelectionChange,
+    value: e.value
+})
+
+export const u_onCarSelect = (e) => ({
+    type: types.OnCarSelect,
+    value: e.value
+})
+
+export const u_onHide = () => ({
+    type: types.DepOnHide,   
+})
+
+export const u_InputSearchChanege = (e) => ({
+    type: types.u_InputSearchChanege,
+    value: e.target.value
+})
+
+export const u_addNew = () => ({
+    type: types.DepaddNew
+})
+
+export const u_Delete = () => ({
+    type: types.DepDelete
+})
+
+export const u_Save = () => ({
+    type: types.DepSave
+})
+
+
+
+
+
+
 /** */
 /** */
 /** */
