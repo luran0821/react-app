@@ -16,54 +16,6 @@ class DepTabel extends Component{
        //this.props.onCarSelect = this.props.onCarSelect.bind(this)
     }
 
-//   depSave() {
-//     let cars = [...this.state.car];
-//     if(this.newCar)
-//         cars.push(this.state.car);
-//     else
-//         cars[this.findSelectedCarIndex()] = this.state.car;
-
-//     this.setState({cars:cars, selectedCar:null, car: null, displayDialog:false});
-// }
-
-// depDelete() {
-//     let index = this.findSelectedCarIndex();
-//     this.setState({
-//         cars: this.state.cars.filter((val,i) => i !== index),
-//         selectedCar: null,
-//         car: null,
-//         displayDialog: false});
-// }
-
-// findSelectedCarIndex() {
-//     return this.state.cars.indexOf(this.state.selectedCar);
-// }
-
-// updateProperty(property, value) {
-//     let car = this.state.car;
-//     car[property] = value;
-//     this.setState({car: car});
-// }
-
-
-// onCarSelect(e){
-//     this.newCar = false;
-//     this.setState({
-//         displayDialog:true,
-//         car: Object.assign({}, e.data)
-//     });
-// }
-
-// depaddNew() {
-//     this.newCar = true;
-//     this.setState({
-//         car: {name:'', department_id: ''},
-//         displayDialog: true
-//     });
-// }
-
-
-
 
 
 render () {
@@ -85,8 +37,7 @@ render () {
         selectionChange, 
         deponHide,
     }  = this.props
-    // let header = <div className="p-clearfix" style={{lineHeight:'1.87em'}}>CRUD for Cars </div>;
-    
+ 
     onCarSelect = onCarSelect.bind(this)
 
     var header = <div style={{'textAlign':'right'}}>
@@ -118,39 +69,21 @@ render () {
             <div className="content-section implementation">
                 <DataTable value={ cars } paginator={true} rows={20}  
                             header={header} 
-                            footer={footer}
-                           
-                           selectionMode="single" 
-                           //  selection={this.state.selectedCar} 
-                          
+                            footer={footer}   
+                           selectionMode="single"                
                            selection={ selectedCar } 
-                       
-                        // onSelectionChange={e => this.setState({selectedCar: e.value})}
                            onSelectionChange = { selectionChange.bind(this) }
-                           //using ?
-                         //  onRowSelect={e => onCarSelect}
-                         
-
-                        
-   
-
-                          // globalFilter={this.state.globalFilter} emptyMessage="没有结果"
                           globalFilter={ globalFilter } emptyMessage="没有结果"
                            >                    
                     <Column field="name" header="部门名称" sortable={true} />
                     <Column field="department_id" header="部门编号" sortable={true} />
                 </DataTable>
 
-
-
-
-
 {/* 添加信息 */}
                 <Dialog visible={ displayDialog } width="300px" 
                 header="部门信息" 
                 modal={true} 
                 footer={ dialogFooter } 
-                // onHide={() => this.setState({displayDialog: false})}
                 onHide={ deponHide }
                 >   
                     {
@@ -159,17 +92,13 @@ render () {
                             <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="name">部门名称</label></div>
                             <div className="p-col-8" style={{padding:'.5em'}}>
                                 <InputText id="name" 
-
-                                // onChange={(e) => {this.updateProperty('name', e.target.value)}} 
                                 onChange = { inputNameChanege }
                                 value={ name }/>
                             </div>
                             
                             <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="department_id">部门编号</label></div>
                             <div className="p-col-8" style={{padding:'.5em'}}>
-                                <InputText id="department_id"
-
-                                // onChange={(e) => {this.updateProperty('department_id', e.target.value)}} 
+                                <InputText id="department_id" 
                                 onChange = { inputIdChanege }
                                 value={ department_id }/>
                             </div>
