@@ -23,8 +23,6 @@ render () {
         depaddNew, 
         depDelete, 
         displayDialog, 
-        onCarSelect, 
-        updateProperty ,
         inputNameChanege,
         inputIdChanege,
         globalFilter,
@@ -38,7 +36,7 @@ render () {
         deponHide,
     }  = this.props
  
-    onCarSelect = onCarSelect.bind(this)
+  
 
     var header = <div style={{'textAlign':'right'}}>
                         <i className="pi pi-search" style={{margin:'4px 4px 0 0'}}></i>
@@ -142,11 +140,6 @@ const mapDispatchToProps = (dispatch) =>({
     selectionChange(e){
         dispatch(actionCreators.selectionChange(e))
     },
-
-    onCarSelect(e){
-        dispatch(actionCreators.onCarSelect(e))
-    },
-
     deponHide(){
         dispatch(actionCreators.deponHide())
     },

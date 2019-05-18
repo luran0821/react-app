@@ -78,10 +78,6 @@ export const selectionChange = (e) => ({
     value: e.value
 })
 
-export const onCarSelect = (e) => ({
-    type: types.OnCarSelect,
-    value: e.value
-})
 
 export const deponHide = () => ({
     type: types.DepOnHide,   
@@ -111,27 +107,23 @@ export const depSave = () => ({
 
 
 export const u_inputNameChanege = (e) => ({
-    type: types.InputNameChanege,
+    type: types.UInputNameChanege,
     value: e.target.value
 })
 
 export const u_inputIdChanege = (e) => ({
-    type: types.InputIdChanege,
+    type: types.u_InputIdChanege,
     value: e.target.value
 })
 
 export const u_selectionChange = (e) => ({
-    type: types.SelectionChange,
+    type: types.u_SelectionChange,
     value: e.value
 })
 
-export const u_onCarSelect = (e) => ({
-    type: types.OnCarSelect,
-    value: e.value
-})
 
 export const u_onHide = () => ({
-    type: types.DepOnHide,   
+    type: types.u_OnHide,   
 })
 
 export const u_InputSearchChanege = (e) => ({
@@ -140,18 +132,87 @@ export const u_InputSearchChanege = (e) => ({
 })
 
 export const u_addNew = () => ({
-    type: types.DepaddNew
+    type: types.u_AddNew
 })
 
 export const u_Delete = () => ({
-    type: types.DepDelete
+    type: types.u_Delete
 })
 
 export const u_Save = () => ({
-    type: types.DepSave
+    type: types.u_Save
+})
+
+// export const u_updateProperty = (property, value) => ({
+//     type: types.u_UpdateProperty,
+//     value: value,
+//     property: property
+// })
+
+
+
+export const u_inputJobChanege = (e) => ({
+    type: types.UinputJobChanege,
+    value: e.target.value
 })
 
 
+export const u_inputDepChanege = (e) => ({
+    type: types.UinputDepChanege,
+    value: e.target.value
+})
+
+export const u_inputAgeChanege = (e) => ({
+    type: types.UinputAgeChanege,
+    value: e.target.value
+})
+
+
+export const u_inputGenderChanege = (e) => ({
+    type: types.UinputGenderChanege,
+    value: e.target.value
+})
+
+
+export const u_inputPhoneChanege = (e) => ({
+    type: types.UinputPhoneChanege,
+    value: e.target.value
+})
+
+export const u_inputIdentityChanege = (e) => ({
+    type: types.UinputIdentityChanege,
+    value: e.target.value
+})
+
+export const u_inputMarriageChanege = (e) => ({
+    type: types.UinputMarriageChanege,
+    value: e.target.value
+})
+
+export const u_inputBirthChanege = (e) => ({
+    type: types.UinputBirthChanege,
+    value: e.target.value
+})
+
+export const u_inputPoliticalChanege = (e) => ({
+    type: types.UinputPoliticalChanege,
+    value: e.target.value
+})
+
+
+export const u_inputInserviceChanege = (e) => ({
+    type: types.UinputInserviceChanege,
+    value: e.target.value
+})
+
+export const u_inputAddressChanege = (e) => ({
+    type: types.UinputAddressChanege,
+    value: e.target.value
+})
+export const u_inputInserviceTChanege = (e) => ({
+    type: types.UinputAddressChanege,
+    value: e.target.value
+})
 
 
 

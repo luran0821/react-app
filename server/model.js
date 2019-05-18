@@ -28,7 +28,6 @@ const models = {
         political: {type: String, require: true},           //政治面貌
         phone: {type: String, require: true},               //电话
         gender:{type: String, require: true},               //性别
-        address:{type: String, require: true},              //家庭住址
         inservice_time:{type: Date, require: true},          //入职时间
         department: { 
             type: Schema.Types.ObjectId, 
