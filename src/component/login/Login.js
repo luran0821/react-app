@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
 import * as actionCreators from '../../action/actionCreators' 
 
 import {InputText} from 'primereact/inputtext';
@@ -11,7 +10,7 @@ import {Button} from 'primereact/button';
 import './login.css'
 
 const Login = (props) => {
-        const { name, password, loginNameChanege, loginPwdChanege, onClickLogin, redirecTo } = props
+        const { name, password, loginNameChanege, loginPwdChanege } = props
         return(
            
             <div className = 'loginbox' >                

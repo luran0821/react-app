@@ -45,9 +45,7 @@ export default(state = initState, action) => {
     newState.newCar = false
     newState.car = action.value
    
-    newState.index = state.cars.indexOf(action.value)
-    console.log(state.cars.indexOf(action.value))
-    
+    newState.index = state.cars.indexOf(action.value)  
     newState.displayDialog = true
     
     return newState

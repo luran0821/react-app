@@ -75,6 +75,8 @@ const models = {
             type: Schema.Types.ObjectId, 
             ref: 'user'
         },//部门
+
+        
         communication_subsidy:{
             type: Number
         },//通讯补贴 

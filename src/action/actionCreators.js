@@ -202,7 +202,7 @@ export const u_inputAddressChanege = (e) => ({
     value: e.target.value
 })
 export const u_inputInserviceTChanege = (e) => ({
-    type: types.UinputAddressChanege,
+    type: types.UinputInserviceTChanege,
     value: e.target.value
 })
 
@@ -247,12 +247,234 @@ export const ASave = () => ({
     type: types.ASave
 })
 
+/** education*/
+
+export const EinputSearchChanege = (e) => ({
+    type: types.EinputSearchChanege,
+    value: e.target.value
+})
+export const EselectionChange = (e) => ({
+    type: types.EselectionChange,
+    value:  e.value
+})
+export const EonHide = () => ({
+    type: types.EonHide
+})
+export const ESave = () => ({
+    type: types.ESave
+})
+export const EDelete = () => ({
+    type: types.EDelete
+})
+export const EaddNew = () => ({
+    type: types.EaddNew
+})
+export const inputUser_idChanege = (e) => ({
+    type: types.inputUser_idChanege,
+    value: e.target.value
+})
+export const inputUser_nameChanege = (e) => ({
+    type: types.inputUser_nameChanege,
+    value: e.target.value
+})
+export const inputUser_departmentChanege = (e) => ({
+    type: types.inputUser_departmentChanege,
+    value: e.target.value
+})
+export const inputDiploma_numberChanege = (e) => ({
+    type: types.inputDiploma_numberChanege,
+    value: e.target.value
+})
+export const inputH_educationChanege = (e) => ({
+    type: types.inputH_educationChanege,
+    value:e.target.value
+})
+export const inputSchool_nameChanege = (e) => ({
+    type: types.inputSchool_nameChanege,
+    value: e.target.value
+})
 
 
 
 
+/**Salary */
+
+
+export const  salary_inputSearchChanege = (e) => ({
+    type: types.salary_inputSearchChanege,
+    value: e.target.value
+}) 
+export const  salary_selectionChange = (e) => ({
+    type: types.salary_selectionChange,
+    value:  e.value
+}) 
+export const  salary_onHide =  () => ({
+    type: types.salary_onHide
+})
+export const  salary_Save = () => ({
+    type: types.salary_Save
+}) 
+export const  salary_Delete = () => ({
+    type: types.salary_Delete
+}) 
+export const  salary_addNew = () => ({
+    type: types.salary_addNew
+}) 
+
+export const salary_inputUser_idChanege =  (e) => ({
+    type: types.salary_inputUser_idChanege,
+    value: e.target.value
+})
+export const salary_inputUser_nameChanege = (e) => ({
+    type: types.salary_inputUser_nameChanege,
+    value: e.target.value
+})
+export const salary_inputUser_departmentChanege = (e) => ({
+    type: types.salary_inputUser_departmentChanege,
+    value: e.target.value
+})
+export const inputBasic_salaryChanege = (e) => ({
+    type: types.inputBasic_salaryChanege,
+    value: e.target.value
+}) 
+export const inputPosition_salaryChanege =  (e) => ({
+    type: types.inputPosition_salaryChanege,
+    value: e.target.value
+})
+export const inputBonusChanege = (e) => ({
+    type: types.inputBonusChanege,
+    value: e.target.value
+}) 
 
 
 
-/** */
-/** */
+
+/**Subsidy */
+
+
+export const  subsidy_inputSearchChanege = (e) => ({
+    type: types.subsidy_inputSearchChanege,
+    value: e.target.value
+}) 
+export const  subsidy_selectionChange = (e) => ({
+    type: types.subsidy_selectionChange,
+    value:  e.value
+}) 
+export const  subsidy_onHide =  () => ({
+    type: types.subsidy_onHide
+})
+export const  subsidy_Save = () => ({
+    type: types.subsidy_Save
+}) 
+export const  subsidy_Delete = () => ({
+    type: types.subsidy_Delete
+}) 
+export const  subsidy_addNew = () => ({
+    type: types.subsidy_addNew
+}) 
+
+export const subsidy_inputUser_idChanege =  (e) => ({
+    type: types.subsidy_inputUser_idChanege,
+    value: e.target.value
+})
+export const subsidy_inputUser_nameChanege = (e) => ({
+    type: types.subsidy_inputUser_nameChanege,
+    value: e.target.value
+})
+export const subsidy_inputUser_departmentChanege = (e) => ({
+    type: types.subsidy_inputUser_departmentChanege,
+    value: e.target.value
+})
+
+
+export const inputCommunication_subsidyChanege = (e) => ({
+    type: types.inputCommunication_subsidyChanege,
+    value: e.target.value
+}) 
+export const inputTemperature_subsidyChanege =  (e) => ({
+    type: types.inputTemperature_subsidyChanege,
+    value: e.target.value
+})
+export const inputDrink_subsidyChanege = (e) => ({
+    type: types.inputDrink_subsidyChanege,
+    value: e.target.value
+}) 
+export const inputTraffic_subsidyChanege = (e) => ({
+    type: types.inputTraffic_subsidyChanege,
+    value: e.target.value
+}) 
+export const inputMeal_subsidyChanege = (e) => ({
+    type: types.inputMeal_subsidyChanege,
+    value: e.target.value
+}) 
+
+export const inputOther_subsidyChanege = (e) => ({
+    type: types.inputOther_subsidyChanege,
+    value: e.target.value
+}) 
+
+
+// Socialsecurity 
+
+export const  socialsecurity_inputSearchChanege = (e) => ({
+    type: types.socialsecurity_inputSearchChanege,
+    value: e.target.value
+}) 
+export const  socialsecurity_selectionChange = (e) => ({
+    type: types.socialsecurity_selectionChange,
+    value:  e.value
+}) 
+export const  socialsecurity_onHide =  () => ({
+    type: types.socialsecurity_onHide
+})
+export const  socialsecurity_Save = () => ({
+    type: types.socialsecurity_Save
+}) 
+export const  socialsecurity_Delete = () => ({
+    type: types.socialsecurity_Delete
+}) 
+export const  socialsecurity_addNew = () => ({
+    type: types.socialsecurity_addNew
+}) 
+
+export const socialsecurity_inputUser_idChanege =  (e) => ({
+    type: types.socialsecurity_inputUser_idChanege,
+    value: e.target.value
+})
+export const socialsecurity_inputUser_nameChanege = (e) => ({
+    type: types.socialsecurity_inputUser_nameChanege,
+    value: e.target.value
+})
+export const socialsecurity_inputUser_departmentChanege = (e) => ({
+    type: types.socialsecurity_inputUser_departmentChanege,
+    value: e.target.value
+})
+
+
+export const inputPensionChanege = (e) => ({
+    type: types.inputPensionChanege,
+    value: e.target.value
+}) 
+export const inputMedical_insuranceChanege =  (e) => ({
+    type: types.inputMedical_insuranceChanege,
+    value: e.target.value
+})
+export const inputUnemployment_insuranceChanege = (e) => ({
+    type: types.inputUnemployment_insuranceChanege,
+    value: e.target.value
+}) 
+export const inputInjury_insuranceChanege = (e) => ({
+    type: types.inputInjury_insuranceChanege,
+    value: e.target.value
+}) 
+export const inputMaternity_insuranceChanege = (e) => ({
+    type: types.inputMaternity_insuranceChanege,
+    value: e.target.value
+}) 
+
+export const inputHousing_fundChanege = (e) => ({
+    type: types.inputHousing_fundChanege,
+    value: e.target.value
+}) 
+
+

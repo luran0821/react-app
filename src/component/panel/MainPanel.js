@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux'
-import { HashRouter  as Router , Route ,Link} from 'react-router-dom'
+import { HashRouter  as Router , Route } from 'react-router-dom'
 
 
 import Menue from '../menue/Menue'
@@ -12,6 +12,10 @@ import  deptable  from '../../component/deptable/DepTabel';
 import educhart from '../../component/educhart/EduChart';
 import salarychart from '../../component/salarychart/SalaryChart';
 import account from '../../component/account/Account'
+import education from '../../component/education/Education'
+import salary from '../../component/salary/Salary'
+import subsidy from '../../component/subsidy/Subsidy'
+import socialsecurity from '../../component/socialsecurity/Socialsecurity'
  class MainPanel extends Component {     
     render() {
         const items = [
@@ -31,7 +35,10 @@ import account from '../../component/account/Account'
                   {
                      label:'学历管理',
                      icon:'pi pi-fw pi-user',
-                     
+                     command: (event) => {
+                        window.location.hash='/education'
+                        
+                    }
                   }
                ]
             },
@@ -60,17 +67,26 @@ import account from '../../component/account/Account'
                      label:'工资',
                      icon:'pi pi-fw pi-dollar',
                      command: (event) => {
-                        //window.location.hash='/table'
+                        window.location.hash='/salary'
+                       
+                    }
+                     
+                  },
+                  {
+                     label:'补贴',
+                     icon:'pi pi-fw pi-dollar',
+                     command: (event) => {
+                        window.location.hash='/subsidy'
                        
                     }
                   },
                   {
-                     label:'补贴',
-                     icon:'pi pi-fw pi-dollar'
-                  },
-                  {
                      label:'五险一金',
-                     icon:'pi pi-fw pi-dollar'
+                     icon:'pi pi-fw pi-dollar',
+                     command: (event) => {
+                       window.location.hash='/socialsecurity'
+                       
+                    }
                   }
          
                ]
@@ -82,16 +98,28 @@ import account from '../../component/account/Account'
                   {
                      label:'休息管理',
                      icon:'pi pi-fw pi-clock',
+                     command: (event) => {
+                        // window.location.hash='/subsidy'
+                        
+                     }
          
                   },
                   {
                      label:'员工考勤',
                      icon:'pi pi-fw pi-user',
+                     command: (event) => {
+                        // window.location.hash='/subsidy'
+                        
+                     }
          
                   },
                   {
                      label:'值班安排',
                      icon:'pi pi-fw pi-calendar-plus',
+                     command: (event) => {
+                        // window.location.hash='/subsidy'
+                        
+                     }
                   }
                ]
             },
@@ -151,7 +179,12 @@ import account from '../../component/account/Account'
                             <Route path='/deptable' exact component={ deptable } />
                             <Route path='/educhart'  exact component={ educhart } />
                             <Route path='/salarychart' exact component={ salarychart } />
-                            <Route path='/account' exact component={ account } />        
+                            <Route path='/account' exact component={ account } />  
+                            <Route path='/education' exact component={ education } />      
+                            <Route path='/salary' exact component={ salary } />  
+                            <Route path='/subsidy' exact component={ subsidy } /> 
+                            <Route path='/socialsecurity' exact component={ socialsecurity } /> 
+                            
                         </Router>
                        
                        </div>

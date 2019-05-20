@@ -1,5 +1,5 @@
 import * as types from '../action/types'
-import axios from 'axios'
+
 
 
 const initState = {
@@ -20,7 +20,7 @@ export default(state = initState, action) => {
     if(action.type === types.Register_PWD){
         //console.log(state)
         const newState = JSON.parse(JSON.stringify(state))
-        if( newState.password ==! newState.password){
+        if( newState.password ===! newState.password){
             newState.message = '两次密码不一致，请检查 ！'
             return newState
         } 

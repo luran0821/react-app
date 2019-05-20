@@ -54,7 +54,273 @@ const initState = {
       gender: 'dew',           //性别
       inservice_time: 'dewdw',     //入职时间
       department: 'dewdew' ,//部门}
-      },
+      }, {
+        name: 'yang',
+        job_number: '222',//工号
+        age: '12',      //年龄
+        birth: '10',    //出生年月
+        message: 'wq',
+        identity_number: '434343', //身份证号
+        inservice: 'yysua',       //在职情况
+        marriage: 'dewd',        //婚姻情况
+        political: 'dewde',      //政治面貌
+        phone: 'dew',           //电话
+        gender: 'dew',           //性别
+        inservice_time: 'dewdw',     //入职时间
+        department: 'dewdew' ,//部门}
+        }, {
+          name: 'yang',
+          job_number: '222',//工号
+          age: '12',      //年龄
+          birth: '10',    //出生年月
+          message: 'wq',
+          identity_number: '434343', //身份证号
+          inservice: 'yysua',       //在职情况
+          marriage: 'dewd',        //婚姻情况
+          political: 'dewde',      //政治面貌
+          phone: 'dew',           //电话
+          gender: 'dew',           //性别
+          inservice_time: 'dewdw',     //入职时间
+          department: 'dewdew' ,//部门}
+          }, {
+            name: 'yang',
+            job_number: '222',//工号
+            age: '12',      //年龄
+            birth: '10',    //出生年月
+            message: 'wq',
+            identity_number: '434343', //身份证号
+            inservice: 'yysua',       //在职情况
+            marriage: 'dewd',        //婚姻情况
+            political: 'dewde',      //政治面貌
+            phone: 'dew',           //电话
+            gender: 'dew',           //性别
+            inservice_time: 'dewdw',     //入职时间
+            department: 'dewdew' ,//部门}
+            }, {
+              name: 'yang',
+              job_number: '222',//工号
+              age: '12',      //年龄
+              birth: '10',    //出生年月
+              message: 'wq',
+              identity_number: '434343', //身份证号
+              inservice: 'yysua',       //在职情况
+              marriage: 'dewd',        //婚姻情况
+              political: 'dewde',      //政治面貌
+              phone: 'dew',           //电话
+              gender: 'dew',           //性别
+              inservice_time: 'dewdw',     //入职时间
+              department: 'dewdew' ,//部门}
+              }, {
+                name: 'yang',
+                job_number: '222',//工号
+                age: '12',      //年龄
+                birth: '10',    //出生年月
+                message: 'wq',
+                identity_number: '434343', //身份证号
+                inservice: 'yysua',       //在职情况
+                marriage: 'dewd',        //婚姻情况
+                political: 'dewde',      //政治面貌
+                phone: 'dew',           //电话
+                gender: 'dew',           //性别
+                inservice_time: 'dewdw',     //入职时间
+                department: 'dewdew' ,//部门}
+                }, {
+                  name: 'yang',
+                  job_number: '222',//工号
+                  age: '12',      //年龄
+                  birth: '10',    //出生年月
+                  message: 'wq',
+                  identity_number: '434343', //身份证号
+                  inservice: 'yysua',       //在职情况
+                  marriage: 'dewd',        //婚姻情况
+                  political: 'dewde',      //政治面貌
+                  phone: 'dew',           //电话
+                  gender: 'dew',           //性别
+                  inservice_time: 'dewdw',     //入职时间
+                  department: 'dewdew' ,//部门}
+                  }, {
+                    name: 'yang',
+                    job_number: '222',//工号
+                    age: '12',      //年龄
+                    birth: '10',    //出生年月
+                    message: 'wq',
+                    identity_number: '434343', //身份证号
+                    inservice: 'yysua',       //在职情况
+                    marriage: 'dewd',        //婚姻情况
+                    political: 'dewde',      //政治面貌
+                    phone: 'dew',           //电话
+                    gender: 'dew',           //性别
+                    inservice_time: 'dewdw',     //入职时间
+                    department: 'dewdew' ,//部门}
+                    }, {
+                      name: 'yang',
+                      job_number: '222',//工号
+                      age: '12',      //年龄
+                      birth: '10',    //出生年月
+                      message: 'wq',
+                      identity_number: '434343', //身份证号
+                      inservice: 'yysua',       //在职情况
+                      marriage: 'dewd',        //婚姻情况
+                      political: 'dewde',      //政治面貌
+                      phone: 'dew',           //电话
+                      gender: 'dew',           //性别
+                      inservice_time: 'dewdw',     //入职时间
+                      department: 'dewdew' ,//部门}
+                      }, {
+                        name: 'yang',
+                        job_number: '222',//工号
+                        age: '12',      //年龄
+                        birth: '10',    //出生年月
+                        message: 'wq',
+                        identity_number: '434343', //身份证号
+                        inservice: 'yysua',       //在职情况
+                        marriage: 'dewd',        //婚姻情况
+                        political: 'dewde',      //政治面貌
+                        phone: 'dew',           //电话
+                        gender: 'dew',           //性别
+                        inservice_time: 'dewdw',     //入职时间
+                        department: 'dewdew' ,//部门}
+                        }, {
+                          name: 'yang',
+                          job_number: '222',//工号
+                          age: '12',      //年龄
+                          birth: '10',    //出生年月
+                          message: 'wq',
+                          identity_number: '434343', //身份证号
+                          inservice: 'yysua',       //在职情况
+                          marriage: 'dewd',        //婚姻情况
+                          political: 'dewde',      //政治面貌
+                          phone: 'dew',           //电话
+                          gender: 'dew',           //性别
+                          inservice_time: 'dewdw',     //入职时间
+                          department: 'dewdew' ,//部门}
+                          }, {
+                            name: 'yang',
+                            job_number: '222',//工号
+                            age: '12',      //年龄
+                            birth: '10',    //出生年月
+                            message: 'wq',
+                            identity_number: '434343', //身份证号
+                            inservice: 'yysua',       //在职情况
+                            marriage: 'dewd',        //婚姻情况
+                            political: 'dewde',      //政治面貌
+                            phone: 'dew',           //电话
+                            gender: 'dew',           //性别
+                            inservice_time: 'dewdw',     //入职时间
+                            department: 'dewdew' ,//部门}
+                            }, {
+                              name: 'yang',
+                              job_number: '222',//工号
+                              age: '12',      //年龄
+                              birth: '10',    //出生年月
+                              message: 'wq',
+                              identity_number: '434343', //身份证号
+                              inservice: 'yysua',       //在职情况
+                              marriage: 'dewd',        //婚姻情况
+                              political: 'dewde',      //政治面貌
+                              phone: 'dew',           //电话
+                              gender: 'dew',           //性别
+                              inservice_time: 'dewdw',     //入职时间
+                              department: 'dewdew' ,//部门}
+                              }, {
+                                name: 'yang',
+                                job_number: '222',//工号
+                                age: '12',      //年龄
+                                birth: '10',    //出生年月
+                                message: 'wq',
+                                identity_number: '434343', //身份证号
+                                inservice: 'yysua',       //在职情况
+                                marriage: 'dewd',        //婚姻情况
+                                political: 'dewde',      //政治面貌
+                                phone: 'dew',           //电话
+                                gender: 'dew',           //性别
+                                inservice_time: 'dewdw',     //入职时间
+                                department: 'dewdew' ,//部门}
+                                }, {
+                                  name: 'yang',
+                                  job_number: '222',//工号
+                                  age: '12',      //年龄
+                                  birth: '10',    //出生年月
+                                  message: 'wq',
+                                  identity_number: '434343', //身份证号
+                                  inservice: 'yysua',       //在职情况
+                                  marriage: 'dewd',        //婚姻情况
+                                  political: 'dewde',      //政治面貌
+                                  phone: 'dew',           //电话
+                                  gender: 'dew',           //性别
+                                  inservice_time: 'dewdw',     //入职时间
+                                  department: 'dewdew' ,//部门}
+                                  }, {
+                                    name: 'yang',
+                                    job_number: '222',//工号
+                                    age: '12',      //年龄
+                                    birth: '10',    //出生年月
+                                    message: 'wq',
+                                    identity_number: '434343', //身份证号
+                                    inservice: 'yysua',       //在职情况
+                                    marriage: 'dewd',        //婚姻情况
+                                    political: 'dewde',      //政治面貌
+                                    phone: 'dew',           //电话
+                                    gender: 'dew',           //性别
+                                    inservice_time: 'dewdw',     //入职时间
+                                    department: 'dewdew' ,//部门}
+                                    }, {
+                                      name: 'yang',
+                                      job_number: '222',//工号
+                                      age: '12',      //年龄
+                                      birth: '10',    //出生年月
+                                      message: 'wq',
+                                      identity_number: '434343', //身份证号
+                                      inservice: 'yysua',       //在职情况
+                                      marriage: 'dewd',        //婚姻情况
+                                      political: 'dewde',      //政治面貌
+                                      phone: 'dew',           //电话
+                                      gender: 'dew',           //性别
+                                      inservice_time: 'dewdw',     //入职时间
+                                      department: 'dewdew' ,//部门}
+                                      }, {
+                                        name: 'yang',
+                                        job_number: '222',//工号
+                                        age: '12',      //年龄
+                                        birth: '10',    //出生年月
+                                        message: 'wq',
+                                        identity_number: '434343', //身份证号
+                                        inservice: 'yysua',       //在职情况
+                                        marriage: 'dewd',        //婚姻情况
+                                        political: 'dewde',      //政治面貌
+                                        phone: 'dew',           //电话
+                                        gender: 'dew',           //性别
+                                        inservice_time: 'dewdw',     //入职时间
+                                        department: 'dewdew' ,//部门}
+                                        }, {
+                                          name: 'yang',
+                                          job_number: '222',//工号
+                                          age: '12',      //年龄
+                                          birth: '10',    //出生年月
+                                          message: 'wq',
+                                          identity_number: '434343', //身份证号
+                                          inservice: 'yysua',       //在职情况
+                                          marriage: 'dewd',        //婚姻情况
+                                          political: 'dewde',      //政治面貌
+                                          phone: 'dew',           //电话
+                                          gender: 'dew',           //性别
+                                          inservice_time: 'dewdw',     //入职时间
+                                          department: 'dewdew' ,//部门}
+                                          }, {
+                                            name: 'yang',
+                                            job_number: '222',//工号
+                                            age: '12',      //年龄
+                                            birth: '10',    //出生年月
+                                            message: 'wq',
+                                            identity_number: '434343', //身份证号
+                                            inservice: 'yysua',       //在职情况
+                                            marriage: 'dewd',        //婚姻情况
+                                            political: 'dewde',      //政治面貌
+                                            phone: 'dew',           //电话
+                                            gender: 'dew',           //性别
+                                            inservice_time: 'dewdw',     //入职时间
+                                            department: 'dewdew' ,//部门}
+                                            },
 
   ]
 }
@@ -73,20 +339,26 @@ if(action.type === types.u_SelectionChange){
   const newState = JSON.parse(JSON.stringify(state))
   newState.newCar = false
   newState.car = action.value
-  newState.selectedCar = action.value
+  // newState.selectedCar = action.value
 
-  let j , len 
-  for( j = 0,  len = state.cars.length; j <= len; j ++){
-    if (state.cars[j] == newState.car){
-      newState.index = state.cars.indexOf(state.cars[j])
+  // let j , len 
+  // for( j = 0,  len = state.cars.length; j <= len; j ++){
+  //   if (state.cars[j] == newState.car){
+  //     newState.index = state.cars.indexOf(state.cars[j])
      
-    }
-  }
-  console.log(state.index)
+  //   }
+  // }
+  // console.log(state.index)
   
-  newState.cars[state.index] = action.value
+  // newState.cars[state.index] = action.value
+  // newState.displayDialog = true
+  
+
+  newState.index = state.cars.indexOf(action.value)
+  console.log(state.cars.indexOf(action.value))
+  
   newState.displayDialog = true
-  
+
   return newState
 } 
 
@@ -124,8 +396,6 @@ if(action.type === types.u_AddNew){
 
 if(action.type === types.u_Save){
   const newState = JSON.parse(JSON.stringify(state))
-  newState.car = state.selectedCar
-  
   newState.cars = [...state.cars]
   if(state.newCar){
     newState.cars.push(state.car)
@@ -152,27 +422,6 @@ if(action.type === types.u_Delete){
   newState.displayDialog = false
   return newState
 } 
-
-// if(action.type === types.u_UpdateProperty){
-//   const newState = JSON.parse(JSON.stringify(state))
-
-//   if(state.new) newState.newCar = true
-//   else newState.newCar = false
-  
-//   newState.car = updateProperty(action.property, action.value)  
-//   newState.selectedCar = updateProperty(action.property, action.value) 
-//   console.log(updateProperty(action.property, action.value) )
-
-//     //updateProperty(property, value) {
-//     //     let car = this.state.car;
-//     //     car[property] = value;
-//     //     this.setState({car: car});
-//     // }
-
-  
-//   return newState
-// } 
-
 
 if(action.type === types.UInputNameChanege){
   const newState = JSON.parse(JSON.stringify(state))
@@ -231,7 +480,7 @@ if(action.type === types.UinputPoliticalChanege){
 
 if(action.type === types.UinputInserviceChanege){
   const newState = JSON.parse(JSON.stringify(state))
-  newState.car.inservice_time = action.value
+  newState.car.inservice = action.value
   return newState
 }
 
@@ -241,17 +490,12 @@ if(action.type === types.UinputInserviceTChanege){
   return newState
 }
 
+if(action.type === types.UinputInserviceChanege){
+  const newState = JSON.parse(JSON.stringify(state))
+  newState.car.inservice = action.value
+  return newState
+}
 
-
-
-
-// function updateProperty(property, value) {
-//   let car = state.car;
-//   car[property] = value;
-//   return car
-// }
-
-  
   return state
 }
 

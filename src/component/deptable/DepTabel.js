@@ -10,13 +10,6 @@ import * as actionCreators from '../../action/actionCreators'
 
 class DepTabel extends Component{
 
-    constructor (props) {
-        super(props)
-    
-    }
-
-  
-
 render () {
     let {
         depaddNew, 
