@@ -142,7 +142,42 @@ export const inputMaternity_insuranceChanege = 'inputMaternity_insuranceChanege'
 export const inputHousing_fundChanege = 'inputHousing_fundChanege'
 
 
+// Leave
 
+export const  LinputSearchChanege = 'LinputSearchChanege'
+export const  LselectionChange = 'LselectionChange'
+export const  LonHide = 'LonHide'
+export const  LSave = 'LSave'
+export const LDelete = 'LDelete'
+export const LaddNew = 'LaddNew'
+
+
+export const inputLUser_idChanege = 'inputLUser_idChanege'
+export const inputLUser_nameChanege = 'inputLUser_nameChanege'
+export const inputLUser_departmentChanege = 'inputLUser_departmentChanege'
+
+export const inputLeave_typesChanege = 'inputLeave_typesChanege'
+export const inputStart_typesChanege = 'inputStart_typesChanege'
+export const inputEnd_typesChanege = 'inputEnd_typesChanege'
+
+
+// Attendance
+
+export const  ADinputSearchChanege = 'ADinputSearchChanege'
+export const  ADselectionChange = 'ADselectionChange'
+export const  ADonHide = 'ADonHide'
+export const  ADSave = 'ADSave'
+export const ADDelete = 'ADDelete'
+export const ADaddNew = 'ADaddNew'
+
+
+export const inputADUser_idChanege = 'inputADUser_idChanege'
+export const inputADUser_nameChanege = 'inputADUser_nameChanege'
+export const inputADUser_departmentChanege = 'inputADUser_departmentChanege'
+
+export const inputAttendance_tyepsChanege = 'inputAttendance_tyepsChanege'
+export const inputDatesChanege = 'inputDatesChanege'
+export const inputDoctypeChanege = 'inputDoctypeChanege'
 
 
 

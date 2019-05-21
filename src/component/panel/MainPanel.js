@@ -16,6 +16,8 @@ import education from '../../component/education/Education'
 import salary from '../../component/salary/Salary'
 import subsidy from '../../component/subsidy/Subsidy'
 import socialsecurity from '../../component/socialsecurity/Socialsecurity'
+import leave from '../../component/leave/Leave'
+import attendance from '../../component/attendance/Attendance'
  class MainPanel extends Component {     
     render() {
         const items = [
@@ -96,10 +98,10 @@ import socialsecurity from '../../component/socialsecurity/Socialsecurity'
                icon:'pi pi-fw pi-calendar',
                items:[
                   {
-                     label:'休息管理',
+                     label:'请假管理',
                      icon:'pi pi-fw pi-clock',
                      command: (event) => {
-                        // window.location.hash='/subsidy'
+                        window.location.hash='/leave'
                         
                      }
          
@@ -108,18 +110,10 @@ import socialsecurity from '../../component/socialsecurity/Socialsecurity'
                      label:'员工考勤',
                      icon:'pi pi-fw pi-user',
                      command: (event) => {
-                        // window.location.hash='/subsidy'
+                        window.location.hash='/attendance'
                         
                      }
          
-                  },
-                  {
-                     label:'值班安排',
-                     icon:'pi pi-fw pi-calendar-plus',
-                     command: (event) => {
-                        // window.location.hash='/subsidy'
-                        
-                     }
                   }
                ]
             },
@@ -184,7 +178,8 @@ import socialsecurity from '../../component/socialsecurity/Socialsecurity'
                             <Route path='/salary' exact component={ salary } />  
                             <Route path='/subsidy' exact component={ subsidy } /> 
                             <Route path='/socialsecurity' exact component={ socialsecurity } /> 
-                            
+                            <Route path='/leave' exact component={ leave } /> 
+                            <Route path='/attendance' exact component={ attendance } /> 
                         </Router>
                        
                        </div>

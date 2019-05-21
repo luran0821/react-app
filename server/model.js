@@ -36,8 +36,8 @@ const models = {
     },
     /**Department 部门*/
     department:{
-        name: {type: String, require: true}, //部门名称
-        department_id: {type: Number, require: true},  //部门编号
+        name: { type: String, require: true}, //部门名称
+        department_id: { type: Number, require: true},  //部门编号
     },
 
     /**Salary 薪资*/
@@ -55,9 +55,9 @@ const models = {
             ref: 'user'
         },//部门
 
-        bonus: {type: Number, require: true},         //奖金
-        basic_salary: {type: Number, require: true},         //基本工资
-        position_salary: {type: Number, require: true}         //岗位工资
+        bonus: {type: Number },         //奖金
+        basic_salary: {type: Number },         //基本工资
+        position_salary: {type: Number }         //岗位工资
          
     },
 
@@ -112,13 +112,14 @@ const models = {
             type: Schema.Types.ObjectId, 
             ref: 'user'
         },//部门
-        pension:{type: Number, require: true},    //养老保险
-        medical_insurance:{type: Number, require: true},    //医疗保险
-        unemployment_insurance:{type: Number, require: true},    //失业保险
-        injury_insurance:{type: Number, require: true},    //工伤保险
-        maternity_insurance:{type: Number, require: true},    //生育保险
-        housing_fund:{type: Number, require: true},    //住房公积金
+        pension:{type: Number },    //养老保险
+        medical_insurance:{type: Number },    //医疗保险
+        unemployment_insurance:{type: Number },    //失业保险
+        injury_insurance:{type: Number },    //工伤保险
+        maternity_insurance:{type: Number },    //生育保险
+        housing_fund:{type: Number },    //住房公积金
     },
+
     /**Leave 请假 */
     leave:{
         user_id:{
@@ -134,9 +135,9 @@ const models = {
             ref: 'user'
         },//部门
 
-        leave_types:{type: String, require: true},//请假类型
-        start_types:{type: Date, require: true},//开始时间
-        end_types:{type: Date, require: true},//结束时间
+        leave_types:{type: String },//请假类型
+        start_types:{type: Date },//开始时间
+        end_types:{type: Date },//结束时间
     },
 
      /**Attendance 考勤 */
@@ -153,10 +154,12 @@ const models = {
             type: Schema.Types.ObjectId, 
             ref: 'user'
         },//部门        
-        attendance_tyeps: {type: String, require: true},
-        date:{type: Date, require: true},   //日期
+        attendance_tyeps: { type: String }, //考勤类型
+        date:{type: Date },   //日期
+        doctype: {type: String } //备注
      },
-     /**Onduty 考勤 */
+     
+     /**Onduty 考勤 
      onduty:{
         user_id:{
             type: Schema.Types.ObjectId, 
@@ -172,6 +175,8 @@ const models = {
         },//部门   
         date:{type: Date, require: true},   //日期
      },
+*/
+
 
      /**Education 学历 */
      education:{

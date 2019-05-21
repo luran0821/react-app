@@ -478,3 +478,98 @@ export const inputHousing_fundChanege = (e) => ({
 }) 
 
 
+// Leave
+
+export const LinputSearchChanege = (e) => ({
+    type: types.LinputSearchChanege,
+    value: e.target.value
+})
+export const LselectionChange = (e) => ({
+    type: types.LselectionChange,
+    value:  e.value
+})
+export const LonHide = () => ({
+    type: types.LonHide
+})
+export const LSave = () => ({
+    type: types.LSave
+})
+export const LDelete = () => ({
+    type: types.LDelete
+})
+export const LaddNew = () => ({
+    type: types.LaddNew
+})
+export const inputLUser_idChanege = (e) => ({
+    type: types.inputLUser_idChanege,
+    value: e.target.value
+})
+export const inputLUser_nameChanege = (e) => ({
+    type: types.inputLUser_nameChanege,
+    value: e.target.value
+})
+export const inputLUser_departmentChanege = (e) => ({
+    type: types.inputLUser_departmentChanege,
+    value: e.target.value
+})
+export const inputLeave_typesChanege = (e) => ({
+    type: types.inputLeave_typesChanege,
+    value: e.target.value
+})
+export const inputStart_typesChanege = (e) => ({
+    type: types.inputStart_typesChanege,
+    value:e.target.value
+})
+export const inputEnd_typesChanege = (e) => ({
+    type: types.inputEnd_typesChanege,
+    value: e.target.value
+})
+
+
+//Attendance
+
+export const ADinputSearchChanege = (e) => ({
+    type: types.ADinputSearchChanege,
+    value: e.target.value
+})
+export const ADselectionChange = (e) => ({
+    type: types.ADselectionChange,
+    value:  e.value
+})
+export const ADonHide = () => ({
+    type: types.ADonHide
+})
+export const ADSave = () => ({
+    type: types.ADSave
+})
+export const ADDelete = () => ({
+    type: types.ADDelete
+})
+export const ADaddNew = () => ({
+    type: types.ADaddNew
+})
+export const inputADUser_idChanege = (e) => ({
+    type: types.inputADUser_idChanege,
+    value: e.target.value
+})
+export const inputADUser_nameChanege = (e) => ({
+    type: types.inputLUser_nameChanege,
+    value: e.target.value
+})
+export const inputADUser_departmentChanege = (e) => ({
+    type: types.inputADUser_departmentChanege,
+    value: e.target.value
+})
+export const inputAttendance_tyepsChanege = (e) => ({
+    type: types.inputAttendance_tyepsChanege,
+    value: e.target.value
+})
+export const inputDatesChanege = (e) => ({
+    type: types.inputDatesChanege,
+    value:e.target.value
+})
+export const inputDoctypeChanege = (e) => ({
+    type: types.inputDoctypeChanege,
+    value: e.target.value
+})
+
