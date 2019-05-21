@@ -339,21 +339,7 @@ if(action.type === types.u_SelectionChange){
   const newState = JSON.parse(JSON.stringify(state))
   newState.newCar = false
   newState.car = action.value
-  // newState.selectedCar = action.value
-
-  // let j , len 
-  // for( j = 0,  len = state.cars.length; j <= len; j ++){
-  //   if (state.cars[j] == newState.car){
-  //     newState.index = state.cars.indexOf(state.cars[j])
-     
-  //   }
-  // }
-  // console.log(state.index)
   
-  // newState.cars[state.index] = action.value
-  // newState.displayDialog = true
-  
-
   newState.index = state.cars.indexOf(action.value)
   console.log(state.cars.indexOf(action.value))
   
@@ -386,7 +372,7 @@ if(action.type === types.u_AddNew){
   newState.car.inservice_time = ''     //入职时间
   newState.car.department = ''          //部门
 
-  newState.selectedCar = state.car
+ // newState.selectedCar = state.car
   newState.new = true
   newState.newCar = true
  

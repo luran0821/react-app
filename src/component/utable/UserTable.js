@@ -58,7 +58,7 @@ import './UserTable.css'
                         <i className="pi pi-search" style={{margin:'4px 4px 0 0'}}></i>
 
                         <InputText type="search" 
-                        onInput={ UinputSearchChanege } 
+                        onInput={ (e) => UinputSearchChanege(e) } 
                         placeholder="搜索" size="50"/>
                     </div>;
 
@@ -82,7 +82,7 @@ import './UserTable.css'
                             header={header} footer={footer}
                            selectionMode="single" 
                            selection={ selectedCar } 
-                           onSelectionChange={(e) =>UselectionChange(e)}
+                           onSelectionChange={(e) => UselectionChange(e)}
                            
                            globalFilter={ globalFilter} emptyMessage="没有结果"
                            >
