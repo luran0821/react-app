@@ -9,7 +9,7 @@ import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
 
-import './UserTable.css'
+import '../../index.css'
 
 
  class UserTable extends Component {
@@ -112,7 +112,6 @@ import './UserTable.css'
                 modal={true} 
                 footer={dialogFooter} 
                 onHide={ UonHide }
-                style = {{width: "530px"}}
                 >  
                     {
                       cars &&    
@@ -198,36 +197,37 @@ import './UserTable.css'
                             </div> 
                             <div className='clear'></div>
                            
-                            <div className="p-col-4 " style={{padding:'.75em'}}><label htmlFor="inservice">在职</label></div>
-                            <div className="p-col-8 " style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="inservice">在职</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                            <InputText id="birth" 
                            onChange={(e) => UinputInserviceChanege(e)}
                            value={ inservice }/>
                             </div>
                             
-                            <div className="p-col-4 " style={{padding:'.75em'}}><label htmlFor="birth">出生年月</label></div>
-                            <div className="p-col-8 " style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="birth">出生年月</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="birth" 
                                 onChange={(e) => UinputBirthChanege(e)}
                                  value={ birth }/>
                             </div>
                             
+                            <div className='clear'></div>
 
-                            <div className="p-col-4 " style={{padding:'.75em'}}><label htmlFor="political">政治面貌</label></div>
-                            <div className="p-col-8 " style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="political">政治面貌</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="political"
                                 onChange={(e) => UinputPoliticalChanege(e) } 
                                 value={ political }/>
                             </div>
-                            <div className='clear'></div>
+                           
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="inservice_time">入职时间</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="inservice_time">入职时间</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="inservice_time"
                                  onChange={(e) => UinputInserviceTChanege(e) } 
                                  value={ inservice_time }/>
                             </div>
-                            
+                            <div className='clear'></div>
 
                             <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>

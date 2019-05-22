@@ -7,6 +7,7 @@ import {InputText} from 'primereact/inputtext';
 import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
+import '../../index.css'
 
 class Leave extends Component{
 
@@ -100,47 +101,52 @@ render () {
                     {
                         cars &&   
                         <div className="p-grid p-fluid">
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_id" 
                                 onChange = {(e) =>  inputLUser_idChanege(e)}
                                 value={ user_id }/>
                             </div>
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_name" 
                                 onChange = { (e) => inputLUser_nameChanege(e) }
                                 value={ user_name }/>
                             </div>
+                            <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_department" 
                                 onChange = { (e) => inputLUser_departmentChanege(e) }
                                 value={ user_department }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="leave_types">请假类型</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="leave_types">请假类型</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="leave_types" 
                                 onChange = { (e) => inputLeave_typesChanege(e) }
                                 value={ leave_types }/>
                             </div>
+                            <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="start_types">开始时间</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="start_types">开始时间</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="start_types" 
                                 onChange = { (e) => inputStart_typesChanege(e) }
                                 value={ start_types }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="school_name">结束时间</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="school_name">结束时间</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="end_types" 
                                 onChange = { (e) => inputEnd_typesChanege(e) }
                                 value={ end_types }/>
                             </div>
+                            <div className='clear'></div>
+
                             <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>
                     }

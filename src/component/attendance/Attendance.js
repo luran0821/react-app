@@ -8,6 +8,7 @@ import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
 
+import '../../index.css'
 class Attendance extends Component{
 
 
@@ -100,47 +101,51 @@ render () {
                     {
                         cars &&   
                         <div className="p-grid p-fluid">
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_id" 
                                 onChange = {(e) =>  inputADUser_idChanege(e)}
                                 value={ user_id }/>
                             </div>
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_name" 
                                 onChange = { (e) => inputADUser_nameChanege(e) }
                                 value={ user_name }/>
                             </div>
+                            <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_department" 
                                 onChange = { (e) => inputADUser_departmentChanege(e) }
                                 value={ user_department }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="attendance_tyeps">考勤类型</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="attendance_tyeps">考勤类型</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="attendance_tyeps" 
                                 onChange = { (e) => inputAttendance_tyepsChanege(e) }
                                 value={ attendance_tyeps }/>
                             </div>
+                            <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="date">时间</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="date">时间</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="date" 
                                 onChange = { (e) => inputDateChanege(e) }
                                 value={ date }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="doctype">备注</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="doctype">备注</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="doctype" 
                                 onChange = { (e) => inputDoctypeChanege(e) }
                                 value={ doctype }/>
                             </div>
+                            <div className='clear'></div>
+                        
                             <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>
                     }

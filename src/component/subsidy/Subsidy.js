@@ -7,6 +7,7 @@ import {InputText} from 'primereact/inputtext';
 import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
+import '../../index.css'
 
 class Subsidy extends Component{
 
@@ -112,73 +113,80 @@ render () {
                     {
                         cars &&   
                         <div className="p-grid p-fluid">
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_id" 
                                 onChange = {(e) =>  subsidy_inputUser_idChanege(e)}
                                 value={ user_id }/>
                             </div>
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_name" 
                                 onChange = { (e) => subsidy_inputUser_nameChanege(e) }
                                 value={ user_name }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className='clear'></div>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_department" 
                                 onChange = { (e) => subsidy_inputUser_departmentChanege(e) }
                                 value={ user_department }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="communication_subsidy">通讯补贴</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="communication_subsidy">通讯补贴</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="communication_subsidy" 
                                 onChange = { (e) => inputCommunication_subsidyChanege(e) }
                                 value={ communication_subsidy }/>
                             </div>
+                            <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="temperature_subsidy">高温补贴</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="temperature_subsidy">高温补贴</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="temperature_subsidy" 
                                 onChange = { (e) => inputTemperature_subsidyChanege(e) }
                                 value={ temperature_subsidy }/>
                             </div>
+                         
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="drink_subsidy">奖金</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="drink_subsidy">奖金</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="drink_subsidy" 
                                 onChange = { (e) => inputDrink_subsidyChanege(e) }
                                 value={ drink_subsidy }/>
                             </div>
 
 
-                            
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="traffic_subsidy">交通补贴</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className='clear'></div>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="traffic_subsidy">交通补贴</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="traffic_subsidy" 
                                 onChange = { (e) => inputTraffic_subsidyChanege(e) }
                                 value={ traffic_subsidy }/>
                             </div>
 
+                            
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="meal_subsidy">伙食补贴</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="meal_subsidy">伙食补贴</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="meal_subsidy" 
                                 onChange = { (e) => inputMeal_subsidyChanege(e) }
                                 value={ meal_subsidy }/>
                             </div>
-
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="other_subsidy">其他补贴</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                          
+                            <div className='clear'></div>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="other_subsidy">其他补贴</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="other_subsidy" 
                                 onChange = { (e) => inputOther_subsidyChanege(e) }
                                 value={ other_subsidy }/>
                             </div>
 
-
+                            <div className='clear'></div>
                             <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>
                     }

@@ -8,6 +8,8 @@ import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
 
+import '../../index.css'
+
 class Socialsecurity extends Component{
 
 
@@ -109,72 +111,77 @@ render () {
                     {
                         cars &&   
                         <div className="p-grid p-fluid">
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_id" 
                                 onChange = {(e) =>  socialsecurity_inputUser_idChanege(e)}
                                 value={ user_id }/>
                             </div>
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_name" 
                                 onChange = { (e) => socialsecurity_inputUser_nameChanege(e) }
                                 value={ user_name }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className='clear'></div>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_department" 
                                 onChange = { (e) => socialsecurity_inputUser_departmentChanege(e) }
                                 value={ user_department }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="pension">养老保险</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="pension">养老保险</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="pension" 
                                 onChange = { (e) => inputPensionChanege(e) }
                                 value={ pension }/>
                             </div>
+                            <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="temperature_subsidy">医疗保险</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="temperature_subsidy">医疗保险</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="medical_insurance" 
                                 onChange = { (e) => inputMedical_insuranceChanege(e) }
                                 value={ medical_insurance }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="drink_subsidy">失业保险</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="drink_subsidy">失业保险</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="unemployment_insurance" 
                                 onChange = { (e) => inputUnemployment_insuranceChanege(e) }
                                 value={ unemployment_insurance }/>
                             </div>
-
+                            <div className='clear'></div>
 
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="injury_insurance">工伤保险</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="injury_insurance">工伤保险</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="injury_insurance" 
                                 onChange = { (e) => inputInjury_insuranceChanege(e) }
                                 value={ injury_insurance }/>
                             </div>
 
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="maternity_insurance">生育保险</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="maternity_insurance">生育保险</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="maternity_insurance" 
                                 onChange = { (e) => inputMaternity_insuranceChanege(e) }
                                 value={ maternity_insurance }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="housing_fund">其他补贴</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className='clear'></div>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="housing_fund">其他补贴</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="housing_fund" 
                                 onChange = { (e) => inputHousing_fundChanege(e) }
                                 value={ housing_fund }/>
                             </div>
-
+                            <div className='clear'></div>
 
                             <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>

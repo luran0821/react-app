@@ -8,6 +8,8 @@ import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
 
+import '../../index.css'
+
 class Salary extends Component{
 
 
@@ -97,47 +99,52 @@ render () {
                     {
                         cars &&   
                         <div className="p-grid p-fluid">
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_id">工号</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_id" 
                                 onChange = {(e) =>  salary_inputUser_idChanege(e)}
                                 value={ user_id }/>
                             </div>
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_name">姓名</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_name" 
                                 onChange = { (e) => salary_inputUser_nameChanege(e) }
                                 value={ user_name }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className='clear'></div>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="user_department">部门</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="user_department" 
                                 onChange = { (e) => salary_inputUser_departmentChanege(e) }
                                 value={ user_department }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="basic_salary">基本工资</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="basic_salary">基本工资</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="basic_salary" 
                                 onChange = { (e) => inputBasic_salaryChanege(e) }
                                 value={ basic_salary }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="position_salary">岗位工资</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className='clear'></div>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="position_salary">岗位工资</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="position_salary" 
                                 onChange = { (e) => inputPosition_salaryChanege(e) }
                                 value={ position_salary }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="bonus">奖金</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="bonus">奖金</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="bonus" 
                                 onChange = { (e) => inputBonusChanege(e) }
                                 value={ bonus }/>
                             </div>
+                            <div className='clear'></div>
                             <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
                         </div>
                     }
