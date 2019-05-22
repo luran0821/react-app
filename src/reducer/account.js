@@ -1,4 +1,5 @@
 import * as types from '../action/types'
+import axios from 'axios'
 
 const initState = {
   car:{
@@ -11,16 +12,36 @@ const initState = {
   globalFilter: null,
   newCar: false,
   index: 0,
-  cars: [{
-    name: '32',
-    password: 2132
-  },{
-    name: 'ya32ng',
-    password: 2132
-  }]
+  cars: []
 }
    
 export default(state = initState, action) => {
+
+  if(action.type === types.AServeice){
+    const newState = JSON.parse(JSON.stringify(state))
+   
+
+      axios.get('/account/inquire')
+      .then(function (response) {
+        const data =  JSON.parse(JSON.stringify(response.data))
+        newState.cars = []
+        let i, len
+        for(i = 0, len = data.length; i < len; i++){
+           
+            
+            newState.car = data[i]
+            
+            newState.cars.push(data[i])
+         }
+
+       // newState.cars = [... state.data]
+      
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    return newState
+  }
   
     if(action.type === types.AInputSearchChanege){
       const newState = JSON.parse(JSON.stringify(state))

@@ -50,6 +50,7 @@ export const UinputInserviceChanege = 'u_inputInserviceChanege'
 export const UinputAddressChanege  = 'u_inputAddressChanege'
 export const UInputNameChanege = 'u_InputNameChanege'
 export const UinputInserviceTChanege = 'u_inputInserviceTChanege'
+export const UServeice = 'UServeice'
 
 
 
@@ -63,7 +64,7 @@ export const AInputSearchChanege = 'a_inputSearch_chanege'
 export const AaddNew = 'a_addNew'
 export const ADelete = 'a_Delete'
 export const ASave = 'a_Save'
-
+export const AServeice = 'AServeice'
 
 
 //education
@@ -82,7 +83,6 @@ export const inputUser_departmentChanege = 'inputUser_departmentChanege'
 export const inputDiploma_numberChanege = 'inputDiploma_numberChanege'
 export const inputH_educationChanege = 'inputH_educationChanege'
 export const inputSchool_nameChanege = 'inputSchool_nameChanege'
-
 
 
 

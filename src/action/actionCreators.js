@@ -206,6 +206,10 @@ export const u_inputInserviceTChanege = (e) => ({
     value: e.target.value
 })
 
+export const UServeice = () => ({
+    type: types.UServeice
+  
+})
 
 
 
@@ -246,6 +250,12 @@ export const ADelete = () => ({
 export const ASave = () => ({
     type: types.ASave
 })
+
+export const AServeice = () => ({
+    type: types.AServeice
+  
+})
+
 
 /** education*/
 

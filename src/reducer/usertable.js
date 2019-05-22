@@ -1,4 +1,5 @@
 import * as types from '../action/types'
+import axios from 'axios'
 
 const initState = {
   car: {
@@ -329,6 +330,23 @@ const initState = {
 
 
 export default(state = initState, action) => {
+  if(action.type === types.UServeice){
+    const newState = JSON.parse(JSON.stringify(state))
+
+      axios.get('/account/inquire')
+      .then(function (response) {
+        console.log(response.data);
+        
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    return newState
+  }
+
+
+
+
   if(action.type === types.u_InputSearchChanege){
     const newState = JSON.parse(JSON.stringify(state))
     newState.globalFilter = action.value

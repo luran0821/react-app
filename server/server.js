@@ -2,7 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session');
 const bodyparser = require('body-parser');
-const accountRouter = require('./account')
+const accountRouter = require('./account');
+const userRouter = require('./user');
 const redisStore = require('connect-redis')(session);
 
 //建立mongo连接后面跟要创建的数据库(集合connection)
@@ -10,8 +11,8 @@ const redisStore = require('connect-redis')(session);
 
 const app =  express()
 
+app.use('/account',accountRouter)
 app.use('/user',accountRouter)
-
 
 ///user/info userRouter子路由
 //app.use('/user', userRouter)

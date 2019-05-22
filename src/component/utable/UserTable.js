@@ -14,6 +14,11 @@ import '../../index.css'
 
  class UserTable extends Component {
 
+    //date
+    componentDidMount(){
+        this.props.UServeice()
+    }
+
 
   render() {
     const {
@@ -261,6 +266,9 @@ const mapStateToProps = (state) => ({
 
 
 const mapDispatchToProps = (dispatch) =>({
+    UServeice(){
+        dispatch(actionCreators.UServeice())
+    },
     UinputSearchChanege(e){
         dispatch(actionCreators.u_InputSearchChanege(e))
     },

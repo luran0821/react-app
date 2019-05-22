@@ -10,7 +10,9 @@ import * as actionCreators from '../../action/actionCreators'
 
 class Account extends Component{
 
- 
+    componentDidMount(){
+        this.props.AServeice()
+    }
 render () {
     let {
         AaddNew, 
@@ -148,6 +150,9 @@ const mapDispatchToProps = (dispatch) =>({
 
     AaddNew(){
         dispatch(actionCreators.AaddNew())
+    },
+    AServeice(){
+        dispatch(actionCreators.AServeice())
     }
    
 })
