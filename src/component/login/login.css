@@ -21,7 +21,7 @@
 .regin-button{
     position:absolute;
     bottom:15%;
-    left:20%;
+    left:22%;
     width: 90px;
     height: 40px;
 }
@@ -29,7 +29,21 @@
 .login-button{
     position:absolute;
     bottom:15%;
-    left:50%;
+    left:52%;
     width: 90px;
     height: 40px;
 }
+
+.login-background{
+    background-image: url("../../resources/image/bg.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+
+}
+

@@ -23,8 +23,7 @@ Router.get('/inquire',function(req, res){
 
 
   //过滤字段{_id:0 ,__v:0}
-  Account.find({},{_id:0 ,__v:0,isAuth:0}, function(err, doc){
-    //console.log(11111)
+  Account.find({},{_id:0 , __v:0, isAuth:0}, function(err, doc){
     res.json(doc)
   })
 })

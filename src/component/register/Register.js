@@ -18,35 +18,9 @@ const Register = (props) => {
     const { name, password, registerNameChanege, registerPwdChanege, npassword, registerPwdSChanege, onClickregister ,message} = props
 
     return(
-        <div>
+        <div className= 'register-background' >
                 <div className = 'register' >
-                 {/* <div>
-                    <input value= { name }
-                           onChange={ loginNameChanege }
-                    />
-                 </div>
-                 <div>
-                    <input value= { password }
-                           onChange= { loginPwdChanege }
-                    />
-                 </div>
-                 <div>
-                    <button name='login'
-                            onClick= { onClickLogin }
-                    > login 
-                   { redirecTo ? <Redirect to = { redirecTo } /> : null}
-                    </button>
-                    <button name='register' > register </button>
-                 </div>
-                 <div>
-                 <button 
-
-                            >login</button></div>
-                 <div><button
-                            
-                            >logout</button></div> */}
-
-
+                
                  <div className='register-name'>           
                     
                         <InputText  

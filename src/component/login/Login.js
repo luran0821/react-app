@@ -13,38 +13,40 @@ const Login = (props) => {
         const { name, password, loginNameChanege, loginPwdChanege } = props
         return(
            
-            <div className = 'loginbox' >                
-                 <div>           
-                    <span className='p-float-label input-name'>
-                        <InputText  
-                            placeholder='用户名'
-                            size = '30'
-                            value= { name }
-                           onChange={ loginNameChanege}
-                        />
-                    </span>
-                </div>
-                
-                <div>
-                    <Password  
-                    className='input-password'
-                    promptLabel= '输入密码'
-                    weakLabel = '密码太短'
-                    mediumLabel = '密码长度一般'
-                    strongLabel = '密码长度适合'
-                    size = '30'
+            <div  className = 'login-background'>
+                <div className = 'loginbox' >                
+                    <div>           
+                        <span className='p-float-label input-name'>
+                            <InputText  
+                                placeholder='用户名'
+                                size = '30'
+                                value= { name }
+                            onChange={ loginNameChanege}
+                            />
+                        </span>
+                    </div>
+                    
+                    <div>
+                        <Password  
+                        className='input-password'
+                        promptLabel= '输入密码'
+                        weakLabel = '密码太短'
+                        mediumLabel = '密码长度一般'
+                        strongLabel = '密码长度适合'
+                        size = '30'
 
-                    placeholder='密码'
-                    value= { password }
-                    onChange= { loginPwdChanege }
+                        placeholder='密码'
+                        value= { password }
+                        onChange= { loginPwdChanege }
 
-                    />    
+                        />    
+                    </div>
+                    <div>
+                        <Button className="p-button-info regin-button" label="注册" />
+                        <Button  className="p-button-info  login-button" label="登陆" />
+                    </div>
                 </div>
-                <div>
-                    <Button className="p-button-info regin-button" label="注册" />
-                    <Button  className="p-button-info  login-button" label="登陆" />
-                </div>
-            </div>
+             </div>
         
         )
 
