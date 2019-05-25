@@ -9,7 +9,7 @@ const initState = {
     h_education: '',    //最高学历
     school_name: ''   //学校
   },
-    
+  //message: ' 退出编辑状态请保存退出 ！',  
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,

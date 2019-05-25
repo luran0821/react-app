@@ -36,7 +36,7 @@ render () {
         leave_types,
         start_types,
         end_types,
-
+        message,
         inputLUser_idChanege,
         inputLUser_nameChanege,
         inputLUser_departmentChanege,
@@ -147,7 +147,7 @@ render () {
                             </div>
                             <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -170,7 +170,8 @@ render () {
     selectedCar: state.leave.selectedCar,
     globalFilter: state.leave.globalFilter,
     cars: state.leave.cars,
-    displayDialog:  state.leave.displayDialog
+    displayDialog:  state.leave.displayDialog,
+    message: state.account.message
     
 })
 

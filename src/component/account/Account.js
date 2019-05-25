@@ -7,6 +7,7 @@ import {InputText} from 'primereact/inputtext';
 import {Button} from 'primereact/button';
 import * as actionCreators from '../../action/actionCreators' 
 
+import '../../index.css'
 
 class Account extends Component{
 
@@ -29,6 +30,13 @@ render () {
         AInputSearchChanege ,
         AselectionChange, 
         AonHide,
+        InputaddChanege,
+        InputdeleteChanege,
+        InputmodifyChanege,
+        add,
+        adelete,
+        modify,
+        message
     }  = this.props
  
   
@@ -69,7 +77,9 @@ render () {
                           globalFilter={ globalFilter } emptyMessage="没有结果"
                            >                    
                     <Column field="name" header="账号" sortable={true} />
-                    <Column field="password" header="密码" sortable={true} />
+                    <Column field="add"   header="添加权限" sortable={true} />
+                    <Column field="adelete"   header="删除权限" sortable={true} />
+                    <Column field="modify"   header="修改权限" sortable={true} />
                 </DataTable>
 
 {/* 添加信息 */}
@@ -81,23 +91,50 @@ render () {
                 >   
                     {
                         cars &&   
-                        <div className="p-grid p-fluid">
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="name">账号</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                        <div className="p-grid p-fluid ">
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="name">账号</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="name" 
                                 onChange = { (e) =>  AInputNameChanege(e)}
                                 value={ name }/>
                             </div>
                             
-                            <div className="p-col-4" style={{padding:'.75em'}}><label htmlFor="department_id">密码</label></div>
-                            <div className="p-col-8" style={{padding:'.5em'}}>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="department_id">密码</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
                                 <InputText id="password" 
                                  type="password" 
                                 onChange = { (e) => AInputPwdChanege(e)}
                                 value={ password }/>
                             </div>
+                            <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="name">添加权限</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+                                <InputText id="add" 
+                                placeholder="填：有 | 没有"
+                                onChange = { (e) =>  InputaddChanege(e)}
+                                value={ add }/>
+                            </div>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="name">删除权限</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+                                <InputText id="adelete" 
+                                placeholder="填：有 | 没有"
+                                onChange = { (e) =>  InputdeleteChanege(e)}
+                                value={ adelete }/>
+                            </div>
+                            <div className='clear'></div>
+
+                            <div className="p-col-4 floatf" style={{padding:'.75em'}}><label htmlFor="name">修改权限</label></div>
+                            <div className="p-col-8 floatf" style={{padding:'.5em'}}>
+                                <InputText id="modify" 
+                                placeholder="填：有 | 没有"
+                                onChange = { (e) =>  InputmodifyChanege(e)}
+                                value={ modify }/>
+                            </div>
+
+                            <div className='clear'></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -111,10 +148,14 @@ render () {
    const mapStateToProps = (state) => ({
     name: state.account.car.name,
     cars: state.account.cars,
+    add: state.account.car.add,
+    adelete: state.account.car.adelete,
+    modify: state.account.car.modify,
     department_id: state.account.car.password,
     displayDialog: state.account.displayDialog,
     selectedCar: state.account.selectedCar,
-    globalFilter: state.account.globalFilter
+    globalFilter: state.account.globalFilter,
+    message: state.account.message
     
 })
 
@@ -153,7 +194,17 @@ const mapDispatchToProps = (dispatch) =>({
     },
     AServeice(){
         dispatch(actionCreators.AServeice())
-    }
+    },
+
+    InputaddChanege(e){
+        dispatch(actionCreators.InputaddChanege(e))
+    },
+    InputdeleteChanege(e){
+        dispatch(actionCreators.InputdeleteChanege(e))
+    },
+    InputmodifyChanege(e){
+        dispatch(actionCreators.InputmodifyChanege(e))
+    },
    
 })
 

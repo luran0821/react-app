@@ -37,7 +37,7 @@ render () {
         injury_insurance,
         maternity_insurance,
         housing_fund,
-        
+        message,
 
 
         socialsecurity_inputUser_idChanege,
@@ -183,7 +183,7 @@ render () {
                             </div>
                             <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -210,8 +210,8 @@ render () {
     selectedCar: state.socialsecurity.selectedCar,
     globalFilter: state.socialsecurity.globalFilter,
     cars: state.socialsecurity.cars,
-    displayDialog:  state.socialsecurity.displayDialog
-    
+    displayDialog:  state.socialsecurity.displayDialog,
+    message: state.account.message
 })
 
 

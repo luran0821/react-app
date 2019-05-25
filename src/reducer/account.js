@@ -4,15 +4,51 @@ import axios from 'axios'
 const initState = {
   car:{
     name: '',
-    password: ''
+    password: '',
+    add: '有',
+    adelete: '没有',
+    modify: '有',
   },
+  message: ' 退出编辑状态请保存退出 ！',
     
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,
   newCar: false,
   index: 0,
-  cars: []
+  cars: [{
+    name: 'admin',
+    password: 'admin',
+    add: '有',
+    adelete: '有',
+    modify: '有',
+  },
+  {
+    name: '普通员工',
+    password: 'admin',
+    add: '有',
+    adelete: '没有',
+    modify: '没有',
+  },{
+    name: '普通员工',
+    password: 'admin',
+    add: '有',
+    adelete: '没有',
+    modify: '没有',
+  },{
+    name: '普通员工',
+    password: 'admin',
+    add: '有',
+    adelete: '没有',
+    modify: '没有',
+  },
+  {
+    name: '普通员工',
+    password: 'admin',
+    add: '有',
+    adelete: '没有',
+    modify: '有',
+  },]
 }
    
 export default(state = initState, action) => {
@@ -75,6 +111,9 @@ export default(state = initState, action) => {
     const newState = JSON.parse(JSON.stringify(state))
     newState.car.name = '' 
     newState.car.password = ''
+    newState.car.add = ''
+    newState.car.adelete = ''
+    newState.car.modify = ''
     newState.newCar = true
    
     newState.displayDialog = true

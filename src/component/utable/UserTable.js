@@ -38,6 +38,7 @@ import '../../index.css'
         displayDialog,
         selectedCar,
         globalFilter,
+        message,
         UinputSearchChanege,
         UaddNew,
         UDelete,
@@ -234,7 +235,7 @@ import '../../index.css'
                             </div>
                             <div className='clear'></div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -249,7 +250,7 @@ const mapStateToProps = (state) => ({
     job_number: state.usertabel.car.job_number,     //工号
     age: state.usertabel.car.age,                   //年龄
     birth: state.usertabel.car.birth,               //出生年月
-    message: state.usertabel.car.message,
+    message: state.account.message,
     identity_number: state.usertabel.car.identity_number,   //身份证号
     inservice: state.usertabel.car.inservice,       //在职情况
     marriage: state.usertabel.car.marriage,        //婚姻情况

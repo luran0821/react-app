@@ -5,7 +5,7 @@ const initState = {
     name: '',
     department_id: ''
   },
-    
+  //message: ' 退出编辑状态请保存退出 ！',  
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,

@@ -13,7 +13,7 @@ const initState = {
     maternity_insurance: '',         //生育保险
     housing_fund: ''                 //住房公积金
   },
-    
+  //message: ' 退出编辑状态请保存退出 ！',  
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,

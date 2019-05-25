@@ -27,7 +27,7 @@ render () {
         EselectionChange, 
 
         EonHide,
-
+        message,
         user_id,
         user_name,
         user_department,
@@ -144,7 +144,7 @@ render () {
                                 value={ school_name }/>
                             </div>
                             <div className='clear'></div>
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -165,7 +165,8 @@ render () {
     selectedCar: state.education.selectedCar,
     globalFilter: state.education.globalFilter,
     cars: state.education.cars,
-    displayDialog:  state.education.displayDialog
+    displayDialog:  state.education.displayDialog,
+    message: state.account.message
     
 })
 

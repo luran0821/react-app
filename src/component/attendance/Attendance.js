@@ -36,7 +36,7 @@ render () {
         attendance_tyeps,//考勤类型
         date, //日期
         doctype, //备注
-
+        message,
         inputADUser_idChanege,
         inputADUser_nameChanege,
         inputADUser_departmentChanege,
@@ -146,7 +146,7 @@ render () {
                             </div>
                             <div className='clear'></div>
                         
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -169,7 +169,8 @@ render () {
     selectedCar: state.attendance.selectedCar,
     globalFilter: state.attendance.globalFilter,
     cars: state.attendance.cars,
-    displayDialog:  state.attendance.displayDialog
+    displayDialog:  state.attendance.displayDialog,
+    message: state.account.message
     
 })
 

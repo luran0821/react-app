@@ -30,7 +30,7 @@ render () {
         user_id,
         user_name,
         user_department,
-
+        message,
        
         communication_subsidy,
         temperature_subsidy,
@@ -187,7 +187,7 @@ render () {
                             </div>
 
                             <div className='clear'></div>
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -214,7 +214,8 @@ render () {
     selectedCar: state.subsidy.selectedCar,
     globalFilter: state.subsidy.globalFilter,
     cars: state.subsidy.cars,
-    displayDialog:  state.subsidy.displayDialog
+    displayDialog:  state.subsidy.displayDialog,
+    message: state.account.message
     
 })
 

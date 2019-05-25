@@ -25,7 +25,8 @@ render () {
         depSave,
         inputSearchChanege ,
         selectionChange, 
-        deponHide
+        deponHide,
+        message
     }  = this.props
  
   
@@ -93,7 +94,7 @@ render () {
                                 value={ department_id }/>
                             </div>
 
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -110,8 +111,8 @@ render () {
     department_id: state.deptabel.car.department_id,
     displayDialog: state.deptabel.displayDialog,
     selectedCar: state.deptabel.selectedCar,
-    globalFilter: state.deptabel.globalFilter
-    
+    globalFilter: state.deptabel.globalFilter,
+    message: state.account.message
 })
 
 

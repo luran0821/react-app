@@ -10,7 +10,7 @@ const initState = {
     basic_salary: '',    //基本工资
     position_salary: ''   //岗位工资
   },
-    
+  //message: ' 退出编辑状态请保存退出 ！',  
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,

@@ -27,7 +27,7 @@ render () {
         salary_selectionChange, 
 
         salary_onHide,
-
+        message,
         user_id,
         user_name,
         user_department,
@@ -145,7 +145,7 @@ render () {
                                 value={ bonus }/>
                             </div>
                             <div className='clear'></div>
-                            <div className="p-col-4" style={{padding:'.75em'}}><label > 退出编辑状态请保存退出 ！</label></div>
+                            <div className="p-col-4" style={{padding:'.75em'}}><label >{ message }</label></div>
                         </div>
                     }
                 </Dialog>
@@ -169,7 +169,8 @@ render () {
     selectedCar: state.salary.selectedCar,
     globalFilter: state.salary.globalFilter,
     cars: state.salary.cars,
-    displayDialog:  state.salary.displayDialog
+    displayDialog:  state.salary.displayDialog,
+    message: state.account.message
     
 })
 

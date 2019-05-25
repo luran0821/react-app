@@ -256,6 +256,21 @@ export const AServeice = () => ({
   
 })
 
+export const InputaddChanege = (e) => ({
+    type: types.InputaddChanege,
+    value: e.target.value
+})
+export const InputdeleteChanege = (e) => ({
+    type: types.InputdeleteChanege,
+    value: e.target.value
+})
+export const InputmodifyChanege = (e) => ({
+    type: types.InputmodifyChanege,
+    value: e.target.value
+})
+
+
+
 
 /** education*/
 

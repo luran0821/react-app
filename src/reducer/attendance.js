@@ -10,7 +10,7 @@ const initState = {
     date: '',    //时间
     doctype: ''   //备注
   },
-    
+  //message: ' 退出编辑状态请保存退出 ！',  
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,

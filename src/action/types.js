@@ -65,6 +65,9 @@ export const AaddNew = 'a_addNew'
 export const ADelete = 'a_Delete'
 export const ASave = 'a_Save'
 export const AServeice = 'AServeice'
+export const InputaddChanege = 'InputaddChanege'
+export const InputdeleteChanege = 'InputdeleteChanege'
+export const InputmodifyChanege = 'InputmodifyChanege'
 
 
 //education

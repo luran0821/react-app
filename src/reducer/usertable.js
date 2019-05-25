@@ -7,7 +7,6 @@ const initState = {
     job_number: '',//工号
     age: '',      //年龄
     birth: '',    //出生年月
-    message: '',
     identity_number: '', //身份证号
     inservice: '',       //在职情况
     marriage: '',        //婚姻情况
@@ -19,6 +18,7 @@ const initState = {
     department: '' ,//部门
 
   },
+  //message: ' 退出编辑状态请保存退出 ！',
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,

@@ -13,7 +13,7 @@ const initState = {
     meal_subsidy: '',            //伙食补贴
     other_subsidy: ''            //其他补贴
   },
-    
+  //message: ' 退出编辑状态请保存退出 ！',  
   displayDialog: false,
   selectedCar: {},
   globalFilter: null,
