@@ -26,7 +26,7 @@ import { connect } from 'react-redux';
         return (
             <div>
                 <div className="content-section implementation">
-                    <Chart type="pie" data={data} />
+                    <Chart type="pie" data={data}  />
                 </div>
             </div>
         )

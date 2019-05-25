@@ -21,137 +21,133 @@ const initState = {
   index: 0,
   cars: [
     {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
   
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
     },
     {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
   
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
     },
     {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
   
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
     },
     {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
   
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
     },
     {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
   
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
     },
     {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
   
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
     },
     {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
   
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
+    }, {
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
+  
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
+    }, {
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
+  
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
+    }, {
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
+  
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
+    }, {
+      user_id: '111',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '设能部', //部门 
+  
+      communication_subsidy: '100',  //通讯补贴 
+      temperature_subsidy: '50',    //高温补贴
+      drink_subsidy: '50',          //高温补贴
+      traffic_subsidy: '100',        //交通补贴
+      meal_subsidy: '200',            //伙食补贴
+      other_subsidy: '10'            //其他补贴
     },
-    {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
-  
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
-    },
-    {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
-  
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
-    },
-    {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
-  
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
-    },
-    {
-      user_id: '2131',   //工号
-      user_name: '31',    //姓名
-      user_department: '412', //部门 
-  
-      communication_subsidy: 'few',  //通讯补贴 
-      temperature_subsidy: 'dqw',    //高温补贴
-      drink_subsidy: 'dqwdqw',          //高温补贴
-      traffic_subsidy: 'dqwdqw',        //交通补贴
-      meal_subsidy: 'dwqdwq',            //伙食补贴
-      other_subsidy: 'dqw212'            //其他补贴
-    }
   ]
 }
    

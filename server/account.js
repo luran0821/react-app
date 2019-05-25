@@ -3,6 +3,7 @@ const express = require('express')
 const Router = express.Router()
 const utils = require('utility')
 const model = require('./model')
+const session = require('express-session');
 const Account = model.getModel('account')
 
 const _filter = {'password':0,'__v':0}

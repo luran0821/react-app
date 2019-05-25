@@ -19,23 +19,15 @@ export default(state = initState, action) => {
 
   if(action.type === types.AServeice){
     const newState = JSON.parse(JSON.stringify(state))
-   
-
       axios.get('/account/inquire')
       .then(function (response) {
         const data =  JSON.parse(JSON.stringify(response.data))
         newState.cars = []
         let i, len
         for(i = 0, len = data.length; i < len; i++){
-           
-            
             newState.car = data[i]
-            
             newState.cars.push(data[i])
-         }
-
-       // newState.cars = [... state.data]
-      
+         }   
       })
       .catch(function (error) {
         console.log(error);

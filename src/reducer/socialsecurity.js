@@ -21,137 +21,193 @@ const initState = {
   index: 0,
   cars:[
     {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
   
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
+    }, {
+      user_id: '121',                      //工号
+      user_name: '杨芷',                   //姓名
+      user_department: '财务部',             //部门 
+  
+      pension: '300',                     //养老保险
+      medical_insurance: '300',           //医疗保险
+      unemployment_insurance: '100',      //失业保险
+      injury_insurance: '100',            //工伤保险
+      maternity_insurance: '100',         //生育保险
+      housing_fund: '600'                 //住房公积金
     },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    },
-    {
-      user_id: '2131',                      //工号
-      user_name: '313',                   //姓名
-      user_department: '3131',             //部门 
-  
-      pension: '3131',                     //养老保险
-      medical_insurance: '31',           //医疗保险
-      unemployment_insurance: '333',      //失业保险
-      injury_insurance: '3313',            //工伤保险
-      maternity_insurance: '31321',         //生育保险
-      housing_fund: '321'                 //住房公积金
-    }
 ]
 }
    

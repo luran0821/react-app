@@ -18,86 +18,124 @@ const initState = {
   index: 0,
   cars: [
     {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
+      user_id: '001',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '孔二',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨三',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '章五',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '婚假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '021',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '事假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '031',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '002',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '033',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '087',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨芷',    //姓名
+      user_department: '生产部', //部门 
+  
+      leave_types: '病假',    //请假类型
+      start_types: '2018.10.4',    //开始时间
+      end_types: '2018.11.4'   //结束时间
+    },
 
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  },
-  {
-    user_id: 'wq',   //工号
-    user_name: 'wqwq',    //姓名
-    user_department: 'wqww', //部门 
-
-    leave_types: 'wq',    //请假类型
-    start_types: 'wqdq',    //开始时间
-    end_types: 'dwqd'   //结束时间
-  }]
+   ]
     
 }
    

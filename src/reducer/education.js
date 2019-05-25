@@ -16,105 +16,127 @@ const initState = {
   newCar: false,
   index: 0,
   cars: [
+   {
+      user_id: '001',   //工号
+      user_name: '杨涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
     {
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  },{
-    user_id: 'dewdew',   //工号
-    user_name: 'dewdew',    //姓名
-    user_department: '3', //部门 
-    diploma_number: '3233',    //毕业证号
-    h_education: '333',    //最高学历
-    school_name: '33333'   //学校
-  }]
+      user_id: '002',   //工号
+      user_name: '孔二',    //姓名
+      user_department: '财务部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '清华大学'   //学校
+    },
+    {
+      user_id: '003',   //工号
+      user_name: '杨三',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨二涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨儿涵',    //姓名
+      user_department: '生产部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京航天航空大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨一涵',    //姓名
+      user_department: '公关部', //部门 
+      diploma_number: '1112120',    //毕业证号
+      h_education: '本科',    //最高学历
+      school_name: '北京大学'   //学校
+    }
+   ]
 }
    
 export default(state = initState, action) => {

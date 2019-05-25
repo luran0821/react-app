@@ -18,103 +18,77 @@ const initState = {
   index: 0,
   cars: [
     {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      user_id: '11',   //工号
+      user_name: '王二',    //姓名
+      user_department: '生产部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '12',   //工号
+      user_name: '王二',    //姓名
+      user_department: '生产部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '13',   //工号
+      user_name: '王二',    //姓名
+      user_department: '生产部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '14',   //工号
+      user_name: '王二',    //姓名
+      user_department: '设能部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '11',   //工号
+      user_name: '王二',    //姓名
+      user_department: '财务部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '11',   //工号
+      user_name: '王一',    //姓名
+      user_department: '财务部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '11',   //工号
+      user_name: '王二',    //姓名
+      user_department: '生产部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '11',   //工号
+      user_name: '王二',    //姓名
+      user_department: '财务部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
+    }, {
+      user_id: '11',   //工号
+      user_name: '王二',    //姓名
+      user_department: '生产部', //部门 
   
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
-  
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
-    },
-    {
-      user_id: 'wq',   //工号
-      user_name: 'wq',    //姓名
-      user_department: 'wq', //部门 
-  
-      attendance_tyeps: 'wqqw',    //考勤类型
-      date: 'wqwqww',    //时间
-      doctype: 'wqwq'   //备注
+      attendance_tyeps: '迟到',    //考勤类型
+      date: '2018.4.8',    //时间
+      doctype: ''   //备注
     }
     ]
     

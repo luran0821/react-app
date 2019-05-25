@@ -23,7 +23,7 @@ class SalaryChart extends Component {
         return (
             <div>
                 <div className="content-section implementation">
-                    <Chart type="bar" data={data} />
+                    <Chart type="bar" data={data} width= "100%"/>
                 </div>
             </div>
         )

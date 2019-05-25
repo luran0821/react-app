@@ -27,302 +27,131 @@ const initState = {
   new: false,
   cars:[
     {
-    name: 'yang',
+    name: '杨一',
     job_number: '222',//工号
-    age: '12',      //年龄
-    birth: '10',    //出生年月
-    message: 'wq',
-    identity_number: '434343', //身份证号
-    inservice: 'yysua',       //在职情况
-    marriage: 'dewd',        //婚姻情况
-    political: 'dewde',      //政治面貌
-    phone: 'dew',           //电话
-    gender: 'dew',           //性别
-    inservice_time: 'dewdw',     //入职时间
-    department: 'dewdew' ,//部门}
+    age: '22',      //年龄
+    birth: '2016.10.28',    //出生年月
+    identity_number: '4343436786788', //身份证号
+    inservice: '在职',       //在职情况
+    marriage: '已婚',        //婚姻情况
+    political: '团员',      //政治面貌
+    phone: '13978555646',           //电话
+    gender: '男',           //性别
+    inservice_time: '2019.10.01',     //入职时间
+    department: '设能部' ,//部门}
     },
     {
-      name: 'yang',
-      job_number: '222',//工号
-      age: '12',      //年龄
-      birth: '10',    //出生年月
-      message: 'wq',
-      identity_number: '434343', //身份证号
-      inservice: 'yysua',       //在职情况
-      marriage: 'dewd',        //婚姻情况
-      political: 'dewde',      //政治面貌
-      phone: 'dew',           //电话
-      gender: 'dew',           //性别
-      inservice_time: 'dewdw',     //入职时间
-      department: 'dewdew' ,//部门}
-      }, {
-        name: 'yang',
-        job_number: '222',//工号
-        age: '12',      //年龄
-        birth: '10',    //出生年月
-        message: 'wq',
-        identity_number: '434343', //身份证号
-        inservice: 'yysua',       //在职情况
-        marriage: 'dewd',        //婚姻情况
-        political: 'dewde',      //政治面貌
-        phone: 'dew',           //电话
-        gender: 'dew',           //性别
-        inservice_time: 'dewdw',     //入职时间
-        department: 'dewdew' ,//部门}
-        }, {
-          name: 'yang',
-          job_number: '222',//工号
-          age: '12',      //年龄
-          birth: '10',    //出生年月
-          message: 'wq',
-          identity_number: '434343', //身份证号
-          inservice: 'yysua',       //在职情况
-          marriage: 'dewd',        //婚姻情况
-          political: 'dewde',      //政治面貌
-          phone: 'dew',           //电话
-          gender: 'dew',           //性别
-          inservice_time: 'dewdw',     //入职时间
-          department: 'dewdew' ,//部门}
-          }, {
-            name: 'yang',
-            job_number: '222',//工号
-            age: '12',      //年龄
-            birth: '10',    //出生年月
-            message: 'wq',
-            identity_number: '434343', //身份证号
-            inservice: 'yysua',       //在职情况
-            marriage: 'dewd',        //婚姻情况
-            political: 'dewde',      //政治面貌
-            phone: 'dew',           //电话
-            gender: 'dew',           //性别
-            inservice_time: 'dewdw',     //入职时间
-            department: 'dewdew' ,//部门}
-            }, {
-              name: 'yang',
-              job_number: '222',//工号
-              age: '12',      //年龄
-              birth: '10',    //出生年月
-              message: 'wq',
-              identity_number: '434343', //身份证号
-              inservice: 'yysua',       //在职情况
-              marriage: 'dewd',        //婚姻情况
-              political: 'dewde',      //政治面貌
-              phone: 'dew',           //电话
-              gender: 'dew',           //性别
-              inservice_time: 'dewdw',     //入职时间
-              department: 'dewdew' ,//部门}
-              }, {
-                name: 'yang',
-                job_number: '222',//工号
-                age: '12',      //年龄
-                birth: '10',    //出生年月
-                message: 'wq',
-                identity_number: '434343', //身份证号
-                inservice: 'yysua',       //在职情况
-                marriage: 'dewd',        //婚姻情况
-                political: 'dewde',      //政治面貌
-                phone: 'dew',           //电话
-                gender: 'dew',           //性别
-                inservice_time: 'dewdw',     //入职时间
-                department: 'dewdew' ,//部门}
-                }, {
-                  name: 'yang',
-                  job_number: '222',//工号
-                  age: '12',      //年龄
-                  birth: '10',    //出生年月
-                  message: 'wq',
-                  identity_number: '434343', //身份证号
-                  inservice: 'yysua',       //在职情况
-                  marriage: 'dewd',        //婚姻情况
-                  political: 'dewde',      //政治面貌
-                  phone: 'dew',           //电话
-                  gender: 'dew',           //性别
-                  inservice_time: 'dewdw',     //入职时间
-                  department: 'dewdew' ,//部门}
-                  }, {
-                    name: 'yang',
-                    job_number: '222',//工号
-                    age: '12',      //年龄
-                    birth: '10',    //出生年月
-                    message: 'wq',
-                    identity_number: '434343', //身份证号
-                    inservice: 'yysua',       //在职情况
-                    marriage: 'dewd',        //婚姻情况
-                    political: 'dewde',      //政治面貌
-                    phone: 'dew',           //电话
-                    gender: 'dew',           //性别
-                    inservice_time: 'dewdw',     //入职时间
-                    department: 'dewdew' ,//部门}
-                    }, {
-                      name: 'yang',
-                      job_number: '222',//工号
-                      age: '12',      //年龄
-                      birth: '10',    //出生年月
-                      message: 'wq',
-                      identity_number: '434343', //身份证号
-                      inservice: 'yysua',       //在职情况
-                      marriage: 'dewd',        //婚姻情况
-                      political: 'dewde',      //政治面貌
-                      phone: 'dew',           //电话
-                      gender: 'dew',           //性别
-                      inservice_time: 'dewdw',     //入职时间
-                      department: 'dewdew' ,//部门}
-                      }, {
-                        name: 'yang',
-                        job_number: '222',//工号
-                        age: '12',      //年龄
-                        birth: '10',    //出生年月
-                        message: 'wq',
-                        identity_number: '434343', //身份证号
-                        inservice: 'yysua',       //在职情况
-                        marriage: 'dewd',        //婚姻情况
-                        political: 'dewde',      //政治面貌
-                        phone: 'dew',           //电话
-                        gender: 'dew',           //性别
-                        inservice_time: 'dewdw',     //入职时间
-                        department: 'dewdew' ,//部门}
-                        }, {
-                          name: 'yang',
-                          job_number: '222',//工号
-                          age: '12',      //年龄
-                          birth: '10',    //出生年月
-                          message: 'wq',
-                          identity_number: '434343', //身份证号
-                          inservice: 'yysua',       //在职情况
-                          marriage: 'dewd',        //婚姻情况
-                          political: 'dewde',      //政治面貌
-                          phone: 'dew',           //电话
-                          gender: 'dew',           //性别
-                          inservice_time: 'dewdw',     //入职时间
-                          department: 'dewdew' ,//部门}
-                          }, {
-                            name: 'yang',
-                            job_number: '222',//工号
-                            age: '12',      //年龄
-                            birth: '10',    //出生年月
-                            message: 'wq',
-                            identity_number: '434343', //身份证号
-                            inservice: 'yysua',       //在职情况
-                            marriage: 'dewd',        //婚姻情况
-                            political: 'dewde',      //政治面貌
-                            phone: 'dew',           //电话
-                            gender: 'dew',           //性别
-                            inservice_time: 'dewdw',     //入职时间
-                            department: 'dewdew' ,//部门}
-                            }, {
-                              name: 'yang',
-                              job_number: '222',//工号
-                              age: '12',      //年龄
-                              birth: '10',    //出生年月
-                              message: 'wq',
-                              identity_number: '434343', //身份证号
-                              inservice: 'yysua',       //在职情况
-                              marriage: 'dewd',        //婚姻情况
-                              political: 'dewde',      //政治面貌
-                              phone: 'dew',           //电话
-                              gender: 'dew',           //性别
-                              inservice_time: 'dewdw',     //入职时间
-                              department: 'dewdew' ,//部门}
-                              }, {
-                                name: 'yang',
-                                job_number: '222',//工号
-                                age: '12',      //年龄
-                                birth: '10',    //出生年月
-                                message: 'wq',
-                                identity_number: '434343', //身份证号
-                                inservice: 'yysua',       //在职情况
-                                marriage: 'dewd',        //婚姻情况
-                                political: 'dewde',      //政治面貌
-                                phone: 'dew',           //电话
-                                gender: 'dew',           //性别
-                                inservice_time: 'dewdw',     //入职时间
-                                department: 'dewdew' ,//部门}
-                                }, {
-                                  name: 'yang',
-                                  job_number: '222',//工号
-                                  age: '12',      //年龄
-                                  birth: '10',    //出生年月
-                                  message: 'wq',
-                                  identity_number: '434343', //身份证号
-                                  inservice: 'yysua',       //在职情况
-                                  marriage: 'dewd',        //婚姻情况
-                                  political: 'dewde',      //政治面貌
-                                  phone: 'dew',           //电话
-                                  gender: 'dew',           //性别
-                                  inservice_time: 'dewdw',     //入职时间
-                                  department: 'dewdew' ,//部门}
-                                  }, {
-                                    name: 'yang',
-                                    job_number: '222',//工号
-                                    age: '12',      //年龄
-                                    birth: '10',    //出生年月
-                                    message: 'wq',
-                                    identity_number: '434343', //身份证号
-                                    inservice: 'yysua',       //在职情况
-                                    marriage: 'dewd',        //婚姻情况
-                                    political: 'dewde',      //政治面貌
-                                    phone: 'dew',           //电话
-                                    gender: 'dew',           //性别
-                                    inservice_time: 'dewdw',     //入职时间
-                                    department: 'dewdew' ,//部门}
-                                    }, {
-                                      name: 'yang',
-                                      job_number: '222',//工号
-                                      age: '12',      //年龄
-                                      birth: '10',    //出生年月
-                                      message: 'wq',
-                                      identity_number: '434343', //身份证号
-                                      inservice: 'yysua',       //在职情况
-                                      marriage: 'dewd',        //婚姻情况
-                                      political: 'dewde',      //政治面貌
-                                      phone: 'dew',           //电话
-                                      gender: 'dew',           //性别
-                                      inservice_time: 'dewdw',     //入职时间
-                                      department: 'dewdew' ,//部门}
-                                      }, {
-                                        name: 'yang',
-                                        job_number: '222',//工号
-                                        age: '12',      //年龄
-                                        birth: '10',    //出生年月
-                                        message: 'wq',
-                                        identity_number: '434343', //身份证号
-                                        inservice: 'yysua',       //在职情况
-                                        marriage: 'dewd',        //婚姻情况
-                                        political: 'dewde',      //政治面貌
-                                        phone: 'dew',           //电话
-                                        gender: 'dew',           //性别
-                                        inservice_time: 'dewdw',     //入职时间
-                                        department: 'dewdew' ,//部门}
-                                        }, {
-                                          name: 'yang',
-                                          job_number: '222',//工号
-                                          age: '12',      //年龄
-                                          birth: '10',    //出生年月
-                                          message: 'wq',
-                                          identity_number: '434343', //身份证号
-                                          inservice: 'yysua',       //在职情况
-                                          marriage: 'dewd',        //婚姻情况
-                                          political: 'dewde',      //政治面貌
-                                          phone: 'dew',           //电话
-                                          gender: 'dew',           //性别
-                                          inservice_time: 'dewdw',     //入职时间
-                                          department: 'dewdew' ,//部门}
-                                          }, {
-                                            name: 'yang',
-                                            job_number: '222',//工号
-                                            age: '12',      //年龄
-                                            birth: '10',    //出生年月
-                                            message: 'wq',
-                                            identity_number: '434343', //身份证号
-                                            inservice: 'yysua',       //在职情况
-                                            marriage: 'dewd',        //婚姻情况
-                                            political: 'dewde',      //政治面貌
-                                            phone: 'dew',           //电话
-                                            gender: 'dew',           //性别
-                                            inservice_time: 'dewdw',     //入职时间
-                                            department: 'dewdew' ,//部门}
-                                            },
-
+      name: '王二',
+      job_number: '223',//工号
+      age: '30',      //年龄
+      birth: '2016.10.28',    //出生年月
+      identity_number: '4343436786788', //身份证号
+      inservice: '在职',       //在职情况
+      marriage: '未婚',        //婚姻情况
+      political: '党员',      //政治面貌
+      phone: '13978555646',           //电话
+      gender: '男',           //性别
+      inservice_time: '2019.10.01',     //入职时间
+      department: '生产部' ,//部门}
+      },
+      {
+        name: '李二',
+        job_number: '224',//工号
+        age: '22',      //年龄
+        birth: '2016.10.28',    //出生年月
+        identity_number: '4343436786788', //身份证号
+        inservice: '在职',       //在职情况
+        marriage: '未婚',        //婚姻情况
+        political: '党员',      //政治面貌
+        phone: '13978555646',           //电话
+        gender: '男',           //性别
+        inservice_time: '2019.10.01',     //入职时间
+        department: '设能部' ,//部门}
+        },
+        {
+          name: '杨一',
+          job_number: '225',//工号
+          age: '40',      //年龄
+          birth: '2016.10.28',    //出生年月
+          identity_number: '4343436786788', //身份证号
+          inservice: '在职',       //在职情况
+          marriage: '未婚',        //婚姻情况
+          political: '党员',      //政治面貌
+          phone: '13978555646',           //电话
+          gender: '男',           //性别
+          inservice_time: '2019.10.01',     //入职时间
+          department: '财务部' ,//部门}
+          },
+          {
+            name: '杨一',
+            job_number: '226',//工号
+            age: '40',      //年龄
+            birth: '2016.10.28',    //出生年月
+            identity_number: '4343436786788', //身份证号
+            inservice: '在职',       //在职情况
+            marriage: '未婚',        //婚姻情况
+            political: '党员',      //政治面貌
+            phone: '13978555646',           //电话
+            gender: '男',           //性别
+            inservice_time: '2019.10.01',     //入职时间
+            department: '财务部' ,//部门}
+            },
+            {
+              name: '杨一',
+              job_number: '227',//工号
+              age: '40',      //年龄
+              birth: '2016.10.28',    //出生年月
+              identity_number: '4343436786788', //身份证号
+              inservice: '在职',       //在职情况
+              marriage: '未婚',        //婚姻情况
+              political: '党员',      //政治面貌
+              phone: '13978555646',           //电话
+              gender: '男',           //性别
+              inservice_time: '2019.10.01',     //入职时间
+              department: '财务部' ,//部门}
+              },
+              {
+                name: '李四',
+                job_number: '228',//工号
+                age: '40',      //年龄
+                birth: '2016.10.28',    //出生年月
+                identity_number: '4343436786788', //身份证号
+                inservice: '在职',       //在职情况
+                marriage: '未婚',        //婚姻情况
+                political: '党员',      //政治面貌
+                phone: '13978555646',           //电话
+                gender: '男',           //性别
+                inservice_time: '2019.10.01',     //入职时间
+                department: '财务部' ,//部门}
+                },
+                {
+                  name: '杨二',
+                  job_number: '229',//工号
+                  age: '40',      //年龄
+                  birth: '2016.10.28',    //出生年月
+                  identity_number: '4343436786788', //身份证号
+                  inservice: '在职',       //在职情况
+                  marriage: '未婚',        //婚姻情况
+                  political: '党员',      //政治面貌
+                  phone: '13978555646',           //电话
+                  gender: '男',           //性别
+                  inservice_time: '2019.10.01',     //入职时间
+                  department: '财务部' ,//部门}
+                  },
+                  {
+                    name: '杨一',
+                    job_number: '230',//工号
+                    age: '40',      //年龄
+                    birth: '2016.10.28',    //出生年月
+                    identity_number: '4343436786788', //身份证号
+                    inservice: '在职',       //在职情况
+                    marriage: '未婚',        //婚姻情况
+                    political: '党员',      //政治面貌
+                    phone: '13978555646',           //电话
+                    gender: '男',           //性别
+                    inservice_time: '2019.10.01',     //入职时间
+                    department: '财务部' ,//部门}
+                    },
   ]
 }
 
@@ -332,14 +161,10 @@ const initState = {
 export default(state = initState, action) => {
   if(action.type === types.UServeice){
     const newState = JSON.parse(JSON.stringify(state))
-
       axios.get('/account/inquire')
       .then(function (response) {
-        console.log(response.data);
-        
       })
       .catch(function (error) {
-        console.log(error);
       });
     return newState
   }

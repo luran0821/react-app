@@ -18,142 +18,122 @@ const initState = {
   index: 0,
   cars:[
     {
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  },{
-    user_id: '111',   //工号
-    user_name: 'yang',    //姓名
-    user_department: 'jiow', //部门 
-
-    bonus: '213414',      //奖金
-    basic_salary: '412421',    //基本工资
-    position_salary: '421412'   //岗位工资
-  }
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '002',   //工号
+      user_name: '孔一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '003',   //工号
+      user_name: '杨二',    //姓名
+      user_department: '财务部', //部门 
+  
+      bonus: '1000',      //奖金
+      basic_salary: '3000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '杨三',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '004',   //工号
+      user_name: '王二',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '李一',    //姓名
+      user_department: '公关部', //部门 
+  
+      bonus: '1000',      //奖金
+      basic_salary: '2000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
+    {
+      user_id: '001',   //工号
+      user_name: '杨一',    //姓名
+      user_department: '生产部', //部门 
+  
+      bonus: '2000',      //奖金
+      basic_salary: '5000',    //基本工资
+      position_salary: '500'   //岗位工资
+    },
 ]
 }
    
