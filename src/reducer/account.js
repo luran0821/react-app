@@ -8,6 +8,7 @@ const initState = {
     add: '有',
     adelete: '没有',
     modify: '有',
+    isAdmin: ''
   },
   message: ' 退出编辑状态请保存退出 ！',
     

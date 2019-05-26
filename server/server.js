@@ -5,16 +5,21 @@ const bodyparser = require('body-parser');
 const accountRouter = require('./account');
 const userRouter = require('./user');
 const redisStore = require('connect-redis')(session);
+const ioRedis = require('ioredis');
 
 
 const app =  express();
 
-app.use('/account',accountRouter);
-app.use('/user',accountRouter);
-
-
+app.use(bodyparser.urlencoded({ extended: false }))
 app.use(bodyparser.json()); // 使用bodyparder中间件，
-app.use(bodyparser.urlencoded({ extended: true }));
+
+
+app.use('/account',accountRouter);
+app.use('/user',userRouter);
+
+
+
+//app.use(bodyparser.urlencoded({ extended: true }));
 
 
 //设置服务器跨域权限
@@ -24,6 +29,16 @@ app.use(bodyparser.urlencoded({ extended: true }));
 //     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
 //     next();
 //   });
+
+
+const redis = new ioRedis();
+// 默认127.0.0.1:6379
+// redis 链接错误
+
+redis.on("error", function (error) {
+    console.log(error);
+});
+
 
 
 

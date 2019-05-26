@@ -10,10 +10,13 @@ mongoose.connection.on('connected', function(){
 const models = {
     /**Account  账户*/
     account: {
-        name: {type: String, require: true},
-        password: {type: String, require: true},
-        isAuth: {type: Boolean},
-        isAdmin:{type: Boolean}
+        name: { type: String, require: true },
+        password: { type: String, require: true },
+        isAuth: { type: Boolean },
+        add:  { type: String },
+        adelete:  { type: String },
+        modify:  { type: String },
+        isAdmin:{ type: Boolean }
     },
     /**User  员工*/
     user:{

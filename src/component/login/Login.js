@@ -10,7 +10,7 @@ import {Button} from 'primereact/button';
 import './login.css'
 
 const Login = (props) => {
-        const { name, password, loginNameChanege, loginPwdChanege } = props
+        const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin } = props
         return(
            
             <div  className = 'login-background'>
@@ -42,8 +42,12 @@ const Login = (props) => {
                         />    
                     </div>
                     <div>
-                        <Button className="p-button-info regin-button" label="注册" />
-                        <Button  className="p-button-info  login-button" label="登陆" />
+                        <Button className="p-button-info regin-button" label="注册" 
+                            
+                        />
+                        <Button  className="p-button-info  login-button" label="登陆" 
+                            onClick= { onClickLogin }
+                        />
                     </div>
                 </div>
              </div>

@@ -10,6 +10,8 @@
     "connect-redis": "^3.4.1",
     "express": "^4.16.4",
     "express-session": "^1.16.1",
+    "ioredis": "^4.9.5",
+    "logger": "^0.0.1",
     "mongoose": "^5.5.3",
     "primeicons": "^1.0.0",
     "primereact": "^3.1.2",
@@ -47,6 +49,5 @@
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8"
   },
-  
   "proxy": "http://localhost:9093"
 }
