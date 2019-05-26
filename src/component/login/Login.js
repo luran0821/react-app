@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{Component}from 'react'
 import { connect } from 'react-redux'
 import * as actionCreators from '../../action/actionCreators' 
 
@@ -8,12 +8,31 @@ import {Password} from 'primereact/password';
 import {Button} from 'primereact/button'; 
 
 import './login.css'
+import { Redirect  } from 'react-router-dom';
+import { withRouter} from 'react-router'
 
-const Login = (props) => {
-        const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin } = props
+class Login extends  Component {
+       
+    componentWillMount(){
+       if(this.props.login){
+        return <Redirect to= '/' />
+       }
+         
+    }
+    render(){
+
+        const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin,onClicRegister } = this.props
+
+
+        if(this.props.login){
+            return <Redirect to= '/' />
+        }
+
         return(
+            
            
             <div  className = 'login-background'>
+               
                 <div className = 'loginbox' >                
                     <div>           
                         <span className='p-float-label input-name'>
@@ -43,22 +62,31 @@ const Login = (props) => {
                     </div>
                     <div>
                         <Button className="p-button-info regin-button" label="注册" 
-                            
+                            //onClick= { onClicRegister.bind(this)}
+                            onClick = {
+                                (e) => {
+                                    this.props.history.push('/register')
+                                }
+                            }
                         />
                         <Button  className="p-button-info  login-button" label="登陆" 
-                            onClick= { onClickLogin }
+                            onClick= { onClickLogin.bind(this) }                                                     
                         />
+                       
                     </div>
                 </div>
              </div>
         
         )
+      }
+    }
 
-}
+
 
 const mapStateToProps = (state) => ({
     name: state.login.name,
     password: state.login.password,
+    login: state.login.login,
     isAuth: state.login.isAuth,
     redirecTo: state.login.redirecTo  
 })
@@ -73,8 +101,11 @@ const mapDispatchToProps = (dispatch) =>({
     },
     onClickLogin(){
         dispatch(actionCreators.onClickLogin())
+    },
+    onClicRegister(){
+        dispatch(actionCreators.onClicRegister())
     }
     
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login))

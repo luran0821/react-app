@@ -21,15 +21,11 @@ export const loginPwdChanege = (e) => ({
 
 export const onClickLogin = () => ({
     type: types.Login 
-}
-// axios.get('/data')
-//   .then(function (response) {
-//     console.log(response.data);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   })
-)
+})
+
+export const onClicRegister = () => ({
+    type: types.Register 
+})
 
 
 export const Sign = () => ({

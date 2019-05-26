@@ -7,7 +7,8 @@ const initState = {
     password: '',
     isAuth: false,
     redirecTo: '',
-    message: ''
+    message: '',
+    login: false
 }
 
 export default(state = initState, action) => {
@@ -31,17 +32,14 @@ export default(state = initState, action) => {
         }
         axios.post('/account/login', data)
             .then((res)=> {
-                if( res.status === 200 ){
-                    res.data = data
-                    console.log(res.data);
-                }else{
-
-                }     
+                if( res.status === 200 && res.data.code === 1 ){
+                    //res.data = data
+                    newState.login = true
+                    console.log(res.data.code);
+                    return newState
+                }    
                 
           }) 
-          .then((req)=> {
-            console.log(JSON.parse(JSON.stringify(req)))
-          })
           .catch(function (error) {
             console.log(error);
           });
@@ -49,5 +47,14 @@ export default(state = initState, action) => {
       
         return newState
     }
+
+    if(action.type === types.Register){
+        const newState = JSON.parse(JSON.stringify(state))
+
+        return newState
+    }
+
+
+
     return state
 }
