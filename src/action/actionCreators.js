@@ -23,6 +23,9 @@ export const onClickLogin = () => ({
     type: types.Login 
 })
 
+export const loginChange  = () => ({
+    type: types.loginChange 
+})
 export const onClicRegister = () => ({
     type: types.Register 
 })

@@ -39,7 +39,7 @@ Router.post('/login',function(req, res){
   console.log(data)
   Account.find({name: data.name},{_id:0 , __v:0, isAuth:0}, function(err, doc){
    if(doc){
-     return res.json({code: 1, msg: '登陆成功 ！'})
+     return res.json({code: 1, msg: '登陆成功 ！', login: true})
    }
    if(err){
     return res.json({code: 0, msg: '没用该用户请注册 ！'})

@@ -18,19 +18,6 @@ app.use('/account',accountRouter);
 app.use('/user',userRouter);
 
 
-
-//app.use(bodyparser.urlencoded({ extended: true }));
-
-
-//设置服务器跨域权限
-// app.use(function (req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-//     next();
-//   });
-
-
 const redis = new ioRedis();
 // 默认127.0.0.1:6379
 // redis 链接错误

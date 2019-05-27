@@ -4,9 +4,8 @@ export const Login_NAME = 'login_name'
 export const Login_PWD = 'login_pwd'
 export const Login = 'login'
 export const Sign = 'Sign'
+export const loginChange ='loginChange'
 
-//export const Login_isAuth_F = 'login_isAuth_false'
-//export const Login_isAuth_T = 'login_isAuth_true'
 
 export const Register_NAME = 'register_name'
 export const Register_PWD = 'register_pwd'

@@ -8,7 +8,8 @@ const initState = {
     isAuth: false,
     redirecTo: '',
     message: '',
-    login: false
+    login: false,
+    code:''
 }
 
 export default(state = initState, action) => {
@@ -25,26 +26,8 @@ export default(state = initState, action) => {
 
     //登陆
     if(action.type === types.Login){
-        const newState = JSON.parse(JSON.stringify(state))
-        const data = {
-            name: newState.name,
-            password: newState.password,
-        }
-        axios.post('/account/login', data)
-            .then((res)=> {
-                if( res.status === 200 && res.data.code === 1 ){
-                    //res.data = data
-                    newState.login = true
-                    console.log(res.data.code);
-                    return newState
-                }    
-                
-          }) 
-          .catch(function (error) {
-            console.log(error);
-          });
-      //  newState.redirecTo = '/todolist'
-      
+        const newState = JSON.parse(JSON.stringify(state))     
+        if(state.code === 1) newState.login = true
         return newState
     }
 
@@ -55,6 +38,34 @@ export default(state = initState, action) => {
     }
 
 
+    if(action.type === types.loginChange){
+        const newState = JSON.parse(JSON.stringify(state))
+        const data = {
+            name: newState.name,
+            password: newState.password,
+        }
+        console.log(data)
+     axios.post('/account/login', data)
+         .then((res)=> {
+                if( res.status === 200 && res.data.code === 1 ){
+                    //res.data = data
+                    newState.code = res.data.code
+                   // newState.login = res.data.login
+                    console.log(res.data.code);
+                    return newState
+                }    
+                
+          }) 
+          .catch(function (error) {
+            console.log(error);
+          });
+
+        return newState
+    }
+
+
 
     return state
 }
+
+

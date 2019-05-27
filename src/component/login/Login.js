@@ -13,26 +13,18 @@ import { withRouter} from 'react-router'
 
 class Login extends  Component {
        
-    componentWillMount(){
-       if(this.props.login){
-        return <Redirect to= '/' />
-       }
-         
-    }
+   
     render(){
 
-        const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin,onClicRegister } = this.props
+        const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin,loginChange ,login} = this.props
 
-
-        if(this.props.login){
-            return <Redirect to= '/' />
-        }
+        loginChange()
 
         return(
             
            
             <div  className = 'login-background'>
-               
+               {login? <Redirect to= '/' /> : null}
                 <div className = 'loginbox' >                
                     <div>           
                         <span className='p-float-label input-name'>
@@ -70,7 +62,7 @@ class Login extends  Component {
                             }
                         />
                         <Button  className="p-button-info  login-button" label="登陆" 
-                            onClick= { onClickLogin.bind(this) }                                                     
+                            onClick= { onClickLogin.bind(this) }                                              
                         />
                        
                     </div>
@@ -104,6 +96,9 @@ const mapDispatchToProps = (dispatch) =>({
     },
     onClicRegister(){
         dispatch(actionCreators.onClicRegister())
+    },
+    loginChange(){
+        dispatch(actionCreators.loginChange())
     }
     
 })
