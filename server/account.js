@@ -20,30 +20,40 @@ const _filter = {'password':0,'__v':0}
 
 Router.get('/inquire',function(req, res){
  
- 
+})
   // Account.remove({name: 'admin'}, function(err, doc){
   //   console.log(doc)
   // })
 
 
   //过滤字段{_id:0 ,__v:0}
-  Account.find({name: 'admin'},{_id:0 , __v:0, isAuth:0}, function(err, doc){
-   
-    res.json(doc)
-  })
-})
+  
 
 
 Router.post('/login',function(req, res){
-  const data = req.body
-  console.log(data)
-  Account.find({name: data.name},{_id:0 , __v:0, isAuth:0}, function(err, doc){
+  
+  const name =  req.body.name
+  const password = req.body.password
+
+  //console.log(password)
+  Account.findOne({name: name},{_id:0 , __v:0, isAuth:0}, function(err, doc){
+
+    if(err){
+      return res.json({code: 0, msg: '没用该用户请注册 ！'})
+     }
+   
    if(doc){
-     return res.json({code: 1, msg: '登陆成功 ！', login: true})
-   }
-   if(err){
+     if(doc.password !== password) return  res.json({code: 0, msg: '密码错误 ！', login: false})
+     else return res.json({code: 1, msg: '登陆成功 ！', login: true}) 
+      
+
+   }else{
     return res.json({code: 0, msg: '没用该用户请注册 ！'})
    }
+   
+   
+
+  
   })
   
   

@@ -13,12 +13,14 @@ import { withRouter} from 'react-router'
 
 class Login extends  Component {
        
-   
+    componentWillReceiveProps(){
+        this.props.loginChange()
+    }
     render(){
 
         const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin,loginChange ,login} = this.props
 
-        loginChange()
+       
 
         return(
             

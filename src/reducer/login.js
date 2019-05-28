@@ -9,7 +9,7 @@ const initState = {
     redirecTo: '',
     message: '',
     login: false,
-    code:''
+    code: 0
 }
 
 export default(state = initState, action) => {
@@ -45,20 +45,23 @@ export default(state = initState, action) => {
             password: newState.password,
         }
         console.log(data)
-     axios.post('/account/login', data)
-         .then((res)=> {
-                if( res.status === 200 && res.data.code === 1 ){
-                    //res.data = data
-                    newState.code = res.data.code
-                   // newState.login = res.data.login
-                    console.log(res.data.code);
-                    return newState
-                }    
-                
-          }) 
-          .catch(function (error) {
-            console.log(error);
-          });
+        if(data.name !== null && data.password !== null){
+
+            axios.post('/account/login', data)
+            .then((res)=> {
+                   if( res.status === 200 && res.data.code === 1 ){
+                       //res.data = data
+                       newState.code = res.data.code
+                       
+                      // newState.login = res.data.login
+                       console.log( res.data);
+                   }    
+                   
+             }) 
+             .catch(function (error) {
+               console.log(error);
+             });
+        }
 
         return newState
     }
