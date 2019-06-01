@@ -18,7 +18,7 @@ class Login extends  Component {
     }
     render(){
 
-        const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin,loginChange ,login} = this.props
+        const { name, password, loginNameChanege, loginPwdChanege ,onClickLogin ,login} = this.props
 
        
 

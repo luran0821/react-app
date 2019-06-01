@@ -8,7 +8,8 @@ const initState = {
     add: '有',
     adelete: '没有',
     modify: '有',
-    isAdmin: ''
+    isAdmin: '',
+    _id: ''
   },
   message: ' 退出编辑状态请保存退出 ！',
     
@@ -90,6 +91,25 @@ export default(state = initState, action) => {
     return newState
   } 
 
+
+if(action.type === types.InputaddChanege){
+  const newState = JSON.parse(JSON.stringify(state))
+  newState.car.add = action.value
+  return newState
+} 
+if(action.type === types.InputdeleteChanege){
+  const newState = JSON.parse(JSON.stringify(state))
+  newState.car.adelete = action.value
+  return newState
+} 
+if(action.type === types.InputmodifyChanege){
+  const newState = JSON.parse(JSON.stringify(state))
+  newState.car.modify = action.value
+  return newState
+} 
+
+
+
   if(action.type === types.ASelectionChange){
     const newState = JSON.parse(JSON.stringify(state))
     newState.newCar = false
@@ -115,23 +135,52 @@ export default(state = initState, action) => {
     newState.car.add = ''
     newState.car.adelete = ''
     newState.car.modify = ''
-    newState.newCar = true
-   
+    newState.car._id = ''
+
+    newState.newCar = true 
     newState.displayDialog = true
+
     return newState
   } 
 
   if(action.type === types.ASave){
     const newState = JSON.parse(JSON.stringify(state))
-
-    
     newState.cars = [...state.cars]
+    let data = newState.car
+    console.log(data)
     if(state.newCar){
-      newState.cars.push(state.car)
+      axios.post('/account/add',data)
+      .then((res)=> {
+             if( res.status === 200 && res.data.code === 1 ){  
+                 
+                 
+             }         
+       }) 
+       .catch(function (error) {
+         console.log(error);
+       });
+
+       newState.cars.push(data)
     }
     
     else{
-      newState.cars[state.index] = state.car
+     // newState.cars[state.index] = state.car
+      data = newState.cars[state.index]
+      console.log( data )
+      axios.post('/account/modify',data)
+      .then((res)=> {
+             if( res.status === 200 && res.data.code === 1 ){
+               console.log(res.data)            
+              newState.cars[state.index] = res.data           
+             }         
+       }) 
+       .catch(function (error) {
+         console.log(error);
+       });
+
+
+
+
     }
   
     newState.selectedCar = null 

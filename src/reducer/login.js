@@ -44,17 +44,12 @@ export default(state = initState, action) => {
             name: newState.name,
             password: newState.password,
         }
-        console.log(data)
         if(data.name !== null && data.password !== null){
 
             axios.post('/account/login', data)
             .then((res)=> {
                    if( res.status === 200 && res.data.code === 1 ){
-                       //res.data = data
                        newState.code = res.data.code
-                       
-                      // newState.login = res.data.login
-                       console.log( res.data);
                    }    
                    
              }) 
